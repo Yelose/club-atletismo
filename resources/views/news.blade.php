@@ -4,7 +4,7 @@
 <h1>Noticias</h1>
 <div>
     @foreach ($noticias as $noticia)
-    <p>{{$noticia->titular}}</p>
+    <x-noticias.aside :noticia="$noticia" />
     @endforeach
 </div>
 
