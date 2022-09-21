@@ -10,8 +10,8 @@
 
 <body>
 
-    <div class="d-flex justify-content-center">
-        <img class="img-fluid full-screen" src="https://media.mybnbwebsite.com/4081/upcoming_events_sunset_03_rs.jpg" alt="Imagen de grupo de superwoman,catwoman, wonderwoman, poison ivy" />
+    <div class="d-flex justify-content-center home-banner">
+       <img class="img-fluid full-screen" src="https://media.mybnbwebsite.com/4081/upcoming_events_sunset_03_rs.jpg" alt="Imagen de grupo de superwoman,catwoman, wonderwoman, poison ivy" />
     </div>
 
     <section id="text">
@@ -47,12 +47,21 @@
 
 
 <style lang="scss" scoped>
-    img {
-        width: 100%;
-        height: 40vh;
-        margin-top: 3%;
-        margin-bottom: 3%;
+    
+    .home-banner {
+ max-height: 50vh;
+ overflow: hidden;
+
     }
+    
+    .home-banner img {
+        width: 100%;
+         margin-top: 3%;
+        margin-bottom: 3%;
+
+    }
+
+    
 
     #text {
         max-width: 1100px;
