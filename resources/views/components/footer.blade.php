@@ -13,9 +13,10 @@
     }
 
     #login {
-        background-color: white;
+        color: white;
         float: right;
-        margin: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
     }
 
     #other-links{
