@@ -1,22 +1,25 @@
 <style>
     #footer{
-        position: absolute;
-        bottom: 0;
         width: 100%;
         background-color: #4D2756;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #title-footer {
         color: white;
         text-shadow: grey 1px 1px 1px;
+        width: fit-content;
     }
 
     #login {
         color: white;
-        float: right;
+        width: 100%;
         margin-right: 20px;
         margin-bottom: 10px;
+        text-align: right;
     }
 
     #other-links{
@@ -38,7 +41,10 @@
         color:  gray;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         opacity: 0.5;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
 </style>
