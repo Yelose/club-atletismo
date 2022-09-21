@@ -17,10 +17,33 @@
       </div>
     
 
-  
+      <section id="text">
+       
+       
+         <div class="text">
+          <h3>Lorem</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aut quia quo eaque. Rerum modi saepe
+            repellendus veritatis? Officia aliquam perferendis tempore doloribus rem delectus veritatis nostrum magnam
+            dolorem reprehenderit!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum error voluptate temporibus amet, ipsa tempore
+            cumque iusto, maiores cupiditate dolore cum corrupti perspiciatis adipisci accusantium atque eligendi nam rerum
+            reiciendis.</p>
+         </div>
+            <div class="contenedor-foto">
+              <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose">
+            </div>
+            
+          </section>    
 
-
-
+          <svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <path id="path">
+             <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
+           </path>
+           <text font-size="30" font-family="Montserrat" fill='purple'>
+             <textPath xlink:href="#path">"Me siento como en familia,somos un hogar"
+             </textPath>
+           </text>
+         </svg>      
 
 </body>
 </html>
@@ -33,4 +56,66 @@ img {
   margin-top: 3%;
   margin-bottom: 3s%;
 }
+#text {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 15px;
+  color: black;
+  display: flex;
+}
+
+#text .contenedor-foto {
+  max-width: 400px;
+  margin-right: 80px;
+}
+
+#text .contenedor-foto img {
+  padding: 20px;
+
+  width: 40vh;
+  height: 30vh;
+  
+ 
+}
+#text .text {
+  margin: 0 40px;
+}
+
+#text .text .titulo-seccion {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 0, 0);
+  text-decoration-thickness: 5px;
+}
+
+#text .text h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#text .text p {
+  font-size: 14px;
+  line-height: 25px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 12px;
+}
+
+
+
+svg{
+  width:40vh;
+  color:black;
+  
+}
+
+#path{
+
+  padding-right: 5vh;
+}
+
 </style>
