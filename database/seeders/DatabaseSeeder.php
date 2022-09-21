@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\noticia;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
+        noticia::factory()->count(10)->create();
 
         // \App\Models\User::factory(10)->create();
 
