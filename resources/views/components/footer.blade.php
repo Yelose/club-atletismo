@@ -40,9 +40,6 @@
     #fem-cod {
         color:  gray;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        opacity: 0.5;
-<<<<<<< HEAD
-=======
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -51,9 +48,11 @@
 
     #fem-cod img {
         width: 100%;
-        width: 5vw;
-        height: 5vw;
->>>>>>> footer
+        width: 4vw;
+        height: 4vw;
+        background-color: white;
+        padding: 2px;
+        border-radius: 5px;
     }
 
 </style>
