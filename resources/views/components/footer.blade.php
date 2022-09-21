@@ -1,22 +1,25 @@
 <style>
     #footer{
-        position: absolute;
-        bottom: 0;
         width: 100%;
         background-color: #4D2756;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #title-footer {
         color: white;
         text-shadow: grey 1px 1px 1px;
+        width: fit-content;
     }
 
     #login {
         color: white;
-        float: right;
+        width: 100%;
         margin-right: 20px;
         margin-bottom: 10px;
+        text-align: right;
     }
 
     #other-links{
@@ -38,6 +41,19 @@
         color:  gray;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         opacity: 0.5;
+<<<<<<< HEAD
+=======
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #fem-cod img {
+        width: 100%;
+        width: 5vw;
+        height: 5vw;
+>>>>>>> footer
     }
 
 </style>
@@ -50,8 +66,8 @@
         <a href="https://www.rfea.es/"><img src="https://habber.com/wp-content/uploads/2022/08/Imagen-WEB-clientes-500x500-1.jpg" alt=""></a>
     </div>
     <div id='fem-cod'>
-        <p>FEM CODERS</p>
-        <p>Marina, Laura, Marybell, Iria y Verónica</p>
+        <p>Marina - Laura - Marybell - Iria - Verónica</p>
+        <img src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/Logo-FemCodersF5-color.png" alt="#">
     </div>
     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" id='login'>Log in</a>
 </section>
