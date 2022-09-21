@@ -7,15 +7,16 @@
     }
 
     .logo{
-        background-color: white;
-        color: #e1bee7;
+        width: 80%;
+        object-fit: contain;
+        border-radius: 50%;
     }
     div.buttons{
         width: 100%;
         height: 30%;
         background: 4D2756;
         display: flex;
-        justify-items: end;
+        justify-items: flex-end;
         align-items: center;
         column-gap: 40px;
     }
@@ -47,10 +48,10 @@
 </style>
 
 
-    <div id="nav-menu"> 
+    <section id="nav-menu"> 
         
     <div id="logo">
-        LOGO<img src="#" alt="">
+        <img class="logo-img" src="" alt="">
     </div>
 
     <div class="buttoms">
@@ -74,4 +75,4 @@
             <a href="{{route('achievements')}}"></a>
         </button>
     </div>
-</div>
+</section>
