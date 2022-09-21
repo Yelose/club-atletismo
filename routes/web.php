@@ -1,24 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AchievementsController;
+use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\TeamController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar');
+Route::get('/history', [HistoryController::class, 'history'])->name('history');
+Route::get('/news', [NewsController::class, 'news'])->name('news');
+Route::get('/team', [TeamController::class, 'team'])->name('team');
+Route::get('/achievements', [AchievementsController::class, 'achievements'])->name('achievements');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section("title", "Inicio")
+@section("title", "Calendario")
 @section("content")
-<h1>Inicio</h1>
+<h1>Calendario</h1>
 @endsection
