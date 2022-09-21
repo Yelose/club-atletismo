@@ -56,9 +56,10 @@
     
     .home-banner img {
         width: 100%;
+        
         margin-bottom: 3%;
        
-
+      
     }
 
     

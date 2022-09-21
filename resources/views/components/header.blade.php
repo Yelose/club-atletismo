@@ -49,12 +49,12 @@
     </div>
 
     <div class="buttons">
-        <a href="#home" class="active" >HOME</a>
-        <a href="#news">HISTORIA</a>
-        <a href="#news">CLUB</a>
-        <a href="#news">NOTICIAS</a>
-        <a href="#contact">LOGROS</a>
-        <a href="#about">CALENDARIO</a>
+        <a href="{{ url('/') }}" class="active" >HOME</a>
+        <a href="{{ url('/history') }}" >HISTORIA</a>
+        <a href="{{ url('/team') }} ">CLUB</a>
+        <a href="{{ url('/news') }} ">NOTICIAS</a>
+        <a href="{{ url('/achievements') }}" >LOGROS</a>
+        <a href="{{ url('/calendar') }}" >CALENDARIO</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
         </a>
