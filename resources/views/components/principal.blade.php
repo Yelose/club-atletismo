@@ -49,10 +49,14 @@
              <textPath xlink:href="#path">"Me siento como en familia,somos un hogar"
              </textPath>
            </text>
-         </svg>      
+         </svg> 
          
          
          
+         
+         
+         
+       
          
       
 </body>
