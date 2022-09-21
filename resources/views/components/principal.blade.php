@@ -56,8 +56,8 @@
     
     .home-banner img {
         width: 100%;
-         margin-top: 3%;
         margin-bottom: 3%;
+       
 
     }
 
@@ -86,6 +86,10 @@
 
     #text .text {
         margin: 0 40px;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        align-content: center;
     }
 
     #text .text .titulo-seccion {
