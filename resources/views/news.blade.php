@@ -2,5 +2,10 @@
 @section("title", "Noticias")
 @section("content")
 <h1>Noticias</h1>
-<x-noticias.index></x-noticias.index>
+<div>
+    @foreach ($noticias as $noticia)
+    <p>{{$noticia->titular}}</p>
+    @endforeach
+</div>
+
 @endsection
