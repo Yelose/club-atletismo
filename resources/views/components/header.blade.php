@@ -24,6 +24,7 @@
         text-decoration: none;
         font-size: clamp(15px,1.6vw,20px);
         font-family:Arial, Helvetica, sans-serif;
+        
 
     }
 
@@ -36,6 +37,7 @@
         display: flex;
         gap: 2vw;
         justify-content: center;
+        margin-right: 4vw;
             }
 </style>
 
