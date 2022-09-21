@@ -51,7 +51,7 @@
     <section id="nav-menu"> 
         
     <div id="logo">
-        <img class="logo-img" src="" alt="">
+        <img class="logo-img" src="" alt="logo club de atletismo">
     </div>
 
     <div class="buttoms">
