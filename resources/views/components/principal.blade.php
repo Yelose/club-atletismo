@@ -26,7 +26,7 @@
                 reiciendis.</p>
         </div>
         <div class="contenedor-foto">
-            <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose">
+            <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose" id="imagen">
         </div>
 
     </section>
@@ -68,10 +68,8 @@
 
     #text .contenedor-foto img {
         padding: 20px;
-
         width: 40vh;
         height: 30vh;
-
 
     }
 
@@ -103,12 +101,9 @@
         margin-bottom: 12px;
     }
 
-
-
     svg {
         width: 40vh;
         color: black;
-
     }
 
     #path {
@@ -125,15 +120,12 @@
 
     ul.slider {
         position: relative;
-        /*Necesitamos que el ul sea relativo*/
     }
 
     ul.slider li {
         opacity: 0;
-        /*Ocultamos todos los <li>*/
         transition: opacity .5s;
         position: absolute;
-        /*Posicionamos en absoluto los <li>*/
         left: 0px;
         top: 0px;
         margin: 50px;
@@ -144,12 +136,10 @@
 
     ul.slider li:first-child {
         opacity: 1;
-        /*Mostramos el primer <li>*/
     }
 
     ul.slider li:target {
         opacity: 1;
-        /*Mostramos el <li> al que apunta el enlace*/
     }
 
     nav {
