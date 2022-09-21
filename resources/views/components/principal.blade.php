@@ -11,7 +11,7 @@
 <body>
 
     <div class="d-flex justify-content-center">
-        <img class="img-fluid full-screen" src="https://media.mybnbwebsite.com/4081/upcoming_events_sunset_03_rs.jpg" alt="Imagen de grupo de superwoman,catwoman, wonderwoman, poison ivy" />
+        <img class="img-fluid full-screen" src="https://media.mybnbwebsite.com/4081/upcoming_events_sunset_03_rs.jpg" alt="Imagen de grupo corriendo por ahí" />
     </div>
 
     <section id="text">

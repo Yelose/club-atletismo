@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'footer.css';
+
+p{
+    color: blue;
+}
