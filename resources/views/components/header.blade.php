@@ -6,11 +6,17 @@
         padding: 10px;
     }
 
-    .logo{
-        width: 80%;
+    img.logo-img{
+        width: 5vh;
         object-fit: contain;
         border-radius: 50%;
+        align-items: center;
     }
+
+    .buttoms a{
+        color: white,
+    }
+
     div.buttons{
         width: 100%;
         height: 30%;
@@ -19,60 +25,25 @@
         justify-items: flex-end;
         align-items: center;
         column-gap: 40px;
-    }
-
-    .home{
-        border: 3px solid #e1bee7;
-        border-radius: 5px;
-    }
-
-    .history{
-        border: 3px solid #e1bee7;
-        border-radius: 5px; 
-    }
-
-    .team{
-        border: 3px solid #e1bee7;
-        border-radius: 5px;
-    }
-
-    .news{
-        border: 3px solid #e1bee7;
-        border-radius: 5px;
-    }
-
-    .achievements{
-        border: 3px solid #e1bee7;
-        border-radius: 5px;
-    }
+        color: aliceblue;
 </style>
 
 
     <section id="nav-menu"> 
-        
-    <div id="logo">
-        <img class="logo-img" src="" alt="logo club de atletismo">
+
+        <div id="logo">
+        <img class="logo-img" src="https://st2.depositphotos.com/1012338/6938/v/600/depositphotos_69381837-stock-illustration-running-shield.jpg" alt="logo club de atletismo">
     </div>
 
     <div class="buttoms">
-        <button class="home">HOME
-            <a href="{{route('home')}}"></a>
-        </button>
-
-        <button class="history">HISTORIA
-            <a href="{{route('history')}}"></a>
-        </button>
-
-        <button class="team">EQUIPO
-            <a href="{{route('team')}}"></a>
-        </button>
-
-        <button class="news">NOTICIAS
-            <a href="{{route('news')}}"></a>
-        </button>
-
-        <button class="achievements">LOGROS
-            <a href="{{route('achievements')}}"></a>
-        </button>
+        <a href="#home" class="active">HOME</a>
+        <a href="#news">HISTORIA</a>
+        <a href="#news">CLUB</a>
+        <a href="#news">NOTICIAS</a>
+        <a href="#contact">LOGROS</a>
+        <a href="#about">CALENDARIO</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
     </div>
 </section>
