@@ -38,7 +38,6 @@
         color:  gray;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         opacity: 0.5;
-
     }
 
 </style>
