@@ -47,6 +47,12 @@
         justify-content: center;
     }
 
+    #fem-cod img {
+        width: 100%;
+        width: 5vw;
+        height: 5vw;
+    }
+
 </style>
 
 <section id='footer'>
@@ -57,8 +63,8 @@
         <a href="https://www.rfea.es/"><img src="https://habber.com/wp-content/uploads/2022/08/Imagen-WEB-clientes-500x500-1.jpg" alt=""></a>
     </div>
     <div id='fem-cod'>
-        <p>FEM CODERS</p>
-        <p>Marina, Laura, Marybell, Iria y Verónica</p>
+        <p>Marina - Laura - Marybell - Iria - Verónica</p>
+        <img src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/Logo-FemCodersF5-color.png" alt="#">
     </div>
     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" id='login'>Log in</a>
 </section>
