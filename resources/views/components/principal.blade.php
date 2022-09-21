@@ -36,7 +36,7 @@
             reiciendis.</p>
          </div>
             <div class="contenedor-foto">
-              <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose">
+              <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose" id="imagen">
             </div>
             
           </section>    
@@ -81,7 +81,6 @@ img {
 
 #text .contenedor-foto img {
   padding: 20px;
-
   width: 40vh;
   height: 30vh;
   
