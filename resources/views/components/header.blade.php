@@ -1,31 +1,42 @@
 <style>
     #nav-menu{
         background-color: #4D2756;
-        display: grid;
         grid-template-columns: 20% 80%;
         padding: 10px;
+        display: flex;
+        align-items: center;
+      
+
+        
     }
 
     img.logo-img{
-        width: 5vh;
+        width: 4vw;
         object-fit: contain;
         border-radius: 50%;
         align-items: center;
     }
 
     .buttons a{
-        color: white,
+        color: white;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: clamp(15px,1.6vw,20px);
+        font-family:Arial, Helvetica, sans-serif;
+
     }
 
-    div.buttons{
+   
+
+ .buttons{
         width: 100%;
         height: 30%;
         background: 4D2756;
         display: flex;
-        justify-items: flex-end;
-        align-items: center;
-        column-gap: 40px;
-        color: aliceblue;
+        gap: 2vw;
+        justify-content: center;
+            }
 </style>
 
 
@@ -36,7 +47,7 @@
     </div>
 
     <div class="buttons">
-        <a href="#home" class="active">HOME</a>
+        <a href="#home" class="active" >HOME</a>
         <a href="#news">HISTORIA</a>
         <a href="#news">CLUB</a>
         <a href="#news">NOTICIAS</a>
