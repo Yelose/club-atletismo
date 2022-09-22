@@ -1,5 +1,5 @@
 @extends('layouts.main')
 @section("title", "Equipo")
 @section("content")
-<h1>Atletas</h1>
+<h1>Conoce al equipo</h1>
 @endsection
