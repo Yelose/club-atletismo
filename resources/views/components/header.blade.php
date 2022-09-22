@@ -5,9 +5,6 @@
         padding: 10px;
         display: flex;
         align-items: center;
-
-
-
     }
 
     img.logo-img {
@@ -24,11 +21,7 @@
         text-decoration: none;
         font-size: clamp(15px, 1.6vw, 20px);
         font-family: Arial, Helvetica, sans-serif;
-
-
     }
-
-
 
     .buttons {
         width: 100%;
@@ -40,7 +33,6 @@
         margin-right: 4vw;
     }
 </style>
-
 
 <section id="nav-menu">
 
