@@ -10,8 +10,10 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body>
-    <x-header />
+<body class="main-layout">
+    <header>
+        <x-header />
+    </header>
     <main>
         @yield("content")
         <x-footer />
@@ -23,5 +25,18 @@
     * {
         margin: 0;
         padding: 0;
+    }
+
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .main-layout main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow-y: auto;
     }
 </style>
