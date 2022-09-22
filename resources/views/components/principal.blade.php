@@ -10,7 +10,7 @@
 
 <body>
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center home-banner">
         <img class="img-fluid full-screen" src="https://media.mybnbwebsite.com/4081/upcoming_events_sunset_03_rs.jpg" alt="Imagen de grupo de superwoman,catwoman, wonderwoman, poison ivy" />
     </div>
 
@@ -26,7 +26,7 @@
                 reiciendis.</p>
         </div>
         <div class="contenedor-foto">
-            <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose">
+            <img src="https://github.com/lauracastelao/image/blob/main/medallas-definitiva.jpeg?raw=true" alt="nose" id="imagen">
         </div>
 
     </section>
@@ -46,10 +46,14 @@
 </html>
 
 <style lang="scss" scoped>
-    img {
+    .home-banner {
+        max-height: 50vh;
+        overflow: hidden;
+
+    }
+
+    .home-banner img {
         width: 100%;
-        height: 40vh;
-        margin-top: 3%;
         margin-bottom: 3%;
     }
 
@@ -68,15 +72,16 @@
 
     #text .contenedor-foto img {
         padding: 20px;
-
         width: 40vh;
         height: 30vh;
-
-
     }
 
     #text .text {
         margin: 0 40px;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        align-content: center;
     }
 
     #text .text .titulo-seccion {
@@ -103,12 +108,9 @@
         margin-bottom: 12px;
     }
 
-
-
     svg {
         width: 40vh;
         color: black;
-
     }
 
     #path {
@@ -125,15 +127,12 @@
 
     ul.slider {
         position: relative;
-        /*Necesitamos que el ul sea relativo*/
     }
 
     ul.slider li {
         opacity: 0;
-        /*Ocultamos todos los <li>*/
         transition: opacity .5s;
         position: absolute;
-        /*Posicionamos en absoluto los <li>*/
         left: 0px;
         top: 0px;
         margin: 50px;
@@ -144,12 +143,10 @@
 
     ul.slider li:first-child {
         opacity: 1;
-        /*Mostramos el primer <li>*/
     }
 
     ul.slider li:target {
         opacity: 1;
-        /*Mostramos el <li> al que apunta el enlace*/
     }
 
     nav {
