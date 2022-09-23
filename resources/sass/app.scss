@@ -3,14 +3,12 @@
 @tailwind utilities;
 @import "variables.scss";
 @import "header.scss";
-<<<<<<< HEAD
 @import "home.scss";
 @import "layout.scss";
 @import "news.scss";
+@import "footer.scss";
 
 p {
     text-align: justify;
 }
-=======
-@import "footer.scss";
->>>>>>> footer
+
