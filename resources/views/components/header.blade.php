@@ -4,6 +4,8 @@
         <img class="logo-img" src="https://st2.depositphotos.com/1012338/6938/v/600/depositphotos_69381837-stock-illustration-running-shield.jpg" alt="logo club de atletismo">
     </div>
 
+    <h1>Club de Atletismo Villaviciosa</h1>
+
     <div class="buttons">
         <a href="{{ url('/') }}" class="active">HOME</a>
         <a href="{{ url('/history') }}">HISTORIA</a>
@@ -15,4 +17,5 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    <div class="header-right"></div>
 </section>
