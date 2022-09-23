@@ -1,7 +1,7 @@
 <style>
-    #footer{
+    #footer {
         width: 100%;
-        background-color: #4D2756;
+        background-color: #1c2751;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -22,24 +22,26 @@
         text-align: right;
     }
 
-    #other-links{
+    #other-links {
         color: grey;
         display: flex;
         justify-content: center;
         gap: 5vw;
         color: white;
     }
+
     #other-links a {
         width: 5vw;
         height: 5vw;
     }
+
     #other-links a img {
         width: 100%;
     }
 
     #fem-cod {
-        color:  gray;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: gray;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -54,7 +56,6 @@
         padding: 2px;
         border-radius: 5px;
     }
-
 </style>
 
 <section id='footer'>
@@ -70,4 +71,3 @@
     </div>
     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" id='login'>Log in</a>
 </section>
-
