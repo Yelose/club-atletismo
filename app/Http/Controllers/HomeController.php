@@ -13,7 +13,7 @@ class HomeController extends Controller
     {
         // $noticias = Noticia::all();
         // return view('home', compact("noticias"));
-        $link = ExternalLink::all();
-        return view("components.footer", compact("links"));
+        // $link = ExternalLink::all();
+        return view("home");
     }
 }
