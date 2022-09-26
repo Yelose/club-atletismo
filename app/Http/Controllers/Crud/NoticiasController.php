@@ -12,7 +12,7 @@ class NoticiasController extends Controller
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $titular, $imagen, $subtitulo, $noticia, $fecha;
+    public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
     public $updateMode = false;
 
     public function render()
@@ -22,6 +22,7 @@ class NoticiasController extends Controller
             'noticias' => noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
+                ->orWhere('piefoto', 'LIKE', $keyWord)
                 ->orWhere('subtitulo', 'LIKE', $keyWord)
                 ->orWhere('noticia', 'LIKE', $keyWord)
                 ->orWhere('fecha', 'LIKE', $keyWord)
@@ -39,6 +40,7 @@ class NoticiasController extends Controller
     {
         $this->titular = null;
         $this->imagen = null;
+        $this->piefoto = null;
         $this->subtitulo = null;
         $this->noticia = null;
         $this->fecha = null;
@@ -50,6 +52,7 @@ class NoticiasController extends Controller
         Noticia::create([
             'titular' => $this->titular,
             'imagen' => $this->imagen,
+            'piefoto' => $this->piefoto,
             'subtitulo' => $this->subtitulo,
             'noticia' => $this->noticia,
             'fecha' => $this->fecha
@@ -67,6 +70,7 @@ class NoticiasController extends Controller
         $this->selected_id = $id;
         $this->titular = $record->titular;
         $this->imagen = $record->imagen;
+        $this->piefoto = $record->piefoto;
         $this->subtitulo = $record->subtitulo;
         $this->noticia = $record->noticia;
         $this->fecha = $record->fecha;
@@ -82,6 +86,7 @@ class NoticiasController extends Controller
             $record->update([
                 'titular' => $this->titular,
                 'imagen' => $this->imagen,
+                'piefoto' => $this->piefoto,
                 'subtitulo' => $this->subtitulo,
                 'noticia' => $this->noticia,
                 'fecha' => $this->fecha
