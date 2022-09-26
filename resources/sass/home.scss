@@ -99,3 +99,18 @@
         display: none;
     }
 }
+
+.sponsor {
+    display: flex;
+    flex-flow:row wrap;
+    a {
+        width: fit-content;
+        figure {
+            max-width: 300px;
+            min-width: 80px;
+            width: 7vw;
+            img {
+            }
+        }
+    }
+}

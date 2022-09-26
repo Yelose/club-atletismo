@@ -13,11 +13,12 @@
             <section id="text">
                 <x-home.intro />
             </section>
-            <section>
-                <x-home.sponsors />
-            </section>
+            
             <section id="testimonials">
                 <x-home.testimonials />
+            </section>
+            <section>
+                <x-home.sponsors />
             </section>
         </div>
     </main>
