@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('externallinks', function (Blueprint $table) {
+        Schema::create('external_links', function (Blueprint $table) {
             $table->id();
-            $table->string("link");
-            $table->string("image");
             $table->string("name");
+            $table->string("image");
+            $table->string("link");
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('externallinks');
+        Schema::dropIfExists('external_links');
     }
 };

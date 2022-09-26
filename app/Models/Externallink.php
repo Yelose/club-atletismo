@@ -10,8 +10,8 @@ class ExternalLink extends Model
     use HasFactory;
 
     protected $fillable = [
-        "link",
-        "image",
-        "name"
+        'name',
+        'image',
+        'link'
     ];
 }

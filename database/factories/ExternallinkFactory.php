@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\externallink>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ExternalLink>
  */
-class ExternallinkFactory extends Factory
+class ExternalLinkFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,9 @@ class ExternallinkFactory extends Factory
     public function definition()
     {
         return [
+            'name' => fake()->name(),
             'image' => fake()->name(),
             'link' => fake()->name(),
-            'name' => fake()->name(),
         ];
     }
 }
