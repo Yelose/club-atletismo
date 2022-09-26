@@ -17,7 +17,9 @@ class ExternallinkFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'image' => fake()->name(),
+            'link' => fake()->name(),
+            'name' => fake()->name(),
         ];
     }
 }
