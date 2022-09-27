@@ -3,7 +3,7 @@
 @section("content")
 <h1>Conoce al equipo</h1>
 
-    @foreach ($atletas as $atleta)
-    <x-atletas.index :atleta="$atleta" />
-    @endforeach
+@foreach ($atletas as $atleta)
+<x-atletas.index :atleta="$atleta" />
+@endforeach
 @endsection
