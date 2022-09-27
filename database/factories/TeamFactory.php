@@ -17,7 +17,10 @@ class TeamFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->name(),
+            'licence' => fake()->name(),
+            'image' => fake()->name(),
+            'category' => fake()->name(),
         ];
     }
 }

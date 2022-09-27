@@ -8,6 +8,7 @@ class NewsController extends Controller
 {
     public function news()
     {
+        
         return view("news");
     }
 }
