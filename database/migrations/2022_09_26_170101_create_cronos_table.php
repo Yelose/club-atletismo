@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('cronos', function (Blueprint $table) {
             $table->id();
+
+            $table->string('fecha');
+            $table->longText('resumen');
+
             $table->timestamps();
         });
     }

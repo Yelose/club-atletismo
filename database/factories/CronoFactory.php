@@ -17,7 +17,8 @@ class CronoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'fecha' => fake()->name(),
+            'resumen' => fake()->name(),
         ];
     }
 }

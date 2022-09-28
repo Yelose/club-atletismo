@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\noticia;
+use App\Models\Somos;
 
 class DatabaseSeeder extends Seeder
 {
-
     public function run()
     {
         DB::statement("SET foreign_key_checks=0");
@@ -28,9 +28,9 @@ class DatabaseSeeder extends Seeder
             ]
         );
         noticia::factory()->count(10)->create();
+        Somos::factory()->count(1)->create();
 
         // \App\Models\User::factory(10)->create();
-
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

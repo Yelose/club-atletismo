@@ -1,12 +1,10 @@
 @extends('layouts.main')
 @section("title", "Historia")
 @section("content")
-<h1>Historia del Club</h1>
+<h1>Historia del club</h1>
 
-@foreach ($somoss as $ somos )
-<p>
-    {{somos->}}
-</p>
-    
-@endforeach
+    @foreach ($somos as $somo )
+    <x-history.somos.index :somo = "$somo"/>
+    @endforeach
+    <x-history.somos.index/>
 @endsection
