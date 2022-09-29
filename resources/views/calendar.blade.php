@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -102,7 +102,11 @@
                     });
                 },
                 eventClick: function(event) {
-                    var deleteMsg = confirm("¿Quieres borrar el evento?");
+                    var deleteMsg = swal({
+  title: "Evento creado!",
+  text: "",
+  icon: "success",
+});;
                     if (deleteMsg) {
                         $.ajax({
                             type: "POST",
@@ -113,7 +117,22 @@
                             },
                             success: function(response) {
                                 calendar.fullCalendar('removeEvents', event.id);
-                                displayMessage("Event Deleted Successfully");
+                                swal({
+  title: "Borrar evento",
+  text: "¿Estas seguro? Si eliminas el evento tendrás que volver a crearlo",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Tu evento ha sido eliminado", {
+      icon: "success",
+    });
+  } else {
+    swal("No has eliminado el evento");
+  }
+});
                             }
                         });
                     }
