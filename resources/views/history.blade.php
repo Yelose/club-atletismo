@@ -4,12 +4,11 @@
 <div>
 <h1>Historia del club</h1>
 
-    @foreach ($somos as $somo )
-    
-    <x-history.somos.index :somo = "$somo"/>
-
+    @foreach ($quiens as $quien )
+    <x-history.quien.index :quien = "$quien"/>
     @endforeach
     <x-history.somos.index/>
+</div>
 @endsection
 
-</div>
+

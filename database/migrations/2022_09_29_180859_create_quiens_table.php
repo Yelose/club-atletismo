@@ -13,17 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('somos', function (Blueprint $table) {
+        Schema::create('quiens', function (Blueprint $table) {
             $table->id();
 
             $table->string('titulo');
-            $table->string('imagen');
+            $table->string('image');
             $table->longText('resumen');
 
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('somos');
+        Schema::dropIfExists('quiens');
     }
 };

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\noticia;
-use App\Models\Somos;
+use App\Models\Quien;
 
 class DatabaseSeeder extends Seeder
 {
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             ]
         );
         noticia::factory()->count(10)->create();
-        Somos::factory()->count(6)->create();
+        Quien::factory()->count(6)->create();
         Crono::factory()->count(3)->create();
         
     }
