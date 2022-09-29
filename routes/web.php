@@ -22,4 +22,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/calendar', function () {
+  return view('calendar');
+ })->middleware(['auth'])->name('calendar');
+
+// Esto hace que me pida autentificación para acceder a calendario
+
 require __DIR__ . '/auth.php';

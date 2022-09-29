@@ -14,7 +14,7 @@ class FullCalendarController extends Controller
      */
     public function index(Request $request)
     {
-
+// Esto lo mantengo
         if ($request->ajax()) {
 
             $data = Event::whereDate('start', '>=', $request->start)
@@ -34,7 +34,7 @@ class FullCalendarController extends Controller
      */
     public function ajax(Request $request)
     {
-
+// Esto lo borro en el caso usuario,vacio
         switch ($request->type) {
             case 'add':
                 $event = Event::create([
