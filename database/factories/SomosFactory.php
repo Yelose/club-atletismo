@@ -17,9 +17,9 @@ class SomosFactory extends Factory
     public function definition()
     {
         return [
-            'titulo' => fake()->name(),
-            'imagen' => fake()->name(),
-            'resumen' => fake()->name(),
+            'titulo'=>$this-> fake->sentence,
+            'imagen'=>$this->fake->image(1280,720),
+            'resumen'=>$this->fake->text(800),
         ];
     }
 }

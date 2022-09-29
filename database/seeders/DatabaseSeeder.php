@@ -1,8 +1,8 @@
 <?php
 
 namespace Database\Seeders;
-
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Crono;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
@@ -28,12 +28,8 @@ class DatabaseSeeder extends Seeder
             ]
         );
         noticia::factory()->count(10)->create();
-        Somos::factory()->count(1)->create();
-
-        // \App\Models\User::factory(10)->create();
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Somos::factory()->count(6)->create();
+        Crono::factory()->count(3)->create();
+        
     }
 }

@@ -10,6 +10,7 @@ class HistoryController extends Controller
 {
     public $selected_id, $keyWord, $titulo, $imagen, $resumen;
     public $updateMode = false;
+    
     public function history()
     {
         $somos = Somos::all();

@@ -9,6 +9,10 @@ class Crono extends Model
 {
     use HasFactory;
 
+    public $timestamps = true;
+    
+    protected $table = 'crono';
+
     protected $fillable = [
         'fecha',
         'resumen',

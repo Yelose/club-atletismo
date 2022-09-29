@@ -9,6 +9,10 @@ class Somos extends Model
 {
     use HasFactory;
 
+    public $timestamps = true;
+    
+    protected $table = 'somos';
+    
     protected $fillable = [
         'titulo',
         'imagen',
