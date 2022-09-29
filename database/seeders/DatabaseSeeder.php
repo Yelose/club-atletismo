@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        noticia::factory()->count(10)->create();
+        noticia::factory()->count(24)->create();
 
         // \App\Models\User::factory(10)->create();
 

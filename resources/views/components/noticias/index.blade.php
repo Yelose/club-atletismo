@@ -14,5 +14,5 @@
     </p>
 
     <p>15/06/2022</p>
-    <button>Leer más</button>
+    <a href="/noticia/{{$noticia->id}}">Leer más</a>
 </div>

@@ -9,7 +9,12 @@ class NewsController extends Controller
 {
     public function news()
     {
-        $noticias = noticia::all();
+        $noticias = noticia::paginate(20);
         return view("news", compact("noticias"));
+    }
+    public function noticia($noticia)
+    {
+        $noticia = noticia::findOrFail($noticia);
+        return view('components.noticias.detail', ['noticia' => $noticia]);
     }
 }
