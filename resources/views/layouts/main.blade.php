@@ -23,21 +23,4 @@
 
 </html>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .main-layout {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    .main-layout main {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        overflow-y: auto;
-    }
 </style>

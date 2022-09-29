@@ -1,10 +1,9 @@
 @extends('layouts.main')
 @section("title", "Noticias")
 @section("content")
-<h1>Noticias</h1>
-<div>
+<div class="news-container">
     @foreach ($noticias as $noticia)
-    <x-noticias.aside :noticia="$noticia" />
+    <x-noticias.index :noticia="$noticia" />
     @endforeach
 </div>
 
