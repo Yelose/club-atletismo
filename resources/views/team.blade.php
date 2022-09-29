@@ -1,9 +1,14 @@
 @extends('layouts.main')
 @section("title", "Equipo")
 @section("content")
-<h1>Conoce al equipo</h1>
+
+<section id="athletes">
+    <h1>Conoce al equipo</h1>
+    <img src="https://static3.elnortedecastilla.es/www/multimedia/202009/05/media/equipocontrofeo.jpg" alt="" id="foto-equipo">
+</section>
+
 
     @foreach ($atletas as $atleta)
-    <x-atletas.index :atleta="$atleta" />
+    <x-team.atletas.index :atleta="$atleta" />
     @endforeach
 @endsection

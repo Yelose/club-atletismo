@@ -1,0 +1,1 @@
+<p>{{$trainers->name}}</p>
