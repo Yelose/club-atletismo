@@ -7,5 +7,12 @@
         </figcaption>
     </figure>
     <h2>{{$noticia->subtitulo}}</h2>
+    <p class="news-description">
+        <?php
+        echo nl2br($noticia->noticia);
+        ?>
+    </p>
+
     <p>15/06/2022</p>
+    <button>Leer más</button>
 </div>

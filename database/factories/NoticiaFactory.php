@@ -15,7 +15,7 @@ class NoticiaFactory extends Factory
             'titular' => $this->faker->name,
             'imagen' => $this->faker->name,
             'piefoto' => $this->faker->name,
-            'subtitulo' => $this->faker->paragraph(),
+            'subtitulo' => $this->faker->paragraph(1),
             'noticia' => $this->faker->sentence(300),
             'fecha' => $this->faker->name,
         ];
