@@ -15,7 +15,6 @@ class NoticiasController extends Controller
     public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
     public $updateMode = false;
 
-<<<<<<< HEAD
     public function render()
     {
         $keyWord = '%' . $this->keyWord . '%';
@@ -31,8 +30,6 @@ class NoticiasController extends Controller
         ]);
     }
 
-=======
->>>>>>> develop
     public function cancel()
     {
         $this->resetInput();
