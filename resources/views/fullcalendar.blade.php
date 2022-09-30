@@ -13,7 +13,7 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container text-center">
-                <h3>Laravel 9 FullCalendar Ajax CRUD Tutorial Example</h3>
+                <h3>Full calendar</h3>
             </div>
         </div>
         <div id='calendar'></div>

@@ -16,8 +16,30 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container text-center">
-                <h3>Calendario anual</h3>
+                <h3>Calendario anual-Club Atletismo Villaviciosa</h3>
             </div>
+            <header>
+               
+                <div
+                  class="p-5 text-center bg-image"
+                  style="
+                    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
+                    height: 400px;
+                    margin-top: 58px;
+                  "
+                >
+                  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                      <div class="text-white">
+                        <h1 class="mb-3">Calendario anual</h1>
+                        <h4 class="mb-3">Club atletismo El Gaitero</h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </header>
         </div>
         <div id='calendar'></div>
     </div>
@@ -28,6 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+
         $(document).ready(function() {
 
             var SITEURL = "{{ url('/') }}";
@@ -52,11 +75,24 @@
                 },
                 selectable: true,
                 selectHelper: true,
-                select: function(start, end, allDay) {
-                    var title = prompt('Event Title:');
+                select: async function(start, end, allDay) {
+                    const title;
+                    await swal({
+                        text: 'Introduzca un evento',
+                        content:"input",
+                        button:{
+                            text:"Aceptar"
+                        }
+                    })
+                    .then(inputValue => {
+                        if (!inputValue) throw null;
+                        title = inputValue;
+                    });
+                    
                     if (title) {
                         var start = $.fullCalendar.formatDate(start, "Y-MM-DD");
                         var end = $.fullCalendar.formatDate(end, "Y-MM-DD");
+                        
                         $.ajax({
                             url: SITEURL + "/fullcalendar-ajax",
                             data: {
@@ -67,6 +103,7 @@
                             },
                             type: "POST",
                             success: function(data) {
+                                
                                 displayMessage("Evento creado correctamente");
 
                                 calendar.fullCalendar('renderEvent', {
@@ -80,7 +117,7 @@
                                 calendar.fullCalendar('unselect');
                             }
                         });
-                    }
+                    };     
                 },
                 eventDrop: function(event, delta) {
                     var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
@@ -106,7 +143,7 @@
   title: "Evento creado!",
   text: "",
   icon: "success",
-});;
+});
                     if (deleteMsg) {
                         $.ajax({
                             type: "POST",
@@ -145,7 +182,6 @@
         function displayMessage(message) {
             toastr.success(message, 'Event');
         }
-
     </script>
 </body>
 
@@ -154,11 +190,3 @@
 @endsection
 
 
-<style>
-
-.jumbotron{
-    background-color: red;
-}
-
-
-    </style>
