@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Crud;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\noticia;
+use App\Models\Noticia;
 use Livewire\WithPagination;
 
 class NoticiasController extends Controller
@@ -19,7 +19,7 @@ class NoticiasController extends Controller
     {
         $keyWord = '%' . $this->keyWord . '%';
         return view('noticias.index', [
-            'noticias' => noticia::latest()
+            'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
                 ->orWhere('piefoto', 'LIKE', $keyWord)

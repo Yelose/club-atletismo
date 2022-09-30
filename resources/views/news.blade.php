@@ -5,6 +5,12 @@
     @foreach ($noticias as $noticia)
     <x-noticias.index :noticia="$noticia" />
     @endforeach
-</div>
 
+</div>
+@if ($noticias->hasPages(2))
+<div class="d-flex justify-content-center mb-5">
+    {{ $noticias->links() }}
+    <a href="{{$noticias->nextPageUrl()}}">Siguiente</a>
+</div>
+@endif
 @endsection
