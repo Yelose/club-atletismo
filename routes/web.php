@@ -15,6 +15,8 @@ Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
 Route::get('/achievements', [AchievementsController::class, 'achievements'])->name('achievements');
 
+Route::get('/noticia/{noticia}', [NewsController::class, 'noticia']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

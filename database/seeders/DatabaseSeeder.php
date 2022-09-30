@@ -27,9 +27,16 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        noticia::factory()->count(10)->create();
         Quien::factory()->count(6)->create();
         Crono::factory()->count(3)->create();
         
+        Noticia::factory()->count(24)->create();
+
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
