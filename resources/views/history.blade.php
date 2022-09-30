@@ -1,9 +1,7 @@
 @extends('layouts.main')
 @section("titulo", "Historia")
 @section("content")
-<div>
-<h1>Historia del club</h1>
-
+<div class="history-container">
     @foreach ($quiens as $quien )
     <x-history.quien.index :quien = "$quien"/>
     @endforeach

@@ -12,7 +12,7 @@ class Quien extends Model
 
 public $timestamps = true;
 
-protected $table = 'Quien';
+protected $table = 'quien';
 
 protected $fillable = [
     'titulo'.

@@ -18,8 +18,8 @@ class HistoryController extends Controller
 
     function render(){
         $keyWord = '%' . $this->keyWord . '%';
-        return view('history.quien.index', [
-            'somos' => Quien::latest()
+        return view('components.history.quien.index', [
+            'quien' => Quien::latest()
             ->orWhere('titulo', 'LIKE', $keyWord)
             ->orWhere('imagen', 'LIKE', $keyWord)
             ->orWhere('resumen', 'LIKE', $keyWord)

@@ -11,9 +11,9 @@ return new class extends Migration
         Schema::create('quiens', function (Blueprint $table) {
             $table->id();
 
-            $table->string('titulo');
-            $table->string('image');
-            $table->longText('resumen');
+            $table->string("titulo");
+            $table->string("image");
+            $table->longText("resumen");
 
             $table->timestamps();
         });

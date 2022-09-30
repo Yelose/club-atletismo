@@ -12,9 +12,9 @@ class QuienFactory extends Factory
     public function definition()
     {
         return [
-            'titulo'=>$this-> fake->name,
-            'image'=>$this->fake->image(1280,720),
-            'resumen'=>$this->fake->sentence(800),
+            'titulo' => $this->faker->name,
+            'image' => $this->faker->name,
+            'resumen' => $this->faker->name,
         ];
     }
 }
