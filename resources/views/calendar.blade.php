@@ -16,7 +16,7 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container text-center">
-                <h3>Calendario anual-Club Atletismo Villaviciosa</h3>
+                
             </div>
             <header>
                
@@ -76,7 +76,7 @@
                 selectable: true,
                 selectHelper: true,
                 select: async function(start, end, allDay) {
-                    const title;
+                    let title;
                     await swal({
                         text: 'Introduzca un evento',
                         content:"input",
