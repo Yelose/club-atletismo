@@ -5,6 +5,7 @@
     <x-home.slider />
     <main>
         <aside>
+            <h2>Últimas noticias</h2>
             @foreach ($noticias as $noticia)
             <x-noticias.aside :noticia="$noticia" />
             @endforeach
@@ -13,11 +14,12 @@
             <section id="text">
                 <x-home.intro />
             </section>
+            <section id="testimonials">
+                El club en palabras de sus atletas
+                <x-home.testimonials />
+            </section>
             <section>
                 <x-home.sponsors />
-            </section>
-            <section id="testimonials">
-                <x-home.testimonials />
             </section>
         </div>
     </main>
