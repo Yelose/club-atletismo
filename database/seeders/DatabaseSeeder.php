@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use App\Models\Crono;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -29,7 +29,6 @@ class DatabaseSeeder extends Seeder
         );
         Quien::factory()->count(6)->create();
         Crono::factory()->count(3)->create();
-        
         Noticia::factory()->count(24)->create();
 
         // \App\Models\User::factory(10)->create();

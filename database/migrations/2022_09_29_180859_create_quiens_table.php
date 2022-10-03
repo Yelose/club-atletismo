@@ -13,7 +13,7 @@ return new class extends Migration
 
             $table->string("titulo");
             $table->string("image");
-            $table->longText("resumen");
+            $table->Text("resumen");
 
             $table->timestamps();
         });

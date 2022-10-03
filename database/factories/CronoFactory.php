@@ -11,8 +11,8 @@ class CronoFactory extends Factory
     public function definition()
     {
         return [
-            'fecha'=>$this->fake->name,
-            'resumen'=>$this->fake->text(200),
+            'fecha'=>$this->faker->name,
+            'resumen'=>$this->faker->text(200),
         ];
     }
 }

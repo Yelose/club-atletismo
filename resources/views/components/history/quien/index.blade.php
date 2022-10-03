@@ -1,10 +1,6 @@
-<div class="new-container">
-{{--     <h2>{{$quien->titulo}}</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<div class="history-container">
+    <h1>{{$quien->titulo}}</h1>
     <figure>
-        <img src="{{$quien->image}}" alt="imagen de ejemplo">
-    </figure> --}}
-
-    <p>15/06/2022</p>
-
-</div>
+        <img src="{{$quien->image}}" alt="">
+    </figure>
+    <h2>{{$quien->resumen}}</h2>

@@ -9,14 +9,13 @@ class Quien extends Model
 {
     use HasFactory;
 
+    protected $table = 'quiens';
 
-public $timestamps = true;
+    protected $fillable = [
+        'titulo' .
+            'image',
+        'resumen',
+    ];
 
-protected $table = 'quien';
-
-protected $fillable = [
-    'titulo'.
-    'image',
-    'resumen',
-];
+    public $timestamps = true;
 }

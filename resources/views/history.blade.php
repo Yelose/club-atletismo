@@ -5,8 +5,9 @@
     @foreach ($quiens as $quien )
     <x-history.quien.index :quien = "$quien"/>
     @endforeach
-    <x-history.somos.index/>
+
 </div>
+
 @endsection
 
 

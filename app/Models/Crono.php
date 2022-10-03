@@ -11,7 +11,7 @@ class Crono extends Model
 
     public $timestamps = true;
     
-    protected $table = 'crono';
+    protected $table = 'cronos';
 
     protected $fillable = [
         'fecha',
