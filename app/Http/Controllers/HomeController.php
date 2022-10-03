@@ -10,7 +10,7 @@ class HomeController extends Controller
 
     public function home()
     {
-        $noticias = noticia::all();
+        $noticias = Noticia::all();
 
         return view('home', compact("noticias"));
     }

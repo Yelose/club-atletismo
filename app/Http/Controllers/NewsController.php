@@ -23,7 +23,7 @@ class NewsController extends Controller
     {
         $keyWord = '%' . $this->keyWord . '%';
         return view('noticias.index', [
-            'noticias' => noticia::latest()
+            'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
                 ->orWhere('piefoto', 'LIKE', $keyWord)
