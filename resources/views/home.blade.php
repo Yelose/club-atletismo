@@ -17,8 +17,8 @@
             <section id="testimonials">
                 @foreach ($testimonies as $testimony)
                 <x-home.testimonials :testimony="$testimony"/>
-                @endforeach
-               
+                @endforeach 
+             
             </section>
             <section>
              
