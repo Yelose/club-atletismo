@@ -30,8 +30,6 @@ class DatabaseSeeder extends Seeder
             ]
         );
         Quien::factory()->count(6)->create();
-        Crono::factory()->count(3)->create();
-        Noticia::factory()->count(24)->create();
         Noticia::factory()->count(24)->create();
         Team::factory()->count(10)->create();
 
