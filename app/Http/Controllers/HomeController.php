@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function home()
     {
         $noticias = noticia::all();
-
-        return view('home', compact("noticias"));
+        $sponsors= Sponsor::all();
+        return view('home', compact("noticias", "sponsors"));
     }
 }

@@ -24,7 +24,7 @@
                   class="p-5 text-center bg-image"
                   style="
                     background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
-                    height: 400px;
+                    height: 300px;
                     margin-top: 58px;
                   "
                 >
@@ -41,7 +41,7 @@
                
               </header>
         </div>
-        <div id='calendar'></div>
+        <div class="mb-5" id='calendar'>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -183,6 +183,7 @@
             toastr.success(message, 'Event');
         }
     </script>
+    </div>
 </body>
 
 </html>
