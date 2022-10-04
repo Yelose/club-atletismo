@@ -16,14 +16,14 @@ class NewsController extends Controller
 
     public function news()
     {
-        $noticias = Noticia::paginate(5);
+        $noticias = Noticia::paginate(10);
         return view("news", compact("noticias"));
     }
     public function render()
     {
         $keyWord = '%' . $this->keyWord . '%';
         return view('noticias.index', [
-            'noticias' => noticia::latest()
+            'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
                 ->orWhere('piefoto', 'LIKE', $keyWord)
@@ -32,5 +32,10 @@ class NewsController extends Controller
                 ->orWhere('fecha', 'LIKE', $keyWord)
                 ->paginate(10),
         ]);
+    }
+    public function noticia($noticia)
+    {
+        $noticia = noticia::findOrFail($noticia);
+        return view('components.noticias.detail', ['noticia' => $noticia]);
     }
 }
