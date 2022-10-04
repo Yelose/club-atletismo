@@ -7,8 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
-use App\Models\noticia;
-use App\Models\Quien;
+use App\Models\Noticia;
 
 class DatabaseSeeder extends Seeder
 {
