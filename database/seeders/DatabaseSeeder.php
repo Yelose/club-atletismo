@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\noticia;
 use App\Models\sponsor;
+use App\Models\Testimony;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,6 +31,6 @@ class DatabaseSeeder extends Seeder
         );
         noticia::factory()->count(10)->create();
         sponsor::factory()->count(6)->create();
-       
+        testimony::factory()->count(8)->create();
     }
 }

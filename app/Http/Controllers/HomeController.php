@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\noticia;
+use App\Models\Sponsor;
+use App\Models\Testimony;
 
 class HomeController extends Controller
 {
@@ -12,6 +14,7 @@ class HomeController extends Controller
     {
         $noticias = noticia::all();
         $sponsors= Sponsor::all();
-        return view('home', compact("noticias", "sponsors"));
+        $testimonies= Testimony::all();
+        return view('home', compact("noticias", "sponsors", "testimonies"));
     }
 }

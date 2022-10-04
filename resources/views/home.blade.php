@@ -5,9 +5,9 @@
     <x-home.slider />
     <main>
         <aside>
-            @foreach ($noticias as $noticia)
+           @foreach ($noticias as $noticia)
             <x-noticias.aside :noticia="$noticia" />
-            @endforeach
+            @endforeach 
         </aside>
         <div>
             <section id="text">
@@ -15,10 +15,17 @@
             </section>
             
             <section id="testimonials">
-                <x-home.testimonials />
+                @foreach ($testimonies as $testimony)
+                <x-home.testimonials :testimony="$testimony"/>
+                @endforeach
+               
             </section>
             <section>
-                <x-home.sponsors />
+             
+               @foreach ($sponsors as $sponsor)
+               <x-home.sponsors :sponsor="$sponsor" /> 
+
+               @endforeach
             </section>
         </div>
     </main>
