@@ -1,0 +1,104 @@
+.principal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    .home-banner {
+        max-height: 50vh;
+        overflow: hidden;
+        img {
+            width: 100%;
+            margin-bottom: 3%;
+        }
+    }
+    > main {
+        display: flex;
+        flex-direction: row;
+        padding: 7vh 4vw;
+        gap: 3vw;
+        aside {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            min-width: 200px;
+            gap: 1vh;
+            h2 {
+                padding: 0.5vh;
+            }
+            h3 {
+                width: 100%;
+                padding: 0.5vh;
+                box-shadow: $box-shadow;
+            }
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10vh;
+            justify-content: center;
+            align-items: center;
+            #text {
+                display: flex;
+                flex: 4;
+                max-width: 1100px;
+                color: black;
+                gap: 3vw;
+                .contenedor-foto {
+                    max-width: 400px;
+                    min-width: 260px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text {
+                    justify-content: center;
+                    flex-direction: column;
+                    display: flex;
+                    align-content: center;
+                    gap: 1vw;
+                    .titulo-seccion {
+                        font-size: 22px;
+                        text-transform: uppercase;
+                        color: black;
+                        text-decoration: underline;
+                        text-decoration-color: rgb(0, 0, 0);
+                        text-decoration-thickness: 5px;
+                    }
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 25px;
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+            #testimonials {
+                width: 70%;
+                box-shadow: $box-shadow;
+                padding: calc(1vh + 1vw);
+                border-radius: $border-radius;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .principal-container > main > div #text {
+        flex-direction: column;
+    }
+    .principal-container > main {
+        padding: 2vw;
+    }
+    .principal-container > main div #text .contenedor-foto {
+        display: flex;
+        width: 100%;
+        max-width: none;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .principal-container > main aside {
+        display: none;
+    }
+}

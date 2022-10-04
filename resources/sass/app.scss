@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "variables.scss";
+@import "header.scss";
+@import "home.scss";
+@import "layout.scss";
+@import "news.scss";
+@import "footer.scss";
+@import "pagination.scss";
+
+p {
+    text-align: justify;
+}

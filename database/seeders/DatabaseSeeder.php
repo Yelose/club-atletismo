@@ -4,11 +4,12 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\ExternalLink;
+use App\Models\Team;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Noticia;
 
 class DatabaseSeeder extends Seeder
 {
@@ -28,6 +29,8 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
+        Noticia::factory()->count(24)->create();
+        Team::factory()->count(10)->create();
 
         // ExternalLink::create(
         //     [
@@ -41,7 +44,6 @@ class DatabaseSeeder extends Seeder
         //         'name' => 'Federación Española de Atletismo'
         //     ]
         // );
-        ExternalLink::factory(3)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ExternalLink>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Team>
  */
-class ExternalLinkFactory extends Factory
+class TeamFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,8 +18,9 @@ class ExternalLinkFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'licence' => fake()->name(),
             'image' => fake()->name(),
-            'link' => fake()->name(),
+            'category' => fake()->name(),
         ];
     }
 }
