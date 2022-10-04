@@ -1,13 +1,16 @@
 @extends('layouts.main')
 @section("titulo", "Historia")
 @section("content")
+
 <div class="history-container">
-    @foreach ($quiens as $quien )
-    <x-history.quien.index :quien = "$quien"/>
-    @endforeach
+<h1>{{ $quiens->titulo}}</h1>
+<hr>
+<h2>{{ $quiens->image}}</h2>
+</div>
+<hr>
+<h3>{{ $quiens->resumen}}</h3>
 
 </div>
-
 @endsection
 
 

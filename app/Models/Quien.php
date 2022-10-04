@@ -13,7 +13,7 @@ class Quien extends Model
 
     protected $fillable = [
         'titulo' .
-            'image',
+        'image',
         'resumen',
     ];
 

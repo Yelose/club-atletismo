@@ -10,7 +10,6 @@ return new class extends Migration
     {
         Schema::create('quiens', function (Blueprint $table) {
             $table->id();
-
             $table->string('titulo');
             $table->string('image');
             $table->Text('resumen');

@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 use App\Models\Team;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -29,15 +27,9 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        Quien::factory()->count(6)->create();
+
+        Quien::factory()->count(1)->create();
         Noticia::factory()->count(24)->create();
         Team::factory()->count(10)->create();
-
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }

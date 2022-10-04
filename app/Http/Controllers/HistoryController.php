@@ -12,8 +12,10 @@ class HistoryController extends Controller
     
     public function history()
     {
-        $quiens = Quien::all();
+        // Aquí usamos el modelo "Quien"
+        $quiens = Quien::first(); 
         return view("history", compact("quiens"));
+
     }
 
     function render(){
