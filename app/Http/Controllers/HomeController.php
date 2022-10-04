@@ -12,11 +12,7 @@ class HomeController extends Controller
 
     public function home()
     {
-<<<<<<< HEAD
-        $noticias = Noticia::all();
-=======
         $noticias = DB::table('noticias')->take(12)->get();
->>>>>>> news
 
         return view('home', compact("noticias"));
     }
