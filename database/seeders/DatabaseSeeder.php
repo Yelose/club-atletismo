@@ -6,11 +6,14 @@ namespace Database\Seeders;
 
 use App\Models\ExternalLink;
 use App\Models\Team;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Noticia;
+use App\Models\Sponsor;
+use App\Models\Testimony;
 
 class DatabaseSeeder extends Seeder
 {
@@ -41,5 +44,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        sponsor::factory()->count(6)->create();
+        testimony::factory()->count(8)->create();
     }
 }

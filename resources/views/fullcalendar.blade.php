@@ -1,11 +1,8 @@
-@extends('layouts.main')
-@section("title", "Calendario")
-@section("content")
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Calendario anual</title>
+    <title>Laravel 9 FullCalendar Ajax CRUD Tutorial Example</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
@@ -16,41 +13,18 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container text-center">
-                
+                <h3>Full calendar</h3>
             </div>
-            <header>
-               
-                <div
-                  class="p-5 text-center bg-image"
-                  style="
-                    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
-                    height: 300px;
-                    margin-top: 58px;
-                  "
-                >
-                  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-                    <div class="d-flex justify-content-center align-items-center h-100">
-                      <div class="text-white">
-                        <h1 class="mb-3">Calendario anual</h1>
-                        <h4 class="mb-3">Club atletismo El Gaitero</h4>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-               
-              </header>
         </div>
-        <div class="mb-5" id='calendar'>
+        <div id='calendar'></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
 
+    <script>
         $(document).ready(function() {
 
             var SITEURL = "{{ url('/') }}";
@@ -75,24 +49,11 @@
                 },
                 selectable: true,
                 selectHelper: true,
-                select: async function(start, end, allDay) {
-                    let title;
-                    await swal({
-                        text: 'Introduzca un evento',
-                        content:"input",
-                        button:{
-                            text:"Aceptar"
-                        }
-                    })
-                    .then(inputValue => {
-                        if (!inputValue) throw null;
-                        title = inputValue;
-                    });
-                    
+                select: function(start, end, allDay) {
+                    var title = prompt('Event Title:');
                     if (title) {
                         var start = $.fullCalendar.formatDate(start, "Y-MM-DD");
                         var end = $.fullCalendar.formatDate(end, "Y-MM-DD");
-                        
                         $.ajax({
                             url: SITEURL + "/fullcalendar-ajax",
                             data: {
@@ -103,8 +64,7 @@
                             },
                             type: "POST",
                             success: function(data) {
-                                
-                                displayMessage("Evento creado correctamente");
+                                displayMessage("Event Created Successfully");
 
                                 calendar.fullCalendar('renderEvent', {
                                     id: data.id,
@@ -117,7 +77,7 @@
                                 calendar.fullCalendar('unselect');
                             }
                         });
-                    };     
+                    }
                 },
                 eventDrop: function(event, delta) {
                     var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
@@ -139,11 +99,7 @@
                     });
                 },
                 eventClick: function(event) {
-                    var deleteMsg = swal({
-  title: "Evento creado!",
-  text: "",
-  icon: "success",
-});
+                    var deleteMsg = confirm("Do you really want to delete?");
                     if (deleteMsg) {
                         $.ajax({
                             type: "POST",
@@ -154,22 +110,7 @@
                             },
                             success: function(response) {
                                 calendar.fullCalendar('removeEvents', event.id);
-                                swal({
-  title: "Borrar evento",
-  text: "¿Estas seguro? Si eliminas el evento tendrás que volver a crearlo",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-})
-.then((willDelete) => {
-  if (willDelete) {
-    swal("Tu evento ha sido eliminado", {
-      icon: "success",
-    });
-  } else {
-    swal("No has eliminado el evento");
-  }
-});
+                                displayMessage("Event Deleted Successfully");
                             }
                         });
                     }
@@ -182,12 +123,8 @@
         function displayMessage(message) {
             toastr.success(message, 'Event');
         }
+
     </script>
-    </div>
 </body>
 
 </html>
-
-@endsection
-
-
