@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Team;
+use App\Models\Trainer;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
@@ -29,8 +30,8 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        noticia::factory()->count(10)->create();
-
+        Noticia::factory()->count(10)->create();
+        Trainer::factory()->count(2)->create();
         Team::factory()->count(10)->create();
         // \App\Models\User::factory(10)->create();
 

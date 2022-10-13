@@ -17,7 +17,10 @@ class TrainerFactory extends Factory
     public function definition()
     {
         return [
+            'photo' => fake()->name(),
             'name' => fake()->name(),
+            'roll' => fake()->name(),
+
         ];
     }
 }
