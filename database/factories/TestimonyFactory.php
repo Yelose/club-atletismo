@@ -18,8 +18,7 @@ class TestimonyFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'text' => $this->faker->name,
+            'text' => $this->faker->sentence(60),
         ];
-      
     }
 }

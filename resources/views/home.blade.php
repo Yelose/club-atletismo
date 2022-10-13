@@ -16,19 +16,56 @@
             </section>
 
             <section id="testimonials">
-                @foreach ($testimonies as $testimony)
-                <x-home.testimonials :testimony="$testimony" />
-                @endforeach
+                <h3>El club para sus atletas</h3>
+                <div class="slideshow-container">
+                    @foreach ($testimonials as $testimonial)
+                    <x-home.testimonials :testimonial="$testimonial" />
+                    @endforeach
+                </div>
 
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
             </section>
-            <section>
 
+            <section id="sponsors">
                 @foreach ($sponsors as $sponsor)
                 <x-home.sponsors :sponsor="$sponsor" />
-
                 @endforeach
             </section>
         </div>
     </main>
 </div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
 @endsection
