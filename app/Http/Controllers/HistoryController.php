@@ -20,7 +20,7 @@ class HistoryController extends Controller
 
     function render(){
         $keyWord = '%' . $this->keyWord . '%';
-        return view('components.history.cronologia.index', [
+        return view('history.cronologia.index', [
             'quien' => Quien::latest()
             ->orWhere('titulo', 'LIKE', $keyWord)
             ->orWhere('imagen', 'LIKE', $keyWord)
@@ -30,6 +30,6 @@ class HistoryController extends Controller
     public function cronologia($cronologia)
     {
         $cronologia = cronologia::findOrFail($cronologia);
-        return view('components.history.cronologia.index', ['cronologia' => $cronologia]);
+        return view('history.cronologia.index', ['cronologia' => $cronologia]);
     }
 }
