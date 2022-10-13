@@ -1,1 +1,1 @@
-<p>{{$cronologia}}</p>
+<p>{{$cronologia->fecha}}</p>
