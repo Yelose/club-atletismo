@@ -14,12 +14,19 @@
             <section id="text">
                 <x-home.intro />
             </section>
+
             <section id="testimonials">
-                El club en palabras de sus atletas
-                <x-home.testimonials />
+                @foreach ($testimonies as $testimony)
+                <x-home.testimonials :testimony="$testimony" />
+                @endforeach
+
             </section>
             <section>
-                <x-home.sponsors />
+
+                @foreach ($sponsors as $sponsor)
+                <x-home.sponsors :sponsor="$sponsor" />
+
+                @endforeach
             </section>
         </div>
     </main>

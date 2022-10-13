@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Noticia;
 use Illuminate\Support\Facades\DB;
 use League\CommonMark\Extension\Table\Table;
+use App\Models\Sponsor;
+use App\Models\Testimony;
 
 class HomeController extends Controller
 {
 
     public function home()
+
     {
         $noticias = DB::table('noticias')->take(12)->get();
 
-        return view('home', compact("noticias"));
+        $testimonies = Testimony::all();
+        $sponsors = Sponsor::all();
+        return view('home', compact("noticias", "sponsors", "testimonies"));
     }
 }

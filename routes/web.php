@@ -7,6 +7,7 @@ use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\FullCalendarController;
 
 Route::view('/', 'welcome',[
     'options' => ['option-1', 'option-2', 'option-3']
@@ -18,6 +19,8 @@ Route::get('/history', [HistoryController::class, 'history'])->name('history');
 Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
 Route::get('/achievements', [AchievementsController::class, 'achievements'])->name('achievements');
+Route::get('fullcalendar', [FullCalendarController::class, 'index']);
+Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
 
 Route::get('/noticia/{noticia}', [NewsController::class, 'noticia']);
 
