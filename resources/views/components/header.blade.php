@@ -6,7 +6,7 @@
     <h1>Club de Atletismo El Gaitero</h1>
 
     <div class="buttons">
-        <a href="{{ url('/') }}" class="active">HOME</a>
+        <a href="{{ url('/') }}" class="active">INICIO</a>
         <a href="{{ url('/history') }}">HISTORIA</a>
         <a href="{{ url('/team') }}">EQUIPO</a>
         <a href="{{ url('/news') }}">NOTICIAS</a>
@@ -19,7 +19,7 @@
 </nav>
 <div id="menu" class="hidden">
     <div class="mobile-menu">
-        <a href="{{ url('/') }}">HOME</a>
+        <a href="{{ url('/') }}">INICIO</a>
         <a href="{{ url('/history') }}">HISTORIA</a>
         <a href="{{ url('/team') }}">EQUIPO</a>
         <a href="{{ url('/news') }}">NOTICIAS</a>
