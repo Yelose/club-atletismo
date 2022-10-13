@@ -36,10 +36,10 @@
             });
 
             var calendar = $('#calendar').fullCalendar({
-                editable: true,
+                editable: false,
                 events: SITEURL + "/fullcalendar",
                 displayEventTime: false,
-                editable: true,
+                editable: false,
                 eventRender: function(event, element, view) {
                     if (event.allDay === 'true') {
                         event.allDay = true;
@@ -47,8 +47,8 @@
                         event.allDay = false;
                     }
                 },
-                selectable: true,
-                selectHelper: true,
+                selectable: false,
+                selectHelper: false,
                 select: function(start, end, allDay) {
                     var title = prompt('Event Title:');
                     if (title) {
@@ -61,21 +61,8 @@
                                 start: start,
                                 end: end,
                                 type: 'add'
-                            },
-                            type: "POST",
-                            success: function(data) {
-                                displayMessage("Event Created Successfully");
-
-                                calendar.fullCalendar('renderEvent', {
-                                    id: data.id,
-                                    title: title,
-                                    start: start,
-                                    end: end,
-                                    allDay: allDay
-                                }, true);
-
-                                calendar.fullCalendar('unselect');
                             }
+                            
                         });
                     }
                 },
@@ -99,7 +86,7 @@
                     });
                 },
                 eventClick: function(event) {
-                    var deleteMsg = confirm("Do you really want to delete?");
+                    
                     if (deleteMsg) {
                         $.ajax({
                             type: "POST",
@@ -108,10 +95,7 @@
                                 id: event.id,
                                 type: 'delete'
                             },
-                            success: function(response) {
-                                calendar.fullCalendar('removeEvents', event.id);
-                                displayMessage("Event Deleted Successfully");
-                            }
+                            
                         });
                     }
                 }
