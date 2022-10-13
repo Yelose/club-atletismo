@@ -88,3 +88,34 @@
     color: rgba(255, 255, 255, 0.4);
     text-align: right;
 }
+
+@media only screen and (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+        #other-links {
+            .external-links-container {
+                h4 {
+                    width: 100%;
+                    text-align: center;
+                }
+                .links {
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        #fem-cod {
+            flex-direction: column;
+            > section {
+                display: flex;
+                flex-direction: row !important;
+            }
+        }
+    }
+    .login {
+        text-align: center;
+    }
+}
