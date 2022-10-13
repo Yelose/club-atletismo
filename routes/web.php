@@ -8,6 +8,10 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
 
+Route::view('/', 'welcome',[
+    'options' => ['option-1', 'option-2', 'option-3']
+]);
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar');
 Route::get('/history', [HistoryController::class, 'history'])->name('history');

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section("titulo", "Historia")
 @section("content")
-<h1>Historia del Club</h1>
+
 
 <div class="history.container">
 

@@ -8,16 +8,15 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('quiens', function (Blueprint $table) {
+        Schema::create('cronologias', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->string('image');
+            $table->string('fecha');
             $table->Text('resumen');
             $table->timestamps();
         });
     }
     public function down()
     {
-        Schema::dropIfExists('quiens');
+        Schema::dropIfExists('cronologias');
     }
 };
