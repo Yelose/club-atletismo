@@ -3,21 +3,19 @@
 @section("content")
 
 
-<div class="history.container">
+<div class="history-container">
     <h1>{{ $quiens->titulo}}</h1>
-    <hr>
-    <h2>{{ $quiens->image}}</h2>
+    <img src="{{$quiens->image}}" alt="">
 </div>
-<hr>
-<h3>{{ $quiens->resumen}}</h3>
+    <h3>{{ $quiens->resumen}}</h3>
+
+
+{{-- @foreach ($cronologias as $cronologia)
+    <x-history.cronologia.index :cronologia="$cronologia" />
+@endforeach --}}
+
+@foreach ($cronologias as $cronologia)
+    {{$cronologia->fecha}}
+@endforeach
+
 @endsection
-
-
-@section("content")
-<div class="history.container">
-    <h1>{{ $cronologia->fecha}}</h1>
-    <h3>{{ $cronologia->resumen}}</h3>
-</div>
-@endsection
-
-
