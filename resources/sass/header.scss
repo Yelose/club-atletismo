@@ -4,14 +4,6 @@
     align-items: center;
     padding: 1vh;
     gap: 2vw;
-    .logo-img {
-        width: 5vw;
-        object-fit: contain;
-        border-radius: 50%;
-        align-items: center;
-        max-width: 50px;
-        min-width: 30px;
-    }
     h1 {
         width: 20vw;
         font-size: calc($font-size * 1.2);
@@ -43,12 +35,22 @@
         display: none;
     }
 }
+.logo-img {
+    width: 5vw;
+    object-fit: contain;
+    border-radius: 50%;
+    align-items: center;
+    max-width: 50px;
+    min-width: 30px;
+}
+
 .hidden {
     display: none;
 }
 .mobile-menu {
     display: none;
 }
+
 @media only screen and (max-width: 800px) {
     #nav-menu {
         justify-content: space-between;
