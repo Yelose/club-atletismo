@@ -21,5 +21,6 @@ Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+App::setLocale("es");
 
 require __DIR__ . '/auth.php';
