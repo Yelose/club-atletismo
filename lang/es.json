@@ -1,9 +1,15 @@
 {
-    "October": "October",
+    
     "Log in": "Acceder",
     "Remember me": "Recordar",
     "Forgot your password?": "¿Olvidaste la contraseña?",
-    "Password" :"Contraseña"
+    "Password" :"Contraseña",
+    "Dashboard" :"Tablero administrador",
+    "Log Out" : "Salir"
+    
+    
+    
+
    
 
     
