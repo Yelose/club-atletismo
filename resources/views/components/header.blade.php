@@ -10,8 +10,8 @@
         <a href="{{ url('/history') }}">HISTORIA</a>
         <a href="{{ url('/team') }}">EQUIPO</a>
         <a href="{{ url('/news') }}">NOTICIAS</a>
-        <a href="{{ url('/achievements') }}">LOGROS</a>
-        <a href="{{ url('/calendar') }}">CALENDARIO</a>
+        <a href="{{ url('/fullcalendar') }}">CALENDARIO</a>
+        
     </div>
     <a class="menu-toggle" onclick="toggle()">
         <img src="{{asset('assets/img/menu.png')}}" alt="menu">

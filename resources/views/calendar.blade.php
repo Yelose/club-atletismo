@@ -13,35 +13,36 @@
 </head>
 
 <body>
+ 
     <div class="container">
         <div class="jumbotron">
             <div class="container text-center">
-                
-            </div>
-            <header>
+                <header>
                
-                <div
-                  class="p-5 text-center bg-image"
-                  style="
-                    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
-                    height: 300px;
-                    margin-top: 58px;
-                  "
-                >
-                  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-                    <div class="d-flex justify-content-center align-items-center h-100">
-                      <div class="text-white">
-                        <h1 class="mb-3">Calendario anual</h1>
-                        <h4 class="mb-3">Club atletismo El Gaitero</h4>
-                        
+                    <div
+                      class="p-5 text-center bg-image"
+                      style="
+                        background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/059.webp');
+                        height: 300px;
+                        margin-top: 58px;
+                      "
+                    >
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                          <div class="text-white">
+                            <h1 class="mb-3">Aministrar Calendario</h1>
+                            <h4 class="mb-3">Club atletismo El Gaitero</h4>
+                            
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-               
-              </header>
+                   
+                  </header>
+            </div>
         </div>
-        <div class="mb-5" id='calendar'>
+        <div id='calendar'></div>
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -49,9 +50,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+    <script src='fullcalendar/lang/es.js'></script>
+    <script src='lib/moment.js'></script>
+    <script src='lib/jquery-ui.custom-datepicker.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+    <script src='fullcalendar/lang-all.js'></script>
     <script>
 
         $(document).ready(function() {
+            
 
             var SITEURL = "{{ url('/') }}";
 
@@ -66,6 +74,8 @@
                 events: SITEURL + "/fullcalendar",
                 displayEventTime: false,
                 editable: true,
+                lang: 'es',
+                
                 eventRender: function(event, element, view) {
                     if (event.allDay === 'true') {
                         event.allDay = true;
@@ -182,6 +192,8 @@
         function displayMessage(message) {
             toastr.success(message, 'Event');
         }
+        
+
     </script>
     </div>
 </body>
