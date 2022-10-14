@@ -10,8 +10,8 @@
         <a href="{{ url('/team') }}">EQUIPO</a>
         <a href="{{ url('/news') }}">NOTICIAS</a>
         <a href="{{ url('/achievements') }}">LOGROS</a>
-        <a href="{{ url('/calendar') }}">CALENDARIO</a>
-        <a href="{{ url('/fullcalendar') }}">CALEN usuario</a>
+        
+        <a href="{{ url('/fullcalendar') }}">CALENDARIO</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
