@@ -18,7 +18,7 @@ class NoticiasController extends Controller
     public function render()
     {
         $keyWord = '%' . $this->keyWord . '%';
-        return view('noticias.index', [
+        return view('noticias.admin.view', [
             'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
