@@ -1,3 +1,41 @@
-.history-container{
+body main {
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+}
+
+.history-container {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    margin-top: 1vw;
+    background: white;
+    
+    img{
+        border-radius: 25px;
+        width: 800px;
+        height: 400px;
+    }
+    h1{
+        padding: 20px;
+        color: black;
+        text-transform: capitalize;
+        font-size: 45px;
+        text-align: center;
+        display: grid;
+}
+
+h3{
+    padding: 20px;
+    color: black;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+    display: grid;
+}
+
+.cronologia-containes{
     background: red;
+}
+
 }

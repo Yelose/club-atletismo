@@ -14,16 +14,13 @@ class HistoryController extends Controller
     public function history()
     {
         $quiens = Quien::first(); 
-        $cronologias = Cronologia::first();
-        return view("history", compact("quiens", "cronologias"));
+        $cronologias = Cronologia::all();
+        return view("history", compact("quiens","cronologias"));
     }
 
     function render(){
-        $keyWord = '%' . $this->keyWord . '%';
         return view('history.cronologia.index', [
             'quien' => Cronologia::latest()
-            ->orWhere('fecha', 'LIKE', $keyWord)
-            ->orWhere('resumen', 'LIKE', $keyWord)
         ]);
     }
 }

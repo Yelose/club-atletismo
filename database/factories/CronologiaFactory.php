@@ -10,7 +10,7 @@ class CronologiaFactory extends Factory
     {
         return [
             'fecha' => $this->faker->name,
-            'resumen' => $this->faker->name,
+            'resumen' => $this->faker->sentence(100),
         ];
     }
 }

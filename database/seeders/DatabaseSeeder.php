@@ -39,7 +39,8 @@ class DatabaseSeeder extends Seeder
                 "titulo" => "Historia del Club",
                 "image" => "https://img.asmedia.epimg.net/resizer/xyGk4fiXyjQmFGpG1g1Ys_AfIl0=/1952x1098/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/YNFN6DEDIRMK7GPXBCKTNT6UYA.jpg
                 ",
-                "resumen" => "texto, texto"
+                "resumen" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+                quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?"
             ]
         );
         Cronologia::factory()->count(5)->create();
