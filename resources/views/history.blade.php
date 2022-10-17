@@ -11,9 +11,10 @@
 
 </div>
 
-
+<br><br>
+<div>
 @foreach ($cronologias as $cronologia)
     <x-history.cronologia.index :cronologia="$cronologia" />
 @endforeach
-
+</div>
 @endsection
