@@ -50,6 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@2.9.0/dist/lang/es.js"></script>
     <script src='fullcalendar/fullcalendar.js'></script>
     <script src='fullcalendar/lang/es.js'></script>
     <script src='lib/moment.js'></script>
@@ -70,6 +71,8 @@
             });
 
             var calendar = $('#calendar').fullCalendar({
+                timeZone: 'local',
+                locale: 'es',
                 editable: true,
                 events: SITEURL + "/fullcalendar",
                 displayEventTime: false,
