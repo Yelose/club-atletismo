@@ -32,7 +32,15 @@ class DatabaseSeeder extends Seeder
         );
         Noticia::factory()->count(10)->create();
         Trainer::factory()->count(2)->create();
-        Team::factory()->count(10)->create();
+        Team::factory()->count(10)->create(
+            [
+                "name" => "Susana",
+                "photo" => "https://imagenes.heraldo.es/files/image_654_v1/uploads/imagenes/2022/07/16/world-athletics-championships-4.jpeg
+                ",
+                "roll" => "sub16"
+            ]
+        );
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

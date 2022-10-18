@@ -1,11 +1,9 @@
 <div class="new-container">
-    <h1>{{$trainer->photo}}</h1>
+    <h1>{{$trainer->name}}</h1>
     <figure>
-        <img src="{{$trainer->photo}}" alt="{{$trainer->photo}}">
+        <img src="{{$trainer->photo}}" alt="imagen de ejemplo">
         <figcaption>
-            {{$trainer->photo}}
+            {{$trainer->roll}}
         </figcaption>
-    </figure>
-    <h2>{{$trainer->name}}</h2>
-    <p>15/06/2022</p>
+        </figure>
 </div>

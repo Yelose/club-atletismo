@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+use App\Models\Trainer;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -14,16 +15,8 @@ class TeamController extends Controller
     public function team()
     {
         $atletas = Team::all();
-        return view("team", compact("atletas"));
-
-
-    }
-    public function trainer()
-    {
-        $trainers = Team::all();
-        return view("team", compact("trainers"));
-
-
+        $trainers = Trainer::all();
+        return view("team", compact("atletas", "trainers"));
     }
 
     function render(){
