@@ -14,18 +14,18 @@ Route::view('/', 'welcome',[
 ]);
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar');
 Route::get('/history', [HistoryController::class, 'history'])->name('history');
 Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
 Route::get('/achievements', [AchievementsController::class, 'achievements'])->name('achievements');
 Route::get('fullcalendar', [FullCalendarController::class, 'index']);
 Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
-
-Route::get('/noticia/{noticia}', [NewsController::class, 'noticia']);
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+// Protected Routes
+Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar')->middleware(['auth']);
+
 
 require __DIR__ . '/auth.php';

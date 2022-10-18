@@ -1,3 +1,7 @@
+@extends('layouts.main')
+@section("title", "Calendario")
+@section("content")
+
 <!DOCTYPE html>
 <html>
 
@@ -13,10 +17,32 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container text-center">
-                <h3>Full calendar</h3>
+                
             </div>
+            <header>
+               
+                <div
+                  class="p-5 text-center bg-image"
+                  style="
+                    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
+                    height: 300px;
+                    margin-top: 58px;
+                  "
+                >
+                  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                      <div class="text-white">
+                        <h1 class="mb-3">Calendario anual</h1>
+                        <h4 class="mb-3">Club atletismo El Gaitero</h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </header>
         </div>
-        <div id='calendar'></div>
+        <div class="mb-5" id='calendar'>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -30,16 +56,21 @@
             var SITEURL = "{{ url('/') }}";
 
             $.ajaxSetup({
+               
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                
                 }
             });
 
             var calendar = $('#calendar').fullCalendar({
-                editable: true,
+                timeZone: 'local',
+                locale: 'es',
+                editable: false,
                 events: SITEURL + "/fullcalendar",
                 displayEventTime: false,
-                editable: true,
+                editable: false,
+                
                 eventRender: function(event, element, view) {
                     if (event.allDay === 'true') {
                         event.allDay = true;
@@ -47,8 +78,9 @@
                         event.allDay = false;
                     }
                 },
-                selectable: true,
-                selectHelper: true,
+                selectable: false,
+                selectHelper: false,
+                
                 select: function(start, end, allDay) {
                     var title = prompt('Event Title:');
                     if (title) {
@@ -61,21 +93,8 @@
                                 start: start,
                                 end: end,
                                 type: 'add'
-                            },
-                            type: "POST",
-                            success: function(data) {
-                                displayMessage("Event Created Successfully");
-
-                                calendar.fullCalendar('renderEvent', {
-                                    id: data.id,
-                                    title: title,
-                                    start: start,
-                                    end: end,
-                                    allDay: allDay
-                                }, true);
-
-                                calendar.fullCalendar('unselect');
                             }
+                            
                         });
                     }
                 },
@@ -99,7 +118,7 @@
                     });
                 },
                 eventClick: function(event) {
-                    var deleteMsg = confirm("Do you really want to delete?");
+                    
                     if (deleteMsg) {
                         $.ajax({
                             type: "POST",
@@ -108,10 +127,7 @@
                                 id: event.id,
                                 type: 'delete'
                             },
-                            success: function(response) {
-                                calendar.fullCalendar('removeEvents', event.id);
-                                displayMessage("Event Deleted Successfully");
-                            }
+                            
                         });
                     }
                 }
@@ -126,5 +142,10 @@
 
     </script>
 </body>
-
+<style> 
+.jumbotron {
+background-color: transparent;
+}
+</style>
 </html>
+@endsection
