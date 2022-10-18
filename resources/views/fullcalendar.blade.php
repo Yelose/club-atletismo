@@ -49,7 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@2.9.0/dist/lang/es.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -58,18 +58,22 @@
             $.ajaxSetup({
                
                 headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                 
                 }
+                
             });
-
+           
             var calendar = $('#calendar').fullCalendar({
+               
                 timeZone: 'local',
                 locale: 'es',
                 editable: false,
                 events: SITEURL + "/fullcalendar",
                 displayEventTime: false,
                 editable: false,
+               
+                
                 
                 eventRender: function(event, element, view) {
                     if (event.allDay === 'true') {
@@ -139,7 +143,7 @@
         function displayMessage(message) {
             toastr.success(message, 'Event');
         }
-
+       
     </script>
 </body>
 <style> 

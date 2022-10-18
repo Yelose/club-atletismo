@@ -10,6 +10,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\FullCalendarController;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar')->middleware(['auth']);
 Route::get('/history', [HistoryController::class, 'history'])->name('history');
 Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
@@ -19,9 +20,6 @@ Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
-// Protected Routes
-Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar')->middleware(['auth']);
-
+App::setLocale("es");
 
 require __DIR__ . '/auth.php';

@@ -50,20 +50,22 @@
 
                         </div>
 
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-                        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-                        <script src='fullcalendar/fullcalendar.js'></script>
-                        <script src='fullcalendar/lang/es.js'></script>
-                        <script src='lib/moment.js'></script>
-                        <script src='lib/jquery-ui.custom-datepicker.js'></script>
-                        <script src='fullcalendar/fullcalendar.js'></script>
-                        <script src='fullcalendar/lang-all.js'></script>
-                        <script>
-                            $(document).ready(function() {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@2.9.0/dist/lang/es.js"></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+    <script src='fullcalendar/lang/es.js'></script>
+    <script src='lib/moment.js'></script>
+    <script src='lib/jquery-ui.custom-datepicker.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script>
+    <script src='fullcalendar/lang-all.js'></script>
+    <script>
 
+        $(document).ready(function() {
+            
 
                                 var SITEURL = "{{ url('/') }}";
 
@@ -73,52 +75,54 @@
                                     }
                                 });
 
-                                var calendar = $('#calendar').fullCalendar({
-                                    editable: true,
-                                    events: SITEURL + "/fullcalendar",
-                                    displayEventTime: false,
-                                    editable: true,
-                                    lang: 'es',
-
-                                    eventRender: function(event, element, view) {
-                                        if (event.allDay === 'true') {
-                                            event.allDay = true;
-                                        } else {
-                                            event.allDay = false;
-                                        }
-                                    },
-                                    selectable: true,
-                                    selectHelper: true,
-                                    select: async function(start, end, allDay) {
-                                        let title;
-                                        await swal({
-                                                text: 'Introduzca un evento',
-                                                content: "input",
-                                                button: {
-                                                    text: "Aceptar"
-                                                }
-                                            })
-                                            .then(inputValue => {
-                                                if (!inputValue) throw null;
-                                                title = inputValue;
-                                            });
-
-                                        if (title) {
-                                            var start = $.fullCalendar.formatDate(start, "Y-MM-DD");
-                                            var end = $.fullCalendar.formatDate(end, "Y-MM-DD");
-
-                                            $.ajax({
-                                                url: SITEURL + "/fullcalendar-ajax",
-                                                data: {
-                                                    title: title,
-                                                    start: start,
-                                                    end: end,
-                                                    type: 'add'
-                                                },
-                                                type: "POST",
-                                                success: function(data) {
-
-                                                    displayMessage("Evento creado correctamente");
+            var calendar = $('#calendar').fullCalendar({
+                timeZone: 'local',
+                locale: 'es',
+                editable: true,
+                events: SITEURL + "/fullcalendar",
+                displayEventTime: false,
+                editable: true,
+                lang: 'es',
+                
+                eventRender: function(event, element, view) {
+                    if (event.allDay === 'true') {
+                        event.allDay = true;
+                    } else {
+                        event.allDay = false;
+                    }
+                },
+                selectable: true,
+                selectHelper: true,
+                select: async function(start, end, allDay) {
+                    let title;
+                    await swal({
+                        text: 'Introduzca un evento',
+                        content:"input",
+                        button:{
+                            text:"Aceptar"
+                        }
+                    })
+                    .then(inputValue => {
+                        if (!inputValue) throw null;
+                        title = inputValue;
+                    });
+                    
+                    if (title) {
+                        var start = $.fullCalendar.formatDate(start, "Y-MM-DD");
+                        var end = $.fullCalendar.formatDate(end, "Y-MM-DD");
+                        
+                        $.ajax({
+                            url: SITEURL + "/fullcalendar-ajax",
+                            data: {
+                                title: title,
+                                start: start,
+                                end: end,
+                                type: 'add'
+                            },
+                            type: "POST",
+                            success: function(data) {
+                                
+                                displayMessage("Evento creado correctamente");
 
                                                     calendar.fullCalendar('renderEvent', {
                                                         id: data.id,
