@@ -1,7 +1,9 @@
-<div class="new-container">
-    <h1>{{$trainer->name}}</h1>
+<div class="trainer-container">
     <figure>
         <img src="{{$trainer->photo}}" alt="imagen de ejemplo">
+        <figcaption>
+            {{$trainer->name}}
+        </figcaption>
         <figcaption>
             {{$trainer->roll}}
         </figcaption>

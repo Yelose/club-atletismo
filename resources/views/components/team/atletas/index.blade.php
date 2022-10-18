@@ -1,7 +1,9 @@
-<div class="new-container">
-    <h1>{{$atleta->name}}</h1>
+<div class="teams-container">
     <figure>
-        <img src="{{$atleta->imagen}}" alt="imagen de ejemplo">
+        <img src="{{$atleta->image}}" alt="imagen de ejemplo">
+        <figcaption>
+            {{$atleta->name}}
+        </figcaption>
         <figcaption>
             {{$atleta->licence}}
         </figcaption>
