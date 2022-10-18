@@ -9,6 +9,7 @@
 
     <h1>Equipo técnico</h1>
     <div class = "trainers-container">
+        <div class></div>
         @foreach ($trainers as $trainer)
         <x-team.trainers.index :trainer="$trainer"/>
         @endforeach

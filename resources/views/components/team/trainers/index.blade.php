@@ -1,10 +1,10 @@
 <div class="trainer-container">
     <figure>
         <img src="{{$trainer->photo}}" alt="imagen de ejemplo">
-        <figcaption>
+        <figcaption class = "name-trainer">
             {{$trainer->name}}
         </figcaption>
-        <figcaption>
+        <figcaption class = "roll">
             {{$trainer->roll}}
         </figcaption>
         </figure>
