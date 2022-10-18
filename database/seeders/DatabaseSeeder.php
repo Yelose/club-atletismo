@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Nuria Cuenca ",
-                "licence" => "564573",
+                "licence" => "L564573",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ],
@@ -49,15 +49,15 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Maria Pilar Vives ",
-                "licence" => "564573",
-                "image" => "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/allyson-felix-competes-in-the-first-round-of-the-womens-200-news-photo-1624615950.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
+                "licence" => "L564485",
+                "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
         );
         Team::create(
             [
                 "name" => " Tomasa Palomares ",
-                "licence" => "564573",
+                "licence" => "L857294",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Guadalupe Iniesta ",
-                "licence" => "564573",
+                "licence" => "L295736",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Maria Concepcion Saiz ",
-                "licence" => "564573",
+                "licence" => "L840285",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -81,7 +81,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Agueda García ",
-                "licence" => "564573",
+                "licence" => "L928473",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Daniela Baños ",
-                "licence" => "564573",
+                "licence" => "L948264",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Martina Espino ",
-                "licence" => "564573",
+                "licence" => "L928463",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Alexandra de Diego ",
-                "licence" => "564573",
+                "licence" => "L938274",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -113,7 +113,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Natalia Rios ",
-                "licence" => "564573",
+                "licence" => "L928573",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -121,7 +121,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Araceli Berenguer ",
-                "licence" => "564573",
+                "licence" => "L738574",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -129,7 +129,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => "Elena Cuevas",
-                "licence" => "564573",
+                "licence" => "L856259",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -137,7 +137,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Angustias Exposito ",
-                "licence" => "564573",
+                "licence" => "L654832",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -145,7 +145,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Jennifer Piñero ",
-                "licence" => "564573",
+                "licence" => "L284638",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
@@ -153,7 +153,7 @@ class DatabaseSeeder extends Seeder
         Team::create(
             [
                 "name" => " Aurora Corral ",
-                "licence" => "564573",
+                "licence" => "L375638",
                 "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
                 "category" => "sub18",
             ]
