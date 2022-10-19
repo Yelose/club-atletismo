@@ -101,3 +101,11 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .team-container {
+        .teams-container {
+            width: 40%;
+        }
+    }
+  }
