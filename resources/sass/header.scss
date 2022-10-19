@@ -1,16 +1,11 @@
 #nav-menu {
     background-color: $first-color;
-    padding: 10px;
     display: flex;
     align-items: center;
-    .logo-img {
-        width: 4vw;
-        object-fit: contain;
-        border-radius: 50%;
-        align-items: center;
-    }
+    padding: 1vh;
+    gap: 2vw;
     h1 {
-        width: 18vw;
+        width: 20vw;
         font-size: calc($font-size * 1.2);
         text-align: center;
         color: hsla(0, 0%, 100%, 0.6);
@@ -35,5 +30,54 @@
     }
     .header-right {
         width: 18vw;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+.logo-img {
+    width: 5vw;
+    object-fit: contain;
+    border-radius: 50%;
+    align-items: center;
+    max-width: 50px;
+    min-width: 30px;
+}
+
+.hidden {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    #nav-menu {
+        justify-content: space-between;
+        h1 {
+            font-size: 20px;
+            width: 100%;
+        }
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+        }
+        .buttons {
+            display: none;
+        }
+    }
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.2);
+        a {
+            color: $first-color;
+            padding: 0.7vh;
+            border-bottom: solid 1px white;
+        }
+        a:last-child {
+            border: none;
+        }
     }
 }

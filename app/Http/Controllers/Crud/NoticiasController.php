@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Crud;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\noticia;
+use App\Models\Noticia;
 use Livewire\WithPagination;
 
 class NoticiasController extends Controller
@@ -15,20 +15,20 @@ class NoticiasController extends Controller
     public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
     public $updateMode = false;
 
-    // public function render()
-    // {
-    //     $keyWord = '%' . $this->keyWord . '%';
-    //     return view('noticias.index', [
-    //         'noticias' => noticia::latest()
-    //             ->orWhere('titular', 'LIKE', $keyWord)
-    //             ->orWhere('imagen', 'LIKE', $keyWord)
-    //             ->orWhere('piefoto', 'LIKE', $keyWord)
-    //             ->orWhere('subtitulo', 'LIKE', $keyWord)
-    //             ->orWhere('noticia', 'LIKE', $keyWord)
-    //             ->orWhere('fecha', 'LIKE', $keyWord)
-    //             ->paginate(10),
-    //     ]);
-    // }
+    public function render()
+    {
+        $keyWord = '%' . $this->keyWord . '%';
+        return view('noticias.admin.view', [
+            'noticias' => Noticia::latest()
+                ->orWhere('titular', 'LIKE', $keyWord)
+                ->orWhere('imagen', 'LIKE', $keyWord)
+                ->orWhere('piefoto', 'LIKE', $keyWord)
+                ->orWhere('subtitulo', 'LIKE', $keyWord)
+                ->orWhere('noticia', 'LIKE', $keyWord)
+                ->orWhere('fecha', 'LIKE', $keyWord)
+                ->paginate(10),
+        ]);
+    }
 
     public function cancel()
     {
@@ -104,5 +104,23 @@ class NoticiasController extends Controller
             $record = Noticia::where('id', $id);
             $record->delete();
         }
+        //falta mensaje de error
     }
+
+    // public function render()
+    // {
+    //     $keyWord = '%' . $this->keyWord . '%';
+    //     return view('noticias.index', [
+    //         'noticias' => noticia::latest()
+    //             ->orWhere('titular', 'LIKE', $keyWord)
+    //             ->orWhere('imagen', 'LIKE', $keyWord)
+    //             ->orWhere('piefoto', 'LIKE', $keyWord)
+    //             ->orWhere('subtitulo', 'LIKE', $keyWord)
+    //             ->orWhere('noticia', 'LIKE', $keyWord)
+    //             ->orWhere('fecha', 'LIKE', $keyWord)
+    //             ->paginate(10),
+    //     ]);
+    // }
+
+    // orderBy
 }

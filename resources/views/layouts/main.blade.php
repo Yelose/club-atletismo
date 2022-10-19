@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Club Villaviciosa - @yield("title")</title>
     <!-- <link rel="stylesheet" href="../../css/app.css">
     <script src="{{ asset('js/app.js') }}" defer></script> -->
@@ -17,10 +18,10 @@
     </header>
     <main>
         @yield("content")
-        <x-footer />
+        @include("components.footer")
     </main>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
 </html>
-<style>
-</style>

@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\noticia;
+use App\Models\Noticia;
 use Livewire\WithPagination;
 
 class NewsController extends Controller
@@ -16,14 +15,14 @@ class NewsController extends Controller
 
     public function news()
     {
-        $noticias = noticia::all();
+        $noticias = Noticia::paginate(10);
         return view("news", compact("noticias"));
     }
     public function render()
     {
         $keyWord = '%' . $this->keyWord . '%';
         return view('noticias.index', [
-            'noticias' => noticia::latest()
+            'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
                 ->orWhere('piefoto', 'LIKE', $keyWord)
@@ -32,5 +31,10 @@ class NewsController extends Controller
                 ->orWhere('fecha', 'LIKE', $keyWord)
                 ->paginate(10),
         ]);
+    }
+    public function noticia($noticia)
+    {
+        $noticia = Noticia::findOrFail($noticia);
+        return view('components.noticias.detail', ['noticia' => $noticia]);
     }
 }

@@ -3,11 +3,17 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\ExternalLink;
+use App\Models\Team;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
-use App\Models\noticia;
+use App\Models\Noticia;
+use App\Models\Sponsor;
+use App\Models\Testimony;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,7 +33,10 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        noticia::factory()->count(10)->create();
+        Noticia::factory()->count(24)->create();
+        Team::factory()->count(10)->create();
+
+        ExternalLink::factory()->count(10)->create();
 
         // \App\Models\User::factory(10)->create();
 
@@ -35,5 +44,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        sponsor::factory()->count(6)->create();
+        testimony::factory()->count(8)->create();
     }
 }

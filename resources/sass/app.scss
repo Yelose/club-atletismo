@@ -7,7 +7,15 @@
 @import "layout.scss";
 @import "news.scss";
 @import "footer.scss";
+@import "pagination.scss";
 
 p {
     text-align: justify;
 }
+<<<<<<< HEAD
+=======
+a:hover {
+    filter: invert(0.4);
+    text-decoration: none;
+}
+>>>>>>> 1c773e5f937613a27db2356cb1974cc1ff3ce87e

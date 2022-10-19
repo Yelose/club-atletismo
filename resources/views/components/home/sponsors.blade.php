@@ -1,9 +1,7 @@
-<h1>Patrocinadores</h1>
-
-<p>logo enlace</p>
-<p>logo enlace</p>
-<p>logo enlace</p>
-<p>logo enlace</p>
-<p>logo enlace</p>
-<p>logo enlace</p>
-<p>logo enlace</p>
+<div class="sponsor">
+    <a href="{{$sponsor->link}}">
+        <figure>
+            <img src="{{$sponsor->image}}" alt="{{$sponsor->name}}">
+        </figure>
+    </a>
+</div>
