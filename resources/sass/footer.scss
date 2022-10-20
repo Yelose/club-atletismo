@@ -1,121 +1,89 @@
-#footer {
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer{
+	background-color: #000000d4;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #4d2756;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+    border-radius: 5px 5px;
+	height: 40px;
+	width: 40px;
+    margin:0 17px 17px 0;
+	text-align: center;
+	line-height: 40px;
+	color: #ffffff;
+	transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px;
+    border-radius: 5px;
+   
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
     width: 100%;
-    padding: 2vh 2vw;
-    background-color: $first-color;
+}
+}
+
+
+
+#title-footer{
+    color:white;
+    margin-bottom: 2vh;
+    font-size: 20px;
+    padding: 9px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vh;
-    #title-footer {
-        color: white;
-        text-shadow: grey 1px 1px 1px;
-        width: fit-content;
-    }
-    .footer-container {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        #login {
-            color: white;
-            width: 100%;
-            margin-right: 20px;
-            margin-bottom: 10px;
-            text-align: right;
-        }
-
-        #other-links {
-            display: flex;
-            flex-direction: column;
-            color: grey;
-            display: flex;
-            justify-content: center;
-            gap: 5vw;
-            color: white;
-            section {
-                display: flex;
-                flex-direction: column;
-                gap: 1vw;
-                padding: 0 3vw;
-                .links {
-                    display: flex;
-                    flex-flow: row wrap;
-                    gap: 3vw;
-                    a {
-                        width: 5vw;
-                        min-width: 50px;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-
-        #fem-cod {
-            color: gray;
-            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-                "Lucida Sans", Arial, sans-serif;
-            display: flex;
-            padding: 0 2vw;
-            gap: 2vw;
-            > section {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: fit-content;
-                gap: 2vh;
-                h4 {
-                    white-space: nowrap;
-                }
-            }
-            img {
-                width: 100%;
-                width: 4vw;
-                min-width: 40px;
-                background-color: white;
-                padding: 2px;
-                border-radius: 5px;
-            }
-        }
-    }
-}
-.external-links-container {
-    flex: 1;
-}
-.login {
-    width: 100%;
-    color: rgba(255, 255, 255, 0.4);
-    text-align: right;
-}
-
-@media only screen and (max-width: 600px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2vh;
-        #other-links {
-            .external-links-container {
-                h4 {
-                    width: 100%;
-                    text-align: center;
-                }
-                .links {
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-        }
-        #fem-cod {
-            flex-direction: column;
-            > section {
-                display: flex;
-                flex-direction: row !important;
-            }
-        }
-    }
-    .login {
-        text-align: center;
-    }
 }
