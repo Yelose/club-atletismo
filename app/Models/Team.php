@@ -9,6 +9,10 @@ class Team extends Model
 {
     use HasFactory;
 
+    public $timestamps = true;
+
+    protected $table = 'teams';
+
     protected $fillable = [
         'name',
         'licence',

@@ -19,7 +19,15 @@ class TeamFactory extends Factory
         return [
             'name' => fake()->name(),
             'licence' => fake()->name(),
-            'image' => fake()->name(),
+            'image' => $this->faker->randomElement(
+                [
+                    'https://previews.123rf.com/images/iimages/iimages1306/iimages130601429/20517633-ejemplo-de-una-cara-de-una-ni%C3%B1a-linda-en-un-blanco-apaisada.jpg',
+                    'https://previews.123rf.com/images/iimages/iimages1306/iimages130601429/20517633-ejemplo-de-una-cara-de-una-ni%C3%B1a-linda-en-un-blanco-apaisada.jpg',
+                    'https://previews.123rf.com/images/iimages/iimages1306/iimages130601429/20517633-ejemplo-de-una-cara-de-una-ni%C3%B1a-linda-en-un-blanco-apaisada.jpg',
+                    'https://previews.123rf.com/images/iimages/iimages1306/iimages130601429/20517633-ejemplo-de-una-cara-de-una-ni%C3%B1a-linda-en-un-blanco-apaisada.jpg',
+                    'https://previews.123rf.com/images/iimages/iimages1306/iimages130601429/20517633-ejemplo-de-una-cara-de-una-ni%C3%B1a-linda-en-un-blanco-apaisada.jpg',
+                    'https://previews.123rf.com/images/iimages/iimages1306/iimages130601429/20517633-ejemplo-de-una-cara-de-una-ni%C3%B1a-linda-en-un-blanco-apaisada.jpg',
+                ]),
             'category' => fake()->name(),
         ];
     }
