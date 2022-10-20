@@ -1,14 +1,15 @@
 @extends('layouts.main')
 @section("title", "Historia")
 @section("content")
+
 <div class="history-container">
-    
-    <img src="{{$quiens->image}}" alt="">
+    <figure>
+        <img src="{{$quiens->image}}" alt="">
+    </figure>
 
-    <h1>{{ $quiens->titulo}}</h1>
+    <h1 class="title">{{$quiens->titulo}}</h1>
 
-    <h3>{{ $quiens->resumen}}</h3>
-
+    <h3 class="resumen">{{$quiens->resumen}}</h3>
 </div>
 
 <br><br>
