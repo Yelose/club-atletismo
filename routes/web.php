@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AchievementsController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\Crud\NoticiasController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
@@ -22,4 +23,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 App::setLocale("es");
 
+
+// Admin
+
+Route::get('/admin/news', [NoticiasController::class, 'render'])->middleware(['auth'])->name('admin-noticias');
 require __DIR__ . '/auth.php';
