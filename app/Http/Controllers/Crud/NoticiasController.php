@@ -15,10 +15,23 @@ class NoticiasController extends Controller
     public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
     public $updateMode = false;
 
+    // public function index()
+    // {
+    //     $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
+    //     return view('noticias.index', compact('noticias'));
+    // }
+
+    public function showAll()
+    {
+        $noticias = Noticia::paginate(10);
+        return view("admin.news.index", compact("noticias"));
+    }
+
+
     public function render()
     {
         $keyWord = '%' . $this->keyWord . '%';
-        return view('noticias.index', [
+        return view('admin.news.index', [
             'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
                 ->orWhere('imagen', 'LIKE', $keyWord)
@@ -104,7 +117,7 @@ class NoticiasController extends Controller
             $record = Noticia::where('id', $id);
             $record->delete();
         }
-        //falta mensaje de error
+        // falta mensaje de error
     }
 
     // public function render()
