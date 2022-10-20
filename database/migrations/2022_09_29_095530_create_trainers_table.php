@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('trainers', function (Blueprint $table) {
             $table->id();
+            $table->string("photo");
+            $table->string("name");
+            $table->string("roll");
             $table->timestamps();
         });
     }
