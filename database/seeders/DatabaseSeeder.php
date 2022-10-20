@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
                 quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?"
             ]
         );
-        Cronologia::factory()->count(5)->create();
+        Cronologia::factory()->count(6)->create();
         Team::factory()->count(10)->create();
         ExternalLink::factory()->count(10)->create();
         sponsor::factory()->count(6)->create();
