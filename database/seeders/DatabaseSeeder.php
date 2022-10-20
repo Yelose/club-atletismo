@@ -4,8 +4,12 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+<<<<<<< HEAD
 use App\Models\Team;
 use App\Models\Trainer;
+=======
+use App\Models\ExternalLink;
+>>>>>>> footer
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
@@ -159,6 +163,19 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        // ExternalLink::create(
+        //     [
+        //         'image' => 'https://scontent.fbio3-1.fna.fbcdn.net/v/t39.30808-6/295051103_541072890893480_8364037363715391393_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=WxyVIGXBBXUAX9HEKuf&_nc_ht=scontent.fbio3-1.fna&oh=00_AT_5K9VZTdVVpM0e93wTd0RRH8LHAsiD2S0gR_7MZH0W4A&oe=632F03DF',
+        //         'link' => 'http://fasatle.org',
+        //         'name' => 'Federación Asturiana de Atletismo'
+        //     ],
+        //     [
+        //         'image' => 'https://habber.com/wp-content/uploads/2022/08/Imagen-WEB-clientes-500x500-1.jpg',
+        //         'link' => "https://www.rfea.es/",
+        //         'name' => 'Federación Española de Atletismo'
+        //     ]
+        // );
+        ExternalLink::factory(3)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
