@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ExternalLink;
 use Illuminate\Http\Request;
 use App\Models\Noticia;
 use Illuminate\Support\Facades\DB;
@@ -11,6 +12,7 @@ class HomeController extends Controller
 {
 
     public function home()
+
     {
         $noticias = DB::table('noticias')->take(12)->get();
 

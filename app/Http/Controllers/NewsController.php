@@ -35,7 +35,7 @@ class NewsController extends Controller
     }
     public function noticia($noticia)
     {
-        $noticia = noticia::findOrFail($noticia);
+        $noticia = Noticia::findOrFail($noticia);
         return view('components.noticias.detail', ['noticia' => $noticia]);
     }
 }

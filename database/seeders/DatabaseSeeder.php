@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\ExternalLink;
 use App\Models\Team;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -31,6 +32,8 @@ class DatabaseSeeder extends Seeder
         );
         Noticia::factory()->count(24)->create();
         Team::factory()->count(10)->create();
+
+        ExternalLink::factory()->count(10)->create();
 
         // \App\Models\User::factory(10)->create();
 

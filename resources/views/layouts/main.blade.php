@@ -18,7 +18,7 @@
     </header>
     <main>
         @yield("content")
-        <x-footer />
+        @include("components.footer")
     </main>
 </body>
 
