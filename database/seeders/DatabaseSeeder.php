@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        Noticia::factory()->count(10)->create();
+        Noticia::factory()->count(24)->create();
         Trainer::create(
             [
                 "name" => "Jose Alberto García",

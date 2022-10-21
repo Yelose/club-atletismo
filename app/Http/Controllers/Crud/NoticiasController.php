@@ -27,7 +27,6 @@ class NoticiasController extends Controller
         return view("admin.news.index", compact("noticias"));
     }
 
-
     public function render()
     {
         $keyWord = '%' . $this->keyWord . '%';
