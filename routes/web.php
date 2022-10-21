@@ -11,6 +11,10 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\FullCalendarController;
 
+Route::view('/', 'welcome',[
+    'options' => ['option-1', 'option-2', 'option-3']
+]);
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/calendar', [CalendarController::class, 'calendar'])->name('calendar')->middleware(['auth']);
 Route::get('/history', [HistoryController::class, 'history'])->name('history');

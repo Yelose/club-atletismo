@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>Club Villaviciosa - @yield("title")</title>
+    <title>Club Villaviciosa 
+@yield("title")</title>
     <!-- <link rel="stylesheet" href="../../css/app.css">
     <script src="{{ asset('js/app.js') }}" defer></script> -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+@vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body class="main-layout">
