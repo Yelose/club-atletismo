@@ -49,7 +49,7 @@
 
 
 
-    <form action="{{ route('update', $atleta->id) }}" method="POST">
+    <form action="{{ route('atletas.update', $atleta->id) }}" method="POST">
 
         @csrf
 
