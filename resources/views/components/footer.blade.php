@@ -16,7 +16,7 @@
   	 			<h4>Información</h4>
   	 			<ul>
   	 				<li><a href="#">Avisos legales</a></li>
-  	 				<li><a href="#">Politica de privacidad</a></li>
+  	 				<li><a href="{{ url('/policy') }}">Politica de privacidad</a></li>
   					<a href="{{ route('login') }}" class="login" id='login'>Entrar como Administrador</a>
   	 			</ul>
   	 		</div>
