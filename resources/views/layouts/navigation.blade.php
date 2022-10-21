@@ -21,6 +21,15 @@
                         {{ __('Calendario') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('atletas')" :active="request()->routeIs('atletas')">
+                        {{ __('Atletas') }}
+                    </x-nav-link>
+                </div>
+                {{-- <li class="nav-item">
+                    <a href="{{ url('/atletas') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Atletas</a>
+                </li> --}}
+               
             </div>
 
             <!-- Settings Dropdown -->
