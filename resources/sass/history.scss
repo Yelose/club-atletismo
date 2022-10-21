@@ -1,9 +1,10 @@
-.history-container{
+.history-container {
     width: 100%;
     justify-content: center;
-    figure{
+    figure {
         display: flex;
         width: 70%;
+        max-width: 900px;
         height: auto;
         margin: 0 auto;
         margin-top: 3vw;
@@ -14,76 +15,82 @@
         border-width: 5px;
         border-style: solid;
         flex-direction: column;
-        img{
+        img {
             border-radius: 55px;
         }
+    }
+    > h1 {
+        margin: 10px;
+        padding: 40px;
+        min-width: 500px;
+        text-transform: capitalize;
+        text-align: center;
+        background-color: #eee5ef69;
+        font-size: 2em;
+    }
+    > h3 {
+        margin: 10px;
+        padding: 40px;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: medium;
+        background-color: rgba(231, 233, 236, 0.291);
+    }
 }
-h1.title{
-    margin: 10px;
-    padding: 40px;
-    min-width: 500px;
-    text-transform: capitalize;
-    text-align: center;
-    background-color: #eee5ef69;
-    font-size: 2em;
-}
-h3.resumen{
-    margin: 10px;
-    padding: 40px;
-    text-transform: capitalize;
-    text-align: center;
-    font-size: medium;
-    background-color: rgba(231, 233, 236, 0.291);
-}
-}
+.cronologias-container {
+    padding: calc(1vh + 1vw);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    .cronologia-container {
+        display: flex;
+        width: 55%;
+        padding: 1vh 0;
+        align-items: center;
+        > section {
+            background-color: #eee5ef69;
+            border-radius: $border-radius;
+            padding: 1vh 2vw;
+        }
+        > h2 {
+            margin: 1vw;
+            display: flex;
+            padding: 3vw;
+            width: 90px;
+            height: 90px;
+            background-color: #4d2756;
+            color: aliceblue;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+        }
+    }
+    .cronologia-container:nth-child(odd) {
+        align-self: flex-end;
+    }
 
-div.cronologia-container:nth-child(odd) {
-    display: grid;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    padding: 10px;
-    width: auto;
-    border-radius: 20px;
-    display: flex;
-    margin-top: 1vw;
-    align-items: center;
-    background:#d6ccc0a0;
+    .cronologia-container:nth-child(even) {
+        > h2 {
+            order: 2;
+        }
+    }
 }
-
-h2.date{
-    margin: 1vw;
-    display: flex;
-    padding: 3vw;
-    width: 90px;
-    height: 90px;
-    background-color: #4d2756;
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-}
-
-div.cronologia-container:nth-child(even) {
-    display: grid;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    padding: 10px;
-    width: auto;
-    border-radius: 20px;
-    display: flex;
-    margin-top: 1vw;
-    align-items: center;
-    background: rgb(216, 210, 202);
-}
-h2.date{
-    margin: 1vw;
-    display: flex;
-    padding: 3vw;
-    width: 90px;
-    height: 90px;
-    background-color: #4d2756;
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
+@media only screen and (max-width: 900px) {
+    .history-container {
+        figure {
+            width: 90%;
+        }
+    }
+    .cronologias-container {
+        .cronologia-container {
+            width: 100%;
+            flex-direction: column;
+        }
+        .cronologia-container:nth-child(even) {
+            > h2 {
+                order: 0;
+            }
+        }
+    }
 }
