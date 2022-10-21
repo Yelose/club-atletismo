@@ -39,7 +39,7 @@ class AtletasController extends Controller
 
 
 
-        return redirect()->route('atletas.index')->with('success','Atleta created successfully.');
+        return redirect()->route('atletas.index')->with('success','Atleta se ha creado correctamente.');
     }
 
     public function show(Team $atleta)
@@ -53,7 +53,7 @@ class AtletasController extends Controller
     {
         $atletas = Team::latest()->paginate(15);
 
-        return view('admin.atletas.edit',compact('atletas'));
+        return view('admin.atletas.edit',compact('atleta'));
     }
 
     public function update(Request $request, Team $atleta)
@@ -69,13 +69,13 @@ class AtletasController extends Controller
 
         $atleta->update($request->all());
 
-        return redirect()->route('atletas.index')->with('success','Atleta updated successfully');
+        return redirect()->route('atletas.index')->with('success','Atleta se ha actualizado correctamente');
     }
 
     public function destroy(Team $atleta)
     {
         $atleta->delete();
 
-        return redirect()->route('atletas.index')->with('success','Atleta deleted successfully');
+        return redirect()->route('atletas.index')->with('success','Atleta se ha borrado correctamente');
     }
 }

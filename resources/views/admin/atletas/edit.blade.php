@@ -17,7 +17,7 @@
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Atrás</a>
 
             </div>
 
@@ -31,7 +31,7 @@
 
     <div class="alert alert-danger">
 
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <strong>Uy!</strong>Hay algún problema con los datos.<br><br>
 
         <ul>
 

@@ -61,7 +61,11 @@
 
             <td>{{ $atleta->name }}</td>
 
-            <td>{{ $atleta->detail }}</td>
+            <td>{{ $atleta->licence }}</td>
+
+            <td>{{ $atleta->image }}</td>
+
+            <td>{{ $atleta->category }}</td>
 
             <td>
 
