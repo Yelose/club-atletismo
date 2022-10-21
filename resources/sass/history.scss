@@ -1,28 +1,25 @@
 .history-container {
     width: 100%;
+    max-width: 1400px;
     justify-content: center;
+    margin: auto;
     figure {
         display: flex;
         width: 70%;
-        max-width: 900px;
-        height: auto;
         margin: 0 auto;
         margin-top: 3vw;
         overflow: hidden;
         justify-content: center;
         border-radius: 60px;
-        border-color: #4d2756;
-        border-width: 5px;
-        border-style: solid;
+        border: 4px solid #4d2756;
         flex-direction: column;
         img {
             border-radius: 55px;
         }
     }
     > h1 {
-        margin: 10px;
-        padding: 40px;
-        min-width: 500px;
+        padding: calc(1vw + 1vh + 20px);
+        width: 100%;
         text-transform: capitalize;
         text-align: center;
         background-color: #eee5ef69;
@@ -30,40 +27,46 @@
     }
     > h3 {
         margin: 10px;
-        padding: 40px;
-        text-transform: capitalize;
-        text-align: center;
-        font-size: medium;
+        padding: calc(0.5vh + 1vw);
+        text-align: justify;
         background-color: rgba(231, 233, 236, 0.291);
     }
 }
 .cronologias-container {
-    padding: calc(1vh + 1vw);
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: calc(1vh + 1vw);
+    margin: auto;
     .cronologia-container {
         display: flex;
-        width: 55%;
+        width: calc(50% + 45px);
         padding: 1vh 0;
         align-items: center;
+        gap: 2vw;
         > section {
             background-color: #eee5ef69;
             border-radius: $border-radius;
             padding: 1vh 2vw;
         }
-        > h2 {
-            margin: 1vw;
+        > aside {
+            width: 20%;
             display: flex;
-            padding: 3vw;
-            width: 90px;
-            height: 90px;
-            background-color: #4d2756;
-            color: aliceblue;
-            align-items: center;
             justify-content: center;
-            border-radius: 50px;
+            > h2 {
+                display: flex;
+                padding: 10px;
+                width: 90px;
+                height: 90px;
+                background-color: #4d2756;
+                color: aliceblue;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                text-align: center;
+            }
         }
     }
     .cronologia-container:nth-child(odd) {
@@ -71,7 +74,7 @@
     }
 
     .cronologia-container:nth-child(even) {
-        > h2 {
+        > aside {
             order: 2;
         }
     }
@@ -88,7 +91,7 @@
             flex-direction: column;
         }
         .cronologia-container:nth-child(even) {
-            > h2 {
+            > aside {
                 order: 0;
             }
         }
