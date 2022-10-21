@@ -31,11 +31,7 @@ class AtletasController extends Controller
 
         ]);
 
-
-
         Team::create($request->all());
-
-
 
         return redirect()->route('atletas.index')->with('success','Atleta se ha creado correctamente.');
     }

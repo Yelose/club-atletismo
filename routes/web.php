@@ -8,6 +8,9 @@ use App\Http\Controllers\Crud\AtletasController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\Crud\NoticiasController;
+use App\Http\Controllers\Crud\TrainersController;
+
 use App\Http\Controllers\FullCalendarController;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -20,6 +23,7 @@ Route::get('fullcalendar', [FullCalendarController::class, 'index']);
 Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
 Route::resource('atletas', AtletasController::class);
 Route::resource('trainers', TrainersController::class);
+Route::resource('noticias', NoticiasController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

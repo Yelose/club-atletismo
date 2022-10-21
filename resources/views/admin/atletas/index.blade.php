@@ -87,7 +87,7 @@
 
 
 
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Borrar</button>
 
                 </form>
 

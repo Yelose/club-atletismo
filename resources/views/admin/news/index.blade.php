@@ -5,7 +5,6 @@
         </h2>
     </x-slot>
 
-
     <div class="row">
 
         <div class="col-lg-12 margin-tb">
@@ -18,7 +17,7 @@
 
             <div class="pull-right">
 
-                <a class="btn btn-success" href="{{ route('trainers.create') }}"> Crear nuevo entrenador</a>
+                <a class="btn btn-success" href="{{ route('noticias.create') }}">Crear nueva noticia</a>
 
             </div>
 
@@ -30,11 +29,11 @@
 
     @if ($message = Session::get('success'))
 
-        <div class="alert alert-success">
+    <div class="alert alert-success">
 
-            <p>{{ $message }}</p>
+        <p>{{ $message }}</p>
 
-        </div>
+    </div>
 
     @endif
 
@@ -54,29 +53,36 @@
 
         </tr>
 
-        @foreach ($trainers as $trainer)
+        @foreach ($noticias as $noticia)
 
         <tr>
 
             <td>{{ ++$i }}</td>
 
-            <td>{{ $trainer->name }}</td>
+            <td>{{ $noticia->titular }}</td>
 
-            <td>{{ $trainer->photo }}</td>
+            <td>{{ $noticia->imagen }}</td>
 
-            <td>{{ $trainer->roll }}</td>
+            <td>{{ $noticia->piefoto }}</td>
+
+            <td>{{ $noticia->subtitulo }}</td>
+
+            <td>{{ $noticia->noticia }}</td>
+
+            <td>{{ $noticia->fecha }}</td>
+
 
             <td>
 
-                <form action="{{ route('trainers.destroy',$trainer->id) }}" method="POST">
+                <form action="{{ route('noticias.destroy',$noticia->id) }}" method="POST">
 
 
 
-                    <a class="btn btn-info" href="{{ route('trainers.show',$trainer->id) }}">Mostrar</a>
+                    <a class="btn btn-info" href="{{ route('noticias.show',$noticia->id) }}">Mostrar</a>
 
 
 
-                    <a class="btn btn-primary" href="{{ route('trainers.edit',$trainer->id) }}">Editar</a>
+                    <a class="btn btn-primary" href="{{ route('noticias.edit',$noticia->id) }}">Editar</a>
 
 
 
@@ -100,7 +106,7 @@
 
 
 
-    {!! $trainers->links() !!}
+    {!! $noticias->links() !!}
 
 
 

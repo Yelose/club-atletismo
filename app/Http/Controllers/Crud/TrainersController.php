@@ -1,19 +1,12 @@
 <?php
 
+namespace App\Http\Controllers\Crud;
 
-
-namespace App\Http\Controllers;
-
-
-
-use App\Models\Product;
+use App\Http\Controllers\Controller;
 use App\Models\Trainer;
 use Illuminate\Http\Request;
-use Symfony\Component\Translation\Reader\TranslationReaderInterface;
 
-
-
-class ProductController extends Controller
+class TrainersController extends Controller
 
 {
 
