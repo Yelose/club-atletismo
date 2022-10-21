@@ -17,41 +17,15 @@ class ProductController extends Controller
 
 {
 
-    /**
-
-     * Display a listing of the resource.
-
-     *
-
-     * @return \Illuminate\Http\Response
-
-     */
-
     public function index()
 
     {
 
         $trainers = Trainer::latest()->paginate(15);
 
-
-
-        return view('admin.trainers.index',compact('trainers'))
-
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin.trainers.index',compact('trainers'))->with('i', (request()->input('page', 1) - 1) * 5);
 
     }
-
-
-
-    /**
-
-     * Show the form for creating a new resource.
-
-     *
-
-     * @return \Illuminate\Http\Response
-
-     */
 
     public function create()
 
@@ -74,20 +48,17 @@ class ProductController extends Controller
 
         ]);
 
-
-
         Trainer::create($request->all());
 
-
-
-        return redirect()->route('trainers.index')->with('success','Trainer created successfully.');
+        return redirect()->route('trainers.index')->with('success','Entrenador se ha creado correctamente');
 
     }
 
 
-    public function show(Trainer $trainers)
+    public function show(Trainer $trainer)
 
     {
+        $trainers = Trainer::latest()->paginate(15);
 
         return view('admin.trainers.show',compact('trainer'));
 
@@ -96,6 +67,7 @@ class ProductController extends Controller
     public function edit(Trainer $trainer)
 
     {
+        $trainers = Trainer::latest()->paginate(15);
 
         return view('admin.trainers.edit',compact('trainer'));
 
@@ -103,7 +75,6 @@ class ProductController extends Controller
 
 
     public function update(Request $request, Trainer $trainer)
-
     {
 
         $request->validate([
@@ -114,41 +85,19 @@ class ProductController extends Controller
 
         ]);
 
+        $trainer->update($request->all());
 
-
-        $product->update($request->all());
-
-
-
-        return redirect()->route('products.index')
-
-                        ->with('success','Product updated successfully');
+        return redirect()->route('trainers.index')->with('success','Entrenador se ha actualizado correctamente');
 
     }
 
-    /**
-
-     * Remove the specified resource from storage.
-
-     *
-
-     * @param  \App\Models\Product  $product
-
-     * @return \Illuminate\Http\Response
-
-     */
-
-    public function destroy(Product $product)
+    public function destroy(Trainer $trainer)
 
     {
 
-        $product->delete();
+        $trainer->delete();
 
-
-
-        return redirect()->route('products.index')
-
-                        ->with('success','Product deleted successfully');
+        return redirect()->route('trainers.index')->with('success','Entrenador se ha borrado correctamente');
 
     }
 

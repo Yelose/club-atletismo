@@ -19,6 +19,7 @@ Route::get('/achievements', [AchievementsController::class, 'achievements'])->na
 Route::get('fullcalendar', [FullCalendarController::class, 'index']);
 Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
 Route::resource('atletas', AtletasController::class);
+Route::resource('trainers', TrainersController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

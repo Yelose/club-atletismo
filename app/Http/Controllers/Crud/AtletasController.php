@@ -12,8 +12,6 @@ class AtletasController extends Controller
     {
         $atletas = Team::latest()->paginate(15);
 
-
-
         return view('admin.atletas.index',compact('atletas'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
