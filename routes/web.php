@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AchievementsController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\Crud\AtletasController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
@@ -17,6 +18,7 @@ Route::get('/team', [TeamController::class, 'team'])->name('team');
 Route::get('/achievements', [AchievementsController::class, 'achievements'])->name('achievements');
 Route::get('fullcalendar', [FullCalendarController::class, 'index']);
 Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
+Route::resource('atletas', AtletasController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

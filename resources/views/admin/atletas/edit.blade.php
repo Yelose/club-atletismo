@@ -11,7 +11,7 @@
 
             <div class="pull-left">
 
-                <h2>Añade una nueva atleta</h2>
+                <h2>Editar Atleta</h2>
 
             </div>
 
@@ -49,9 +49,11 @@
 
 
 
-    <form action="{{ route('atletas.store') }}" method="POST">
+    <form action="{{ route('update', $atleta->id) }}" method="POST">
 
         @csrf
+
+        @method('PUT')
 
 
 
@@ -63,7 +65,7 @@
 
                     <strong>Nombre:</strong>
 
-                    <input type="text" name="name" class="form-control" placeholder="Name">
+                    <input type="text" name="name" value="{{ $atleta->name }}" class="form-control" placeholder="Name">
 
                 </div>
 
@@ -71,44 +73,41 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
 
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
 
-                    <div class="form-group">
+                    <strong>Licencia:</strong>
 
-                        <strong>Licencia:</strong>
+                    <textarea class="form-control" style="height:150px" name="licence" placeholder="Licence">{{ $atleta->licence }}</textarea>
 
-                        <input type="text" name="licence" class="form-control" placeholder="Licence">
+                </div>
 
-                    </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                <div class="form-group">
+
+                    <strong>Foto:</strong>
+
+                    <textarea class="form-control" style="height:150px" name="image" placeholder="Image">{{ $atleta->image }}</textarea>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                <div class="form-group">
+
+                    <strong>Categoría:</strong>
+
+                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category">{{ $atleta->category }}</textarea>
 
                 </div>
 
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <div class="form-group">
-
-                        <strong>Foto:</strong>
-
-                        <input type="text" name="image" class="form-control" placeholder="Image">
-
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-
-                        <div class="form-group">
-
-                            <strong>Categoría:</strong>
-
-                            <input type="text" name="category" class="form-control" placeholder="Category">
-
-                        </div>
-
-                    </div>
-
-                </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
 
