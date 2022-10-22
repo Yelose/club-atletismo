@@ -47,10 +47,10 @@
                 <input name="subtitulo" class="form-control" placeholder="Subtitulo"></input>
             </div>
 
-            <div>
+            <section>
                 <strong>Noticia:</strong>
                 <textarea name="noticia" class="form-control" placeholder="Noticia"></textarea>
-            </div>
+            </section>
 
             <section class="buttons-group">
                 <button type="submit" class="create-button">Submit</button>
