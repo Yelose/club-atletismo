@@ -47,22 +47,20 @@
             </div>
 
             <div class="form-group">
-                <strong>Contenido de la noticia:</strong>
-                <textarea class="form-control" style="height:150px" name="noticia"
-                    placeholder="Contenido de la noticia">{{ $noticia->noticia }}</textarea>
-            </div>
-
-            <div class="form-group">
                 <strong>Fecha:</strong>
                 <input type="text" name="fecha" value="{{ $noticia->fecha }}" class="form-control" placeholder="Name">
             </div>
 
-
-            <section class="buttons-group">
-                <a class="cancel-button" href="{{ route('noticias.index') }}">Cancelar</a>
-                <button type="submit" class="create-button">Aceptar</button>
+            <section class="form-group">
+                <strong>Contenido de la noticia:</strong>
+                <textarea class="form-control" style="height:150px" name="noticia"
+                    placeholder="Contenido de la noticia">{{ $noticia->noticia }}</textarea>
             </section>
 
+            <section class="buttons-group">
+                <button type="submit" class="create-button">Aceptar</button>
+                <a class="cancel-button" href="{{ route('noticias.index') }}"> Cancelar</a>
+            </section>
         </form>
     </div>
 </x-app-layout>

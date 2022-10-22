@@ -81,6 +81,9 @@
                 box-shadow: inset 1px 1px 2px 1px gray;
             }
         }
+        > section {
+            width: 100%;
+        }
     }
 }
 .table-long-text {
