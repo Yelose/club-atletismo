@@ -1,5 +1,5 @@
 <footer class="footer">
-  	 <div class="container">
+    <div class="container">
         <h2 id="title-footer"> Club atletismo El Gaitero </h2>
   	 	<div class="row">
            <div class="footer-col">
@@ -16,7 +16,7 @@
   	 			<h4>Información</h4>
   	 			<ul>
   	 				<li><a href="#">Avisos legales</a></li>
-  	 				<li><a href="#">Politica de privacidad</a></li>
+  	 				<li><a href="{{ url('/policy') }}">Politica de privacidad</a></li>
   					<a href="{{ route('login') }}" class="login" id='login'>Entrar como Administrador</a>
   	 			</ul>
   	 		</div>
@@ -33,4 +33,11 @@
   </footer>
 
 
+  
 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

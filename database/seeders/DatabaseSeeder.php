@@ -7,15 +7,18 @@ namespace Database\Seeders;
 use App\Models\Team;
 use App\Models\Trainer;
 use App\Models\ExternalLink;
+use App\Models\Cronologia;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
-use App\Models\noticia;
+use App\Models\Noticia;
+use App\Models\Quien;
+use App\Models\Sponsor;
+use App\Models\Testimony;
 
 class DatabaseSeeder extends Seeder
 {
-
     public function run()
     {
         DB::statement("SET foreign_key_checks=0");
@@ -31,7 +34,7 @@ class DatabaseSeeder extends Seeder
                 "password" => Hash::make("admin")
             ]
         );
-        Noticia::factory()->count(10)->create();
+        Noticia::factory()->count(24)->create();
         Trainer::create(
             [
                 "name" => "Jose Alberto García",
@@ -179,5 +182,19 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        Quien::factory()->create(
+            [
+                "titulo" => "Historia del Club",
+                "image" => "https://img.asmedia.epimg.net/resizer/xyGk4fiXyjQmFGpG1g1Ys_AfIl0=/1952x1098/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/YNFN6DEDIRMK7GPXBCKTNT6UYA.jpg
+                ",
+                "resumen" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+                quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,  quaerat?"
+            ]
+        );
+        Cronologia::factory()->count(6)->create();
+        Team::factory()->count(10)->create();
+        ExternalLink::factory()->count(10)->create();
+        sponsor::factory()->count(6)->create();
+        testimony::factory()->count(8)->create();
     }
 }
