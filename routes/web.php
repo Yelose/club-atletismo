@@ -11,9 +11,15 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Crud\NoticiasController;
 use App\Http\Controllers\Crud\TrainersController;
+use App\Http\Controllers\Crud\ImageController;
 
 use App\Http\Controllers\FullCalendarController;
 use App\Http\Controllers\PolicyController;
+
+Route::controller(ImageController::class)->group(function(){
+    Route::get('image-upload', 'index');
+    Route::post('image-upload', 'store')->name('image.store');
+});
 
 Route::view('/', 'welcome',[
     'options' => ['option-1', 'option-2', 'option-3']
@@ -42,6 +48,5 @@ App::setLocale("es");
 
 // Admin
 
-Route::resource('noticias', NewsController::class);
 Route::get('/admin/news', [NoticiasController::class, 'render'])->middleware(['auth'])->name('admin-noticias');
 require __DIR__ . '/auth.php';
