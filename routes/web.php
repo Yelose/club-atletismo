@@ -10,6 +10,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\FullCalendarController;
+use App\Http\Controllers\PolicyController;
 
 Route::view('/', 'welcome',[
     'options' => ['option-1', 'option-2', 'option-3']
@@ -26,6 +27,7 @@ Route::get('/news', [NewsController::class, 'news'])->name('news');
 
 Route::get('/noticia/{noticia}', [NewsController::class, 'noticia']);
 
+Route::get('/policy',[PolicyController::class, 'policy']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
