@@ -2,6 +2,10 @@
 @section("title", "Inicio")
 @section("content")
 <div class="principal-container">
+    <div id="cookies">
+        <p>Esta página lleva las mínimas cookies por ley.</p>
+        <p onclick="cookie()">--x--</p>
+    </div>
     <x-home.slider />
     <main>
         <aside>
@@ -36,6 +40,7 @@
     </main>
 </div>
 <script>
+
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -62,6 +67,7 @@
         }
         slides[slideIndex - 1].style.display = "block";
     }
+
 </script>
 
 @endsection
