@@ -12,10 +12,8 @@ class HomeController extends Controller
 
     public $updateMode = false;
     public function home()
-
     {
         $noticias = DB::table('noticias')->take(12)->get();
-
         $testimonials = Testimony::all();
         $sponsors = Sponsor::all();
         return view('home', compact("noticias", "sponsors", "testimonials"));
@@ -26,8 +24,8 @@ class HomeController extends Controller
         $keyWord = '%' . $this->keyWord . '%';
         return view('components.home.testimonials', [
             'testimonials' => Testimony::latest()
-                ->orWhere('name', 'LIKE', $keyWord)
-                ->orWhere('text', 'LIKE', $keyWord)
+            ->orWhere('name', 'LIKE', $keyWord)
+            ->orWhere('text', 'LIKE', $keyWord)
         ]);
     }
 }
