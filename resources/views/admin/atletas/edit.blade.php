@@ -17,66 +17,42 @@
         </div>
     </div>
 
-
-
     @if ($errors->any())
-
     <div class="alert alert-danger">
         <strong>Uy!</strong>Hay algún problema con los datos.<br><br>
-
         <ul>
-
             @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
             @endforeach
-
         </ul>
-
     </div>
-
     @endif
 
-
-
     <form action="{{ route('atletas.update', $atleta->id) }}" method="POST">
-
         @csrf
         @method('PUT')
 
         <div class="row">
-
             <div class="col-xs-12 col-sm-12 col-md-12">
-
                 <div class="form-group">
-
                     <strong>Nombre:</strong>
-
                     <input type="text" name="name" value="{{ $atleta->name }}" class="form-control" placeholder="Name">
-
                 </div>
-
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
-
                 <div class="form-group">
-
                     <strong>Licencia:</strong>
-
-                    <textarea class="form-control" style="height:150px" name="licence" placeholder="Licence">{{ $atleta->licence }}</textarea>
-
+                    <input class="form-control" style="height:150px" name="licence" placeholder="Licence">{{
+                    $atleta->licence }}</input>
                 </div>
-
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
-
                 <div class="form-group">
-
                     <strong>Foto:</strong>
-
-                    <textarea class="form-control" style="height:150px" name="image" placeholder="Image">{{ $atleta->image }}</textarea>
-
+                    <input class="form-control" style="height:150px" name="image" placeholder="Image">{{ $atleta->image
+                    }}</input>
                 </div>
 
             </div>
@@ -87,7 +63,8 @@
 
                     <strong>Categoría:</strong>
 
-                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category">{{ $atleta->category }}</textarea>
+                    <input class="form-control" style="height:150px" name="category" placeholder="Category">{{
+                    $atleta->category }}</input>
 
                 </div>
 
