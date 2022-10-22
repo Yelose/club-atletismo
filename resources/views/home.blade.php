@@ -16,7 +16,7 @@
             </section>
 
             <section id="testimonials">
-                <h3>El club para sus atletas</h3>
+                <h3>El club en palabras de sus atletas</h3>
                 <div class="slideshow-container">
                     @foreach ($testimonials as $testimonial)
                     <x-home.testimonials :testimonial="$testimonial" />
