@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section("title", "Policy")
 @section('content')
- 
+<div class="container">
 <div class="policy">
 <h1>Cookies Policy</h1>
 <p>Last updated: October 20, 2022</p>
@@ -63,5 +63,6 @@
 <ul>
 <li>By email: admin@admin.com</li>
 </ul>
+</div>
 </div>
 @endsection
