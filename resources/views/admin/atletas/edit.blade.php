@@ -4,82 +4,57 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    <div class="crud-create-edit-container">
+        <h2>Editar Atleta</h2>
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Editar Atleta</h2>
-            </div>
-
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Atrás</a>
-            </div>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Uy!</strong>Hay algún problema con los datos.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
         </div>
+        @endif
+
+        <form action="{{ route('atletas.update', $atleta->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+
+            <div class="form-group">
+                <strong>Nombre:</strong>
+                <input type="text" name="name" value="{{ $atleta->name }}" class="form-control" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <strong>Licencia:</strong>
+                <input class="form-control" name="licence" placeholder="Licence" value="{{
+                $atleta->licence }}"></input>
+            </div>
+
+            <div class="form-group">
+                <strong>Foto:</strong>
+                <input class="form-control" name="image" placeholder="Image" value="{{
+                $atleta->image
+                }}"></input>
+            </div>
+            <div>
+                <strong>Categoría:</strong>
+                <input class="form-control" name="category" placeholder="Category" value="{{
+                $atleta->category }}"></input>
+
+            </div>
+
+            <section class="buttons-group">
+                <button type="submit" class="create-button">Aceptar</button>
+                <a class="cancel-button" href="{{ route('atletas.index') }}">Cancelar</a>
+            </section>
+
     </div>
-
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Uy!</strong>Hay algún problema con los datos.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-
-    <form action="{{ route('atletas.update', $atleta->id) }}" method="POST">
-        @csrf
-        @method('PUT')
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nombre:</strong>
-                    <input type="text" name="name" value="{{ $atleta->name }}" class="form-control" placeholder="Name">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Licencia:</strong>
-                    <input class="form-control" style="height:150px" name="licence" placeholder="Licence">{{
-                    $atleta->licence }}</input>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Foto:</strong>
-                    <input class="form-control" style="height:150px" name="image" placeholder="Image">{{ $atleta->image
-                    }}</input>
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-
-                <div class="form-group">
-
-                    <strong>Categoría:</strong>
-
-                    <input class="form-control" style="height:150px" name="category" placeholder="Category">{{
-                    $atleta->category }}</input>
-
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-
-            </div>
-
-        </div>
 
 
 
     </form>
-
+    </div>
 </x-app-layout>

@@ -5,104 +5,43 @@
         </h2>
     </x-slot>
 
-<div class="row">
+    <div class="crud-create-edit-container">
+        <h2>Añadir nuevo entrenador</h2>
 
-    <div class="col-lg-12 margin-tb">
-
-        <div class="pull-left">
-
-            <h2>Añadir nuevo entrenador</h2>
-
-        </div>
-
-        <div class="pull-right">
-
-            <a class="btn btn-primary" href="{{ route('trainers.index') }}"> Volver</a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-@if ($errors->any())
-
-    <div class="alert alert-danger">
-
-        <strong>Uy!</strong>Hay algún error en los datos introducidos.<br><br>
-
-        <ul>
-
-            @foreach ($errors->all() as $error)
-
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Uy!</strong>Hay algún error en los datos introducidos.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
-            @endforeach
-
-        </ul>
-
-    </div>
-
-@endif
-
-
-
-<form action="{{ route('trainers.store') }}" method="POST">
-
-    @csrf
-
-
-
-     <div class="row">
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-
+        <form action="{{ route('trainers.store') }}" method="POST">
+            @csrf
             <div class="form-group">
-
                 <strong>Nombre:</strong>
-
-                <input type="text" name="name" class="form-control" placeholder="Name">
-
+                <input type="text" name="name" class="form-control" placeholder="Nombre">
             </div>
 
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-
             <div class="form-group">
-
                 <strong>Foto:</strong>
-
-                <textarea class="form-control" style="height:150px" name="photo" placeholder="Photo"></textarea>
-
+                <input class="form-control" name="photo" placeholder="Imagen"></input>
             </div>
-
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
 
             <div class="form-group">
-
                 <strong>Puesto:</strong>
-
-                <textarea class="form-control" style="height:150px" name="roll" placeholder="Roll"></textarea>
-
+                <input class="form-control" name="roll" placeholder="Nombre del puesto que ocupa"></input>
             </div>
 
-        </div>
+            <section class="buttons-group">
+                <button type="submit" class="create-button">Aceptar</button>
+                <a class="cancel-button" href="{{ route('trainers.index') }}">Cancelar</a>
+            </section>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-
-                <button type="submit" class="btn btn-primary">Aceptar</button>
-
-        </div>
-
+        </form>
     </div>
-
-
-
-</form>
 
 </x-app-layout>

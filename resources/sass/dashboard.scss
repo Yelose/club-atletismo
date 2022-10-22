@@ -1,0 +1,35 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    p {
+        width: 100%;
+        text-align: left;
+    }
+    > section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 3vw;
+        margin: 4vh 0;
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 3px solid $first-color;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            h2 {
+                font-size: clamp(20px, 3vw, 30px);
+                background-color: rgb(242, 207, 255);
+                border-radius: 10px 10px 0 0;
+                padding: 1vh 2vw;
+                overflow: hidden;
+            }
+            strong {
+                font-size: clamp(36px, 5vw, 56px);
+            }
+        }
+    }
+}
