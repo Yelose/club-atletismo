@@ -6,23 +6,15 @@
     </x-slot>
 
     <div class="row">
-
         <div class="col-lg-12 margin-tb">
-
             <div class="pull-left">
-
-                <h2>Añadir nueva noticia</h2>
-
+                <h2>Editar Atleta</h2>
             </div>
 
             <div class="pull-right">
-
-                <a class="btn btn-primary" href="{{ route('noticias.index') }}"> Volver</a>
-
+                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Atrás</a>
             </div>
-
         </div>
-
     </div>
 
 
@@ -30,15 +22,12 @@
     @if ($errors->any())
 
     <div class="alert alert-danger">
-
-        <strong>Uy!</strong> Hay algún problema con los datos introducidos.<br><br>
+        <strong>Uy!</strong>Hay algún problema con los datos.<br><br>
 
         <ul>
 
             @foreach ($errors->all() as $error)
-
             <li>{{ $error }}</li>
-
             @endforeach
 
         </ul>
@@ -49,11 +38,10 @@
 
 
 
-    <form action="{{ route('noticias.store') }}" method="POST">
+    <form action="{{ route('atletas.update', $atleta->id) }}" method="POST">
 
         @csrf
-
-
+        @method('PUT')
 
         <div class="row">
 
@@ -61,20 +49,33 @@
 
                 <div class="form-group">
 
-                    <strong>Titular:</strong>
+                    <strong>Nombre:</strong>
 
-                    <input type="text" name="titular" class="form-control" placeholder="Titular">
+                    <input type="text" name="name" value="{{ $atleta->name }}" class="form-control" placeholder="Name">
 
                 </div>
 
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                <div class="form-group">
+
+                    <strong>Licencia:</strong>
+
+                    <textarea class="form-control" style="height:150px" name="licence" placeholder="Licence">{{ $atleta->licence }}</textarea>
+
+                </div>
+
+            </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12">
 
                 <div class="form-group">
 
                     <strong>Foto:</strong>
 
-                    <input type="text" name="imagen" class="form-control" placeholder="Imagen">
+                    <textarea class="form-control" style="height:150px" name="image" placeholder="Image">{{ $atleta->image }}</textarea>
 
                 </div>
 
@@ -84,40 +85,11 @@
 
                 <div class="form-group">
 
-                    <strong>Pie de foto:</strong>
+                    <strong>Categoría:</strong>
 
-                    <input type="text" name="piefoto" class="form-control" placeholder="Piefoto">
-
-                </div>
-
-            </div>
-
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-
-                <div class="form-group">
-
-                    <strong>Subtítulo:</strong>
-
-                    <textarea class="form-control" style="height:150px" name="subtitulo" placeholder="Subtitulo"></textarea>
+                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category">{{ $atleta->category }}</textarea>
 
                 </div>
-                <div class="form-group">
-
-                    <strong>Noticia:</strong>
-
-                    <textarea class="form-control" style="height:150px" name="noticia" placeholder="Noticia"></textarea>
-
-                </div>
-
-                <div class="form-group">
-
-                    <strong>Fecha:</strong>
-
-                    <input type="text" name="fecha" class="form-control" placeholder="Fecha">
-
-                </div>
-
 
             </div>
 

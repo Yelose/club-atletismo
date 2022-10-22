@@ -11,13 +11,13 @@
 
             <div class="pull-left">
 
-                <h2>Mostrar atletas</h2>
+                <h2>Mostrar entrenador</h2>
 
             </div>
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('trainers.index') }}"> Volver</a>
 
             </div>
 
@@ -33,9 +33,9 @@
 
             <div class="form-group">
 
-                <strong>Name:</strong>
+                <strong>Nombre:</strong>
 
-                {{ $atleta->name }}
+                {{ $trainer->name }}
 
             </div>
 
@@ -45,13 +45,26 @@
 
             <div class="form-group">
 
-                <strong>Details:</strong>
+                <strong>Foto:</strong>
 
-                {{ $atleta->detail }}
+                {{ $trainer->photo }}
 
             </div>
 
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Puesto:</strong>
+
+                {{ $trainer->roll }}
+
+            </div>
+
+        </div>
+
 
     </div>
 

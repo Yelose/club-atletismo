@@ -5,85 +5,55 @@
         </h2>
     </x-slot>
 
+
     <div class="row">
-
         <div class="col-lg-12 margin-tb">
-
             <div class="pull-left">
-
                 <h2>Laravel 9 CRUD Example from scratch - ItSolutionStuff.com</h2>
-
             </div>
 
             <div class="pull-right">
-
-                <a class="btn btn-success" href="{{ route('noticias.create') }}">Crear nueva noticia</a>
-
+                <a class="btn btn-success" href="{{ route('trainers.create') }}"> Crear nuevo entrenador</a>
             </div>
-
         </div>
-
     </div>
 
 
 
     @if ($message = Session::get('success'))
-
     <div class="alert alert-success">
-
         <p>{{ $message }}</p>
-
     </div>
-
     @endif
 
 
 
     <table class="table table-bordered">
-
         <tr>
-
-
-            <th>Titular</th>
-            <th>Imagen</th>
-            <th>Pie de foto</th>
-            <th>Subtítulo</th>
-            <th>Contenido de la noticia</th>
-            <th>Fecha</th>
-
+            <th>Nombre</th>
+            <th>Foto</th>
+            <th>Puesto</th>
         </tr>
 
-        @foreach ($noticias as $noticia)
+        @foreach ($trainers as $trainer)
 
         <tr>
-
-            <td>{{ $noticia->titular }}</td>
-            <td>{{ $noticia->imagen }}</td>
-            <td>{{ $noticia->piefoto }}</td>
-            <td>{{ $noticia->subtitulo }}</td>
-            <td>{{ $noticia->noticia }}</td>
-            <td>{{ $noticia->fecha }}</td>
+            <td>{{ $trainer->name }}</td>
+            <td>{{ $trainer->photo }}</td>
+            <td>{{ $trainer->roll }}</td>
             <td>
 
-                <form action="{{ route('noticias.destroy', $noticia->id) }}" method="POST">
-                    <a class="btn btn-primary" href="{{ route('noticias.edit', $noticia->id) }}">Editar</a>
+                <form action="{{ route('trainers.destroy',$trainer->id) }}" method="POST">
+                    <a class="btn btn-primary" href="{{ route('trainers.edit',$trainer->id) }}">Editar</a>
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Borrar</button>
                 </form>
-
             </td>
-
         </tr>
-
         @endforeach
-
     </table>
 
-
-
-    {!! $noticias->links() !!}
-
-
+    {!! $trainers->links() !!}
 
 </x-app-layout>

@@ -1,0 +1,55 @@
+.crud-container {
+    display: flex;
+    flex-direction: column;
+    padding: calc(1vh + 1vw);
+    gap: 3vh;
+    width: fit-content;
+    align-items: center;
+    margin: auto;
+    .primary-button {
+        width: fit-content;
+        background-color: $first-color;
+        padding: 5px 10px;
+        border-radius: $border-radius;
+        color: white;
+        align-self: flex-end;
+        box-shadow: 1px 2px 3px gray;
+        text-decoration: none;
+    }
+    .primary-button:hover {
+        background-color: rgb(89, 61, 104);
+    }
+    > table {
+        border-spacing: 0 7px;
+        border-collapse: separate;
+        tr {
+            box-shadow: 0px 0px 1px 1px #e1d2ff;
+            border-radius: 3px;
+            th {
+                padding: 10px;
+                background-color: #e1d2ff;
+            }
+            td {
+                padding: 0 10px;
+                form {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    a {
+                        padding: 5px;
+                        svg {
+                            width: 22px;
+                            fill: $first-color;
+                        }
+                    }
+                    button {
+                        svg {
+                            width: 20px;
+                            fill: rgb(82, 1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

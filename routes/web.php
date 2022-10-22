@@ -5,10 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AchievementsController;
 use App\Http\Controllers\CalendarController;
-use App\Http\Controllers\Crud\NoticiasController;
+use App\Http\Controllers\Crud\AtletasController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\Crud\NoticiasController;
+use App\Http\Controllers\Crud\TrainersController;
+
 use App\Http\Controllers\FullCalendarController;
 use App\Http\Controllers\PolicyController;
 
@@ -28,6 +31,9 @@ Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/noticia/{noticia}', [NewsController::class, 'noticia']);
 
 Route::get('/policy',[PolicyController::class, 'policy']);
+Route::resource('atletas', AtletasController::class);
+Route::resource('trainers', TrainersController::class);
+Route::resource('noticias', NoticiasController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
