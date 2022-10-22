@@ -17,7 +17,7 @@
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('news.index') }}"> Volver</a>
+                <a class="btn btn-primary" href="{{ route('noticias.index') }}"> Volver</a>
 
             </div>
 
@@ -49,7 +49,7 @@
 
 
 
-    <form action="{{ route('news.store') }}" method="POST">
+    <form action="{{ route('noticias.store') }}" method="POST">
 
         @csrf
 

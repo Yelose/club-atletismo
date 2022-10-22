@@ -43,13 +43,13 @@
 
         <tr>
 
-            <th>No</th>
 
-            <th>Name</th>
-
-            <th>Details</th>
-
-            <th width="280px">Action</th>
+            <th>Titular</th>
+            <th>Imagen</th>
+            <th>Pie de foto</th>
+            <th>Subtítulo</th>
+            <th>Contenido de la noticia</th>
+            <th>Fecha</th>
 
         </tr>
 
@@ -57,43 +57,19 @@
 
         <tr>
 
-            <td>{{ ++$i }}</td>
-
             <td>{{ $noticia->titular }}</td>
-
             <td>{{ $noticia->imagen }}</td>
-
             <td>{{ $noticia->piefoto }}</td>
-
             <td>{{ $noticia->subtitulo }}</td>
-
             <td>{{ $noticia->noticia }}</td>
-
             <td>{{ $noticia->fecha }}</td>
-
-
             <td>
 
-                <form action="{{ route('noticias.destroy',$noticia->id) }}" method="POST">
-
-
-
-                    <a class="btn btn-info" href="{{ route('noticias.show',$noticia->id) }}">Mostrar</a>
-
-
-
-                    <a class="btn btn-primary" href="{{ route('noticias.edit',$noticia->id) }}">Editar</a>
-
-
-
+                <form action="{{ route('noticias.destroy', $noticia->id) }}" method="POST">
+                    <a class="btn btn-primary" href="{{ route('noticias.edit', $noticia->id) }}">Editar</a>
                     @csrf
-
                     @method('DELETE')
-
-
-
                     <button type="submit" class="btn btn-danger">Borrar</button>
-
                 </form>
 
             </td>

@@ -6,23 +6,15 @@
     </x-slot>
 
     <div class="row">
-
         <div class="col-lg-12 margin-tb">
-
             <div class="pull-left">
-
                 <h2>Editar Atleta</h2>
-
             </div>
 
             <div class="pull-right">
-
                 <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Atrás</a>
-
             </div>
-
         </div>
-
     </div>
 
 
@@ -30,15 +22,12 @@
     @if ($errors->any())
 
     <div class="alert alert-danger">
-
         <strong>Uy!</strong>Hay algún problema con los datos.<br><br>
 
         <ul>
 
             @foreach ($errors->all() as $error)
-
             <li>{{ $error }}</li>
-
             @endforeach
 
         </ul>
@@ -52,10 +41,7 @@
     <form action="{{ route('atletas.update', $atleta->id) }}" method="POST">
 
         @csrf
-
         @method('PUT')
-
-
 
         <div class="row">
 
