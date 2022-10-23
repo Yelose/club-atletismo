@@ -1,6 +1,6 @@
 <div class="teams-container">
     <figure>
-        <img src="{{$atleta->image}}" alt="imagen de ejemplo">
+        <img src="/images/{{ $atleta->image }}" width="500px">
         <div class="caption">
             <div class="blur"></div>
             <figcaption class="caption-text">

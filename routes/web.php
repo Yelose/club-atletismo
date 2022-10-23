@@ -25,9 +25,7 @@ Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 App::setLocale("es");
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::resource('atletas', AtletasController::class);
-    Route::resource('trainers', TrainersController::class);
-    Route::resource('noticias', NoticiasController::class);
-});
+Route::resource('atletas', AtletasController::class);
+Route::resource('trainers', TrainersController::class);
+Route::resource('noticias', NoticiasController::class);
 require __DIR__ . '/auth.php';

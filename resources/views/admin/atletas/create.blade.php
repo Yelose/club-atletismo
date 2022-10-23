@@ -17,7 +17,7 @@
         </div>
         @endif
 
-        <form action="{{ route('atletas.store') }}" method="POST">
+        <form action="{{ route('atletas.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div>
                 <strong>Nombre:</strong>
@@ -31,7 +31,7 @@
 
             <div>
                 <strong>Foto:</strong>
-                <input type="text" name="image" class="form-control" placeholder="imágen">
+                <input type="file" name="image" class="form-control" placeholder="imagen">
             </div>
 
             <div>

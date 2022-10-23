@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             [
                 "name" => " Nuria Cuenca ",
                 "licence" => "L564573",
-                "image" => "https://upload.wikimedia.org/wikipedia/commons/1/19/Christine_Merrill_UCSD_1.jpg",
+                "image" => "20221023175449.jpg",
                 "category" => "sub18",
             ],
         );
