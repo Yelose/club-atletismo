@@ -26,12 +26,14 @@ Como equipo de desarrollo hemos realizado todas las vistas mencionadas en Front-
 
 ## Referencias de color 🎨
 
+
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Morado | ![#4d2756](https://via.placeholder.com/10/4d2745?text=+) #4d2756|
 | Lila | ![#e1d2ff](https://via.placeholder.com/10/e1d2ff?text=+) #e1d2ff |
 | Blanco | ![#FFFFFF](https://via.placeholder.com/10/ffffff?text=+) #00b48a |
 | Negro| ![#00000](https://via.placeholder.com/10/000000?text=+) #000000|
+
 
 
 ## Framework
