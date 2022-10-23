@@ -15,7 +15,7 @@ class NewsController extends Controller
 
     public function news()
     {
-        $noticias = Noticia::paginate(10);
+        $noticias = Noticia::paginate(20);
         return view("news", compact("noticias"));
     }
     public function render()
@@ -23,13 +23,13 @@ class NewsController extends Controller
         $keyWord = '%' . $this->keyWord . '%';
         return view('noticias.index', [
             'noticias' => Noticia::latest()
-                ->orWhere('titular', 'LIKE', $keyWord)
-                ->orWhere('imagen', 'LIKE', $keyWord)
-                ->orWhere('piefoto', 'LIKE', $keyWord)
-                ->orWhere('subtitulo', 'LIKE', $keyWord)
-                ->orWhere('noticia', 'LIKE', $keyWord)
-                ->orWhere('fecha', 'LIKE', $keyWord)
-                ->paginate(10),
+            ->orWhere('titular', 'LIKE', $keyWord)
+            ->orWhere('imagen', 'LIKE', $keyWord)
+            ->orWhere('piefoto', 'LIKE', $keyWord)
+            ->orWhere('subtitulo', 'LIKE', $keyWord)
+            ->orWhere('noticia', 'LIKE', $keyWord)
+            ->orWhere('fecha', 'LIKE', $keyWord)
+            ->paginate(10),
         ]);
     }
     public function noticia($noticia)

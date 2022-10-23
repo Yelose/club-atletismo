@@ -11,13 +11,13 @@
 
             <div class="pull-left">
 
-                <h2>Mostrar atletas</h2>
+                <h2>Mostrar atleta</h2>
 
             </div>
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('atletas.index') }}"> Volver</a>
 
             </div>
 
@@ -33,7 +33,7 @@
 
             <div class="form-group">
 
-                <strong>Name:</strong>
+                <strong>Nombre:</strong>
 
                 {{ $atleta->name }}
 
@@ -45,9 +45,32 @@
 
             <div class="form-group">
 
-                <strong>Details:</strong>
+                <strong>Licencia:</strong>
 
-                {{ $atleta->detail }}
+                {{ $atleta->licence }}
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Foto:</strong>
+
+                {{ $atleta->image }}
+
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Categoría:</strong>
+
+                {{ $atleta->category }}
 
             </div>
 

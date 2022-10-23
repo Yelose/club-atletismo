@@ -3,136 +3,63 @@
 namespace App\Http\Controllers\Crud;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Noticia;
-use Livewire\WithPagination;
+use App\View\Components\Noticia as ComponentsNoticia;
+use Illuminate\Http\Request;
 
 class NoticiasController extends Controller
 {
-    use WithPagination;
-
-    protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
-    public $updateMode = false;
-
-    // public function index()
-    // {
-    //     $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
-    //     return view('noticias.index', compact('noticias'));
-    // }
-
-    public function showAll()
+    public function index()
     {
-        $noticias = Noticia::paginate(10);
-        return view("admin.news.index", compact("noticias"));
+        $noticias = Noticia::latest()->paginate(15);
+        return view('admin.news.index', compact('noticias'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
-
-    public function render()
+    public function create()
     {
-        $keyWord = '%' . $this->keyWord . '%';
-        return view('admin.news.index', [
-            'noticias' => Noticia::latest()
-                ->orWhere('titular', 'LIKE', $keyWord)
-                ->orWhere('imagen', 'LIKE', $keyWord)
-                ->orWhere('piefoto', 'LIKE', $keyWord)
-                ->orWhere('subtitulo', 'LIKE', $keyWord)
-                ->orWhere('noticia', 'LIKE', $keyWord)
-                ->orWhere('fecha', 'LIKE', $keyWord)
-                ->paginate(10),
+        return view('admin.news.create');
+    }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'titular' => 'required',
+            'imagen' => 'required',
+            'piefoto' => 'required',
+            'subtitulo' => 'required',
+            'noticia' => 'required',
+            'fecha' => 'required',
         ]);
+        Noticia::create($request->all());
+        return redirect()->route('noticias.index')->with('success', 'La noticia se ha creado correctamente.');
     }
 
-    public function cancel()
+    public function show(Noticia $noticia)
     {
-        $this->resetInput();
-        $this->updateMode = false;
+        $noticias = Noticia::latest()->paginate(15);
+        return view('admin.news.show', compact('noticia'));
     }
 
-    private function resetInput()
+    public function edit(Noticia $noticia)
     {
-        $this->titular = null;
-        $this->imagen = null;
-        $this->piefoto = null;
-        $this->subtitulo = null;
-        $this->noticia = null;
-        $this->fecha = null;
+        $noticias = Noticia::latest()->paginate(15);
+        return view('admin.news.edit', compact('noticia'));
     }
 
-    public function store()
+    public function update(Request $request, Noticia $noticia)
     {
-
-        Noticia::create([
-            'titular' => $this->titular,
-            'imagen' => $this->imagen,
-            'piefoto' => $this->piefoto,
-            'subtitulo' => $this->subtitulo,
-            'noticia' => $this->noticia,
-            'fecha' => $this->fecha
+        $request->validate([
+            'titular' => 'required',
+            'imagen' => 'required',
+            'piefoto' => 'required',
+            'subtitulo' => 'required',
+            'noticia' => 'required',
+            'fecha' => 'required',
         ]);
-
-        $this->resetInput();
-        $this->emit('closeModal');
-        session()->flash('message', 'Noticia Successfully created.');
+        $noticia->update($request->all());
+        return redirect()->route('noticias.index')->with('success', 'La noticia se ha actualizado correctamente');
     }
-
-    public function edit($id)
+    public function destroy(Noticia $noticia)
     {
-        $record = Noticia::findOrFail($id);
-
-        $this->selected_id = $id;
-        $this->titular = $record->titular;
-        $this->imagen = $record->imagen;
-        $this->piefoto = $record->piefoto;
-        $this->subtitulo = $record->subtitulo;
-        $this->noticia = $record->noticia;
-        $this->fecha = $record->fecha;
-
-        $this->updateMode = true;
+        $noticia->delete();
+        return redirect()->route('noticias.index')->with('success', 'La noticia se ha borrado correctamente');
     }
-
-    public function update()
-    {
-
-        if ($this->selected_id) {
-            $record = Noticia::find($this->selected_id);
-            $record->update([
-                'titular' => $this->titular,
-                'imagen' => $this->imagen,
-                'piefoto' => $this->piefoto,
-                'subtitulo' => $this->subtitulo,
-                'noticia' => $this->noticia,
-                'fecha' => $this->fecha
-            ]);
-
-            $this->resetInput();
-            $this->updateMode = false;
-            session()->flash('message', 'Noticia Successfully updated.');
-        }
-    }
-
-    public function destroy($id)
-    {
-        if ($id) {
-            $record = Noticia::where('id', $id);
-            $record->delete();
-        }
-        // falta mensaje de error
-    }
-
-    // public function render()
-    // {
-    //     $keyWord = '%' . $this->keyWord . '%';
-    //     return view('noticias.index', [
-    //         'noticias' => noticia::latest()
-    //             ->orWhere('titular', 'LIKE', $keyWord)
-    //             ->orWhere('imagen', 'LIKE', $keyWord)
-    //             ->orWhere('piefoto', 'LIKE', $keyWord)
-    //             ->orWhere('subtitulo', 'LIKE', $keyWord)
-    //             ->orWhere('noticia', 'LIKE', $keyWord)
-    //             ->orWhere('fecha', 'LIKE', $keyWord)
-    //             ->paginate(10),
-    //     ]);
-    // }
-
-    // orderBy
 }

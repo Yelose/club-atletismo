@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import "variables.scss";
+@import "cookies.scss";
+@import "crud.scss";
+@import "dashboard.scss";
+@import "footer.scss";
 @import "header.scss";
-@import "home.scss";
+@import "history.scss";
 @import "layout.scss";
 @import "news.scss";
-@import "footer.scss";
 @import "pagination.scss";
-@import "team.scss";
-@import "history.scss";
-
 @import "policy.scss";
-@import "cookie.scss";
+@import "team.scss";
+@import "home.scss";
+
 p {
     text-align: justify;
 }
