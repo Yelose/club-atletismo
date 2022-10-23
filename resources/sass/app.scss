@@ -2,19 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @import "variables.scss";
-@import "header.scss";
-@import "home.scss";
-@import "layout.scss";
-@import "news.scss";
-@import "footer.scss";
-@import "pagination.scss";
-@import "team.scss";
+@import "cookies.scss";
 @import "crud.scss";
 @import "dashboard.scss";
-@import "policy.scss";
-@import "cookie.scss";
+@import "footer.scss";
+@import "header.scss";
 @import "history.scss";
+@import "layout.scss";
+@import "news.scss";
+@import "pagination.scss";
+@import "policy.scss";
 @import "team.scss";
+@import "home.scss";
 
 p {
     text-align: justify;
