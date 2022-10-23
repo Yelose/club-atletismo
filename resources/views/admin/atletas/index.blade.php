@@ -30,7 +30,7 @@
             <tr>
                 <td>{{ $atleta->name }}</td>
                 <td>{{ $atleta->licence }}</td>
-                <td><img src="/images/{{$atleta->image}}"></td>
+                <td><img src="/images/{{$atleta->image}}" width="80px"></td>
                 <td>{{ $atleta->category }}</td>
 
                 <td>
