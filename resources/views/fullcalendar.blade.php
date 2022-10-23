@@ -15,7 +15,7 @@
         <header>
 
             <div class="p-5 text-center bg-image" style="
-                    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
+                    background-image: url('https://images.pexels.com/photos/3905827/pexels-photo-3905827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
                     height: 300px;
                     margin-top: 58px;
                   ">
