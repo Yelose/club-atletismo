@@ -3,8 +3,8 @@
 @section("content")
 <div class="principal-container">
     <div id="cookies">
-        <p>Esta página lleva las mínimas cookies por ley.</p>
-        <p onclick="cookie()">--x--</p>
+        <p>Aquí va el texto de las cookies.</p>
+        <strong onclick="cookies.remove()">x</strong>
     </div>
     <x-home.slider />
     <main>
@@ -62,6 +62,8 @@
         }
         slides[slideIndex - 1].style.display = "block";
     }
+    const cookies = document.getElementById('cookies');
+
 </script>
 
 @endsection
