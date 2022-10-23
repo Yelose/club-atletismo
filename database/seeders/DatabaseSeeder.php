@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         Trainer::create(
             [
                 "name" => "Jose Alberto García",
-                "photo" => "https://files.proyectoclubes.com/deportivo/202210/1024x800_b2d84c968111154049oscar_cano.jpg",
+                "image" => "entrenador.jpg",
                 "roll" => "Entrenador",
             ]
         );

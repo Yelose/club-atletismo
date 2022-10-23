@@ -12,7 +12,7 @@ class Trainer extends Model
 
     protected $fillable = [
 
-        'name', 'photo', 'roll'
+        'name', 'image', 'roll'
 
     ];
 

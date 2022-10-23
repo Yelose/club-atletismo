@@ -6,12 +6,10 @@
     </x-slot>
 
     <div class="crud-create-edit-container">
-
-        <h2>Añadir nueva noticia</h2>
-
+        <h2>Añadiendo noticia</h2>
         @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Uy!</strong> Hay algún problema con los datos introducidos.<br><br>
+            <strong>¡Vaya! Parece que falta algo por rellenar</strong>
             <ul>
                 @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -20,43 +18,43 @@
         </div>
         @endif
 
-        <form action="{{ route('noticias.store') }}" method="POST">
+        <form action="{{ route('noticias.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div>
                 <strong>Titular:</strong>
-                <input type="text" name="titular" class="form-control" placeholder="Titular">
+                <input type="text" name="titular" class="form-control" placeholder="titular">
             </div>
 
             <div>
                 <strong>Foto:</strong>
-                <input type="text" name="imagen" class="form-control" placeholder="Imagen">
+                <input type="file" name="image" class="form-control" placeholder="imagen">
             </div>
+
 
             <div>
                 <strong>Pie de foto:</strong>
-                <input type="text" name="piefoto" class="form-control" placeholder="Piefoto">
-            </div>
-
-            <div>
-                <strong>Fecha:</strong>
-                <input type="text" name="fecha" class="form-control" placeholder="Fecha">
+                <input type="text" name="piefoto" class="form-control" placeholder="licencia">
             </div>
 
             <div>
                 <strong>Subtítulo:</strong>
-                <input name="subtitulo" class="form-control" placeholder="Subtitulo"></input>
+                <input type="text" name="subtitulo" class="form-control" placeholder="subtitulo">
             </div>
 
-            <section>
+            <div>
                 <strong>Noticia:</strong>
-                <textarea name="noticia" class="form-control" placeholder="Noticia"></textarea>
-            </section>
+                <input type="text" name="noticia" class="form-control" placeholder="noticia">
+            </div>
+
+            <div>
+                <strong>Fecha:</strong>
+                <input type="text" name="fecha" class="form-control" placeholder="fecha">
+            </div>
 
             <section class="buttons-group">
-                <button type="submit" class="create-button">Submit</button>
-                <a class="cancel-button" href="{{ route('noticias.index') }}"> Volver</a>
+                <button type="submit" class="create-button">Crear</button>
+                <a class="cancel-button" href="{{ route('atletas.index') }}"> Cancelar</a>
             </section>
         </form>
     </div>
-
 </x-app-layout>

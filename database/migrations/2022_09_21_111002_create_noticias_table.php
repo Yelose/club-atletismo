@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('noticias', function (Blueprint $table) {
             $table->id();
             $table->string("titular");
-            $table->string("imagen");
+            $table->string("image");
             $table->string("piefoto");
             $table->string("subtitulo");
             $table->longText("noticia");

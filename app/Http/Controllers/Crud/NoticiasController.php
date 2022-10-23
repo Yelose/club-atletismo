@@ -33,17 +33,23 @@ class NoticiasController extends Controller
     {
         $request->validate([
             'titular' => 'required',
-            'imagen' => 'required',
+            'image' => 'required|image|file',
             'piefoto' => 'required',
             'subtitulo' => 'required',
             'noticia' => 'required',
             'fecha' => 'required',
         ]);
+        $input = $request->all();
 
-        Noticia::create($request->all());
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
 
-        return redirect()->route('noticias.index')->with('success', 'La noticia se ha creado correctamente.');
-    }
+        Noticia::create($input);
+        return redirect()->route('noticias.index')->with('success', 'Noticia se ha creado correctamente.');    }
 
     public function show(Noticia $noticia)
 
@@ -64,14 +70,24 @@ class NoticiasController extends Controller
     {
         $request->validate([
             'titular' => 'required',
-            'imagen' => 'required',
             'piefoto' => 'required',
             'subtitulo' => 'required',
             'noticia' => 'required',
             'fecha' => 'required',
         ]);
-        $noticia->update($request->all());
-        return redirect()->route('noticias.index')->with('success', 'La noticia se ha actualizado correctamente');
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        } else {
+            unset($input['image']);
+        }
+
+        $noticia->update($input);
+        return redirect()->route('noticias.index')->with('success', 'Noticia se ha actualizado correctamente');
     }
 
 

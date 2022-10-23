@@ -24,13 +24,21 @@ class TrainersController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'photo' => 'required',
+            'image' => 'required|image|file',
             'roll' => 'required',
         ]);
 
-        Trainer::create($request->all());
-        return redirect()->route('trainers.index')->with('success', 'Entrenador se ha creado correctamente');
-    }
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+        Trainer::create($input);
+        return redirect()->route('trainers.index')->with('success', 'Entrenador se ha creado correctamente.');    }
 
     public function show(Trainer $trainer)
     {
@@ -47,12 +55,21 @@ class TrainersController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'photo' => 'required',
             'roll' => 'required',
         ]);
-        $trainer->update($request->all());
-        return redirect()->route('trainers.index')->with('success', 'Entrenador se ha actualizado correctamente');
-    }
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        } else {
+            unset($input['image']);
+        }
+
+        $trainer->update($input);
+        return redirect()->route('trainers.index')->with('success', 'Entrenador se ha actualizado correctamente');    }
     public function destroy(Trainer $trainer)
     {
         $trainer->delete();

@@ -1,7 +1,7 @@
 <div class="new-container">
     <h1>{{$noticia->titular}}</h1>
     <figure>
-        <img src="{{$noticia->imagen}}" alt="imagen de ejemplo">
+        <img src="{{$noticia->image}}" alt="imagen de ejemplo">
         <figcaption>
             {{$noticia->piefoto}}
         </figcaption>
