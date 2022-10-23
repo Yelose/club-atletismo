@@ -214,6 +214,6 @@
 <style>
 
     .jumbotron{
-        background-color: transparent;
+        background-color: transparent
     }
 </style>
