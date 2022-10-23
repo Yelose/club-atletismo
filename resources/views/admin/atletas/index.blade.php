@@ -6,7 +6,7 @@
     </x-slot>
     <div class="crud-container">
         <div class="space-between">
-            <a class="primary-button" href="{{ route('news') }}">Ir a la página</a>
+            <a class="primary-button" href="{{ route('team') }}">Ir a la página</a>
             <a class="primary-button" href="{{ route('atletas.create') }}"> Crear atleta</a>
         </div>
 

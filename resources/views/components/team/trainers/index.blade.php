@@ -1,6 +1,6 @@
 <div class="trainer-container">
     <figure>
-        <img src="{{$trainer->image}}" alt="imagen de ejemplo">
+    <img src="/images/{{ $trainer->image }}" width="500px">
         <figcaption class="caption-text">
             <p>{{$trainer->name}}</p>
             <p>{{$trainer->roll}}</p>
