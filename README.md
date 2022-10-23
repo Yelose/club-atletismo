@@ -15,7 +15,7 @@ Página web para el club de atletismo "El Gaitero" Villaviciosa.
 𝐂𝐚𝐥𝐞𝐧𝐝𝐚𝐫𝐢𝐨: Vista que cuenta con eventos programables por el administrador.
 
 
-Como equipo de desarrollo hemos realizado todas las vistas mencionadas en Front-end y todas las vistas del lado Back-end (administrador) para que la página web sea completamente editable.
+Como equipo de desarrollo hemos realizado todas las vistas mencionadas en Front-end y todas las vistas del lado Back-end (administrador) para que la página web sea  editable.
 ## Demo
 
 ![App Screenshot](https://github.com/lauracastelao/image/blob/main/ClubGaitero.jpg?raw=true)
