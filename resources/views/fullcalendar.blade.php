@@ -22,7 +22,7 @@
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <div class="text-white">
-                            <h1 class="mb-3">Calendario anual</h1>
+                            <h1 class="mb-3">CALENDARIO ANUAL</h1>
                             <h4 class="mb-3">Club atletismo El Gaitero</h4>
 
                         </div>
