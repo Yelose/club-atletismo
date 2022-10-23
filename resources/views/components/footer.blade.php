@@ -16,6 +16,8 @@
                 <h4>Información</h4>
                 <ul>
                     <li><a href="#">Avisos legales</a></li>
+                    <li><a href="https://www.rfea.es/">Real Federación Española de Atletismo </a></li>
+                    <li><a href="http://fasatle.org/faa/">Federación asturiana de Atletismo</a></li>
                     <li><a href="{{ url('/policy') }}">Politica de privacidad</a></li>
                     <a href="{{ route('login') }}" class="login" id='login'>Entrar como Administrador</a>
                 </ul>
