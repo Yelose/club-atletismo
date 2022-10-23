@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AchievementsController;
@@ -21,10 +22,12 @@ Route::get('/team', [TeamController::class, 'team'])->name('team');
 Route::get('/achievements', [AchievementsController::class, 'achievements'])->name('achievements');
 Route::get('fullcalendar', [FullCalendarController::class, 'index']);
 Route::post('fullcalendar-ajax', [FullCalendarController::class, 'ajax']);
-Route::resource('atletas', AtletasController::class);
-Route::resource('trainers', TrainersController::class);
-Route::resource('noticias', NoticiasController::class);
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 App::setLocale("es");
 
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resource('atletas', AtletasController::class);
+    Route::resource('trainers', TrainersController::class);
+    Route::resource('noticias', NoticiasController::class);
+});
 require __DIR__ . '/auth.php';

@@ -5,8 +5,10 @@
         </h2>
     </x-slot>
     <div class="crud-container">
-
-        <a class="primary-button" href="{{ route('atletas.create') }}"> Crear atleta</a>
+        <div class="space-between">
+            <a class="primary-button" href="{{ route('news') }}">Ir a la página</a>
+            <a class="primary-button" href="{{ route('atletas.create') }}"> Crear atleta</a>
+        </div>
 
         @if ($message = Session::get('success'))
         <div class="alert alert-success">

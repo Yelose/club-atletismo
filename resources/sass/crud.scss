@@ -7,6 +7,11 @@
     align-items: center;
     margin: auto;
     max-width: 1600px;
+    .space-between {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
     .primary-button {
         width: fit-content;
         background-color: $first-color;
