@@ -41,15 +41,6 @@ Como equipo de desarrollo hemos realizado todas las vistas mencionadas en Front-
 LARAVEL V.9
 
 
-## Instalación
-
-Instala el proyecto mediante NPM
-
-```bash
- git clone
- npm install
-
-```
     
 ## Variables de entorno
 
@@ -62,6 +53,8 @@ Para arrancar el proyecto se necesita añadir las variables de entorno en el arc
 
 
 ## Instalación local
+
+Instala el proyecto mediante NPM
 
 Clone the project
 
