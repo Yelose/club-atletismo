@@ -93,16 +93,6 @@ Arrancar el servidor
 - [@Iriarg](https://github.com/Iriarg)
 
 
-## 🚀 About Me
-I'm a full stack developer...
-
-
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
 
 
 
