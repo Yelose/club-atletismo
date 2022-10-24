@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Noticia;
 use Livewire\WithPagination;
 
@@ -10,12 +11,12 @@ class NewsController extends Controller
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $titular, $piefoto, $image, $subtitulo, $noticia, $fecha;
+    public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
     public $updateMode = false;
 
     public function news()
     {
-        $noticias = Noticia::paginate(20);
+        $noticias = Noticia::paginate(10);
         return view("news", compact("noticias"));
     }
     public function render()
@@ -24,7 +25,7 @@ class NewsController extends Controller
         return view('noticias.index', [
             'noticias' => Noticia::latest()
                 ->orWhere('titular', 'LIKE', $keyWord)
-                ->orWhere('image', 'LIKE', $keyWord)
+                ->orWhere('imagen', 'LIKE', $keyWord)
                 ->orWhere('piefoto', 'LIKE', $keyWord)
                 ->orWhere('subtitulo', 'LIKE', $keyWord)
                 ->orWhere('noticia', 'LIKE', $keyWord)

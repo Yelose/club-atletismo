@@ -1,9 +1,6 @@
-
-
 # Club Atletismo El Gaitero 🏃‍♂️🏃‍♀️
 
-
-Página web para el club de atletismo "El Gaitero" Villaviciosa. 
+Página web para el club de atletismo "El Gaitero" Villaviciosa.
 
 𝐈𝐧𝐢𝐜𝐢𝐨: Vista principal; cuenta con dos sliders, sección de últimas noticias (aside) imagen y texto.
 
@@ -15,21 +12,15 @@ Página web para el club de atletismo "El Gaitero" Villaviciosa.
 
 𝐂𝐚𝐥𝐞𝐧𝐝𝐚𝐫𝐢𝐨: Vista que cuenta con eventos programables por el administrador.
 
-
 Como equipo de desarrollo hemos realizado todas las vistas mencionadas en Front-end y todas las vistas del lado Back-end (administrador) para que la página web sea editable.
+
 ## Demo
 
 ![App Screenshot](https://github.com/lauracastelao/image/blob/main/ClubGaitero.jpg?raw=true)
 
-
-
-
-
-
 ## Framework
 
 LARAVEL V.9
-
 
 ## Instalación
 
@@ -40,26 +31,20 @@ Instala el proyecto mediante NPM
  npm install
 
 ```
-    
-## Variables de entorno
 
+## Variables de entorno
 
 Para arrancar el proyecto se necesita añadir las variables de entorno en el archivo .env
 
 `Crear archivo .env y modificar en database por base de datos, en este caso hemos utilizado MySQL/phpMyAdmin`
-
-
-
 
 ## Instalación local
 
 Clone the project
 
 ```bash
-  git clone 
+  git clone
 ```
-
-
 
 Instalar dependencias
 
@@ -74,17 +59,21 @@ Arrancar el servidor
   php artisan serve
 ```
 
+Errores de rutas puntuales
 
-## 🔗 Herramientas 
+```bash
+  php artisan optimize
+```
+
+## 🔗 Herramientas
 
 [Canva]("https://www.canva.com/")
 
 [Jira]("https://www.atlassian.com/es/software/jira")
 
-
 ## Autores ⌨️
 
-- [@lauracastelao](https://github.com/lauracastelao)
-- [@yelose](https://github.com/Yelose)
-- [@MBellJDD](https://github.com/MBellJDD)
-- [@Iriarg](https://github.com/Iriarg)
+-   [@lauracastelao](https://github.com/lauracastelao)
+-   [@yelose](https://github.com/Yelose)
+-   [@MBellJDD](https://github.com/MBellJDD)
+-   [@Iriarg](https://github.com/Iriarg)

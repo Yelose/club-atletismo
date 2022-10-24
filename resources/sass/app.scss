@@ -19,7 +19,12 @@
 p {
     text-align: justify;
 }
-
+a {
+    text-decoration: none !important;
+}
+a:hover {
+    color: $first-color;
+}
 
 .hidden {
     display: none;
