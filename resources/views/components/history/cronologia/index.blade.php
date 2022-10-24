@@ -1,6 +1,6 @@
 <div class="cronologia-container">
     <aside>
-        <h2>{{ $cronologia->fecha}}</h2>
+        <p>{{ $cronologia->fecha}}</p>
     </aside>
 
     <section>

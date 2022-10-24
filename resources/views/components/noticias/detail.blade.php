@@ -6,7 +6,7 @@
     <div class="new-container">
         <h1>{{$noticia->titular}}</h1>
         <figure>
-            <img src="https://thumbs.dreamstime.com/b/silhouette-athlete-runner-running-sunset-active-healthy-lifestyle-morning-sunrise-woman-trail-ocean-landscape-92091135.jpg" alt="imagen de ejemplo">
+            <img src="/images/{{ $noticia->image }}" width="500px">
             <figcaption>
                 {{$noticia->piefoto}}
             </figcaption>

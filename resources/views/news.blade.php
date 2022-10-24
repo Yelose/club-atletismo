@@ -2,6 +2,7 @@
 @section("title", "Noticias")
 @section("content")
 <div class="news-container">
+    <h1>Noticias</h1>
     @foreach ($noticias as $noticia)
     <x-noticias.index :noticia="$noticia" />
     @endforeach
@@ -10,7 +11,8 @@
 @if ($noticias->hasPages(2))
 <div class="pagination-container mb-5">
     <!-- {{ $noticias->links() }} -->
-    <p>Página {{$noticias->currentPage()}}, mostrando de {{ $noticias->firstItem() }} a {{ $noticias->lastItem() }} noticias de {{$noticias->total()}}.</p>
+    <p>Página {{$noticias->currentPage()}}, mostrando de {{ $noticias->firstItem() }} a {{ $noticias->lastItem() }}
+        noticias de {{$noticias->total()}}.</p>
     <p>
         @if ($noticias->currentPage() != 1)
         <a href="{{$noticias->previousPageUrl()}}">&laquo Anterior</a>

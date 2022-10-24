@@ -1,17 +1,12 @@
 <div class="new-container">
-    <h1>{{$noticia->titular}}</h1>
+    <h2>{{$noticia->titular}}</h2>
     <figure>
-    <img src="/images/{{ $noticia->image }}" width="500px">
+        <img src="/images/{{ $noticia->image }}" width="500px">
         <figcaption>
             {{$noticia->piefoto}}
         </figcaption>
+        <p>{{$noticia->subtitulo}}</p>
     </figure>
-    <h2>{{$noticia->subtitulo}}</h2>
-    <p class="news-description">
-        <?php
-        echo nl2br($noticia->noticia);
-        ?>
-    </p>
 
     <p>15/06/2022</p>
     <a href="/noticia/{{$noticia->id}}">Leer más</a>

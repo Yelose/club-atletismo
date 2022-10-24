@@ -5,7 +5,7 @@
             alt="logo club de atletismo">
     </figure>
 
-    <h1>Club de Atletismo El Gaitero</h1>
+    <p class="header-title">Club de Atletismo El Gaitero</p>
 
     <div class="buttons">
         <a href="{{ url('/') }}" class="active">INICIO</a>

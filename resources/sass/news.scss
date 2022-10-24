@@ -1,8 +1,9 @@
 .news-container {
     display: flex;
+    width: 100%;
     flex-flow: row wrap;
     justify-content: center;
-    max-width: 1400px;
+    max-width: 1600px;
     gap: calc(1vw + 1vh);
     padding: 3vw;
     margin: auto;
@@ -10,7 +11,10 @@
         width: 100%;
         max-width: none;
         figure {
-            max-width: 700px;
+            img {
+                width: auto;
+                height: 400px;
+            }
         }
         .news-description {
             display: flex;
@@ -24,16 +28,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        flex: 1;
-        max-width: 500px;
-        min-width: 400px;
         gap: 1vh;
         figure {
             display: flex;
+            align-items: center;
             flex-direction: column;
+            flex: 1;
             img {
-                width: 100%;
-                height: 300px;
+                max-width: 100%;
+                width: auto;
+                height: 200px;
             }
             figcaption {
                 width: 100%;
@@ -41,6 +45,9 @@
                 color: rgba(255, 255, 255, 0.6);
                 text-align: center;
                 font-size: $font-size;
+            }
+            > p {
+                max-width: 400px;
             }
         }
         .news-description {

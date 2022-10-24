@@ -7,9 +7,10 @@
         <strong onclick="cookies.remove()">x</strong>
     </div>
     <x-home.slider />
+    <h1>Club de Atletismo El Gaitero</h1>
     <main>
         <aside>
-            <h2>Últimas noticias</h2>
+            <h4>Últimas noticias</h4>
             @foreach ($noticias as $noticia)
             <x-noticias.aside :noticia="$noticia" />
             @endforeach
