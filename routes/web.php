@@ -28,4 +28,5 @@ App::setLocale("es");
 Route::resource('atletas', AtletasController::class);
 Route::resource('trainers', TrainersController::class);
 Route::resource('noticias', NoticiasController::class);
+
 require __DIR__ . '/auth.php';

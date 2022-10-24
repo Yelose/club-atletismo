@@ -71,6 +71,9 @@
     h2 {
         text-align: center;
     }
+    img {
+        width: 300px;
+    }
     > form {
         display: flex;
         flex-flow: row wrap;
@@ -127,4 +130,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+}
+input[type="file"] {
+    width: fit-content;
 }

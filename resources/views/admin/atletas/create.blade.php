@@ -19,6 +19,10 @@
 
         <form action="{{ route('atletas.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <section>
+                <strong>Foto:</strong>
+                <input type="file" name="image" placeholder="imagen">
+            </section>
             <div>
                 <strong>Nombre:</strong>
                 <input type="text" name="name" class="form-control" placeholder="nombre completo">
@@ -29,10 +33,6 @@
                 <input type="text" name="licence" class="form-control" placeholder="licencia">
             </div>
 
-            <div>
-                <strong>Foto:</strong>
-                <input type="file" name="image" class="form-control" placeholder="imagen">
-            </div>
 
             <div>
                 <strong>Categoría:</strong>
