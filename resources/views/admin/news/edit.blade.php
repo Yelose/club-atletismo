@@ -29,11 +29,13 @@
             </section>
             <div class="form-group">
                 <strong>Titular:</strong>
-                <input type="text" name="titular" value="{{ $noticia->titular }}" class="form-control" placeholder="titular">
+                <input type="text" name="titular" value="{{ $noticia->titular }}" class="form-control"
+                    placeholder="titular">
             </div>
             <div class="form-group">
                 <strong>Pie de foto:</strong>
-                <input class="form-control" name="piefoto" placeholder="pie de foto" value="{{ $noticia->piefoto }}"></input>
+                <input class="form-control" name="piefoto" placeholder="pie de foto"
+                    value="{{ $noticia->piefoto }}"></input>
             </div>
 
             <div class="form-group">
@@ -42,22 +44,22 @@
                     placeholder="Categoría">
             </div>
 
-            <section class="form-group">
-                <strong>Noticia:</strong>
-                <textarea type="text" name="noticia" value="{{ $noticia->noticia }}" class="form-control"
-                    placeholder="noticia"></textarea>
-            </section>
-
             <div class="form-group">
                 <strong>Fecha:</strong>
-                <input type="text" name="fecha" value="{{ $noticia->fecha }}" class="form-control"
-                    placeholder="fecha">
+                <input type="text" name="fecha" value="{{ $noticia->fecha }}" class="form-control" placeholder="fecha">
             </div>
 
-            <div class="buttons-group">
+            <section class="form-group">
+                <strong>Noticia:</strong>
+                <textarea type="text" name="noticia" class="form-control"
+                    placeholder="noticia">{{ $noticia->noticia }}</textarea>
+            </section>
+
+
+            <section class="buttons-group">
                 <button type="submit" class="create-button">Aceptar</button>
                 <a class="cancel-button" href="{{ route('noticias.index') }}">Cancelar</a>
-            </div>
+            </section>
 
         </form>
     </div>

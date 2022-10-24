@@ -22,8 +22,8 @@
                 <th>Foto</th>
                 <th>Pie de foto</th>
                 <th>Subtítulo</th>
-                <th>Noticia</th>
                 <th>Fecha</th>
+                <th>Acciones</th>
             </tr>
 
             @foreach ($noticias as $noticia)
@@ -33,7 +33,6 @@
                 <td><img src="/images/{{$noticia->image}}" width="80px"></td>
                 <td>{{ $noticia->piefoto }}</td>
                 <td>{{ $noticia->subtitulo }}</td>
-                <td>{{ $noticia->noticia }}</td>
                 <td>{{ $noticia->fecha }}</td>
 
                 <td>

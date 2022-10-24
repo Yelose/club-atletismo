@@ -20,15 +20,16 @@
 
         <form action="{{ route('trainers.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <section>
+                <strong>Foto:</strong>
+                <input type="file" name="image" class="form-control" placeholder="imagen">
+            </section>
+
             <div>
                 <strong>Nombre:</strong>
                 <input type="text" name="name" class="form-control" placeholder="nombre completo">
             </div>
 
-            <div>
-                <strong>Foto:</strong>
-                <input type="file" name="image" class="form-control" placeholder="imagen">
-            </div>
 
             <div>
                 <strong>Puesto:</strong>

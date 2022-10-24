@@ -1,4 +1,4 @@
-<div class="teams-container">
+<div class="athlete-container">
     <figure>
         <img src="/images/{{ $atleta->image }}" width="500px">
         <div class="caption">

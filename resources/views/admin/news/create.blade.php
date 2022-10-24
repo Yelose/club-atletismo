@@ -20,16 +20,15 @@
 
         <form action="{{ route('noticias.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <section>
+                <strong>Foto:</strong>
+                <input type="file" name="image" class="form-control" placeholder="imagen">
+            </section>
+
             <div>
                 <strong>Titular:</strong>
                 <input type="text" name="titular" class="form-control" placeholder="titular">
             </div>
-
-            <div>
-                <strong>Foto:</strong>
-                <input type="file" name="image" class="form-control" placeholder="imagen">
-            </div>
-
 
             <div>
                 <strong>Pie de foto:</strong>
@@ -42,14 +41,14 @@
             </div>
 
             <div>
-                <strong>Noticia:</strong>
-                <input type="text" name="noticia" class="form-control" placeholder="noticia">
-            </div>
-
-            <div>
                 <strong>Fecha:</strong>
                 <input type="text" name="fecha" class="form-control" placeholder="fecha">
             </div>
+
+            <section>
+                <strong>Noticia:</strong>
+                <textarea type="text" name="noticia" class="form-control" placeholder="noticia"></textarea>
+            </section>
 
             <section class="buttons-group">
                 <button type="submit" class="create-button">Crear</button>

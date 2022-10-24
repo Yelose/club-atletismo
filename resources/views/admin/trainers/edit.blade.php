@@ -38,10 +38,10 @@
                 <input class="form-control" name="roll" placeholder="puesto" value="{{ $trainer->roll }}"></input>
             </div>
 
-            <div class="buttons-group">
+            <section class="buttons-group">
                 <button type="submit" class="create-button">Aceptar</button>
                 <a class="cancel-button" href="{{ route('trainers.index') }}">Cancelar</a>
-            </div>
+            </section>
 
         </form>
     </div>

@@ -21,6 +21,7 @@
                 <th>Nombre</th>
                 <th>Foto</th>
                 <th>Puesto</th>
+                <th>Acciones</th>
             </tr>
 
             @foreach ($trainers as $trainer)
