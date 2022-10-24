@@ -51,6 +51,10 @@
 @media only screen and (max-width: 800px) {
     #nav-menu {
         justify-content: space-between;
+        .header-title {
+            width: fit-content;
+            font-size: 16px;
+        }
         h1 {
             font-size: 20px;
             width: 100%;
