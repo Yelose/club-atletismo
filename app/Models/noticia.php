@@ -14,7 +14,7 @@ class Noticia extends Model
 
     protected $fillable = [
         'titular',
-        'imagen',
+        'image',
         'piefoto',
         'subtitulo',
         'noticia',

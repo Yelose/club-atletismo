@@ -47,7 +47,7 @@
 
                 <strong>Foto:</strong>
 
-                {{ $trainer->photo }}
+                {{ $trainer->image }}
 
             </div>
 

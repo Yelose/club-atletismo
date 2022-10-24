@@ -1,6 +1,8 @@
 <nav id="nav-menu">
     <figure>
-        <img class="logo-img" src="https://st2.depositphotos.com/1012338/6938/v/600/depositphotos_69381837-stock-illustration-running-shield.jpg" alt="logo club de atletismo">
+        <img class="logo-img"
+            src="https://st2.depositphotos.com/1012338/6938/v/600/depositphotos_69381837-stock-illustration-running-shield.jpg"
+            alt="logo club de atletismo">
     </figure>
 
     <h1>Club de Atletismo El Gaitero</h1>
@@ -11,7 +13,6 @@
         <a href="{{ url('/team') }}">EQUIPO</a>
         <a href="{{ url('/news') }}">NOTICIAS</a>
         <a href="{{ url('/fullcalendar') }}">CALENDARIO</a>
-        
     </div>
     <a class="menu-toggle" onclick="toggle()">
         <img src="{{asset('assets/img/menu.png')}}" alt="menu">

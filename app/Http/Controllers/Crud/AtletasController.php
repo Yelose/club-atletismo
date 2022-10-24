@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Crud;
 
 use App\Http\Controllers\Controller;
@@ -25,41 +24,54 @@ class AtletasController extends Controller
 
             'name' => 'required',
             'licence' => 'required',
-            'image' => 'required',
+            'image' => 'required|image|file',
             'category' => 'required',
         ]);
 
-        Team::create($request->all());
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+        Team::create($input);
         return redirect()->route('atletas.index')->with('success', 'Atleta se ha creado correctamente.');
     }
 
     public function show(Team $atleta)
     {
         $atletas = Team::latest()->paginate(15);
-
         return view('admin.atletas.show', compact('atleta'));
     }
 
     public function edit(Team $atleta)
     {
-        $atletas = Team::latest()->paginate(15);
-
         return view('admin.atletas.edit', compact('atleta'));
     }
 
     public function update(Request $request, Team $atleta)
     {
         $request->validate([
-
             'name' => 'required',
             'licence' => 'required',
-            'image' => 'required',
             'category' => 'required',
-
         ]);
 
-        $atleta->update($request->all());
+        $input = $request->all();
 
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        } else {
+            unset($input['image']);
+        }
+
+        $atleta->update($input);
         return redirect()->route('atletas.index')->with('success', 'Atleta se ha actualizado correctamente');
     }
 

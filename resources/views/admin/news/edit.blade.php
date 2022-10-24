@@ -5,62 +5,63 @@
         </h2>
     </x-slot>
 
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Uy!</strong> Hay algún problema con los datos introducidos.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
     <div class="crud-create-edit-container">
-
-        <h2>Editar noticia</h2>
-
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Uy!</strong> Hay algún problema con los datos introducidos.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-
-        <form action="{{ route('noticias.update', $noticia->id) }}" method="POST">
+        <h2>Editando {{$noticia->name}}</h2>
+        <img src="/images/{{ $noticia->image }}">
+        <form action="{{ route('noticias.update',$noticia->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
+
+            <section class="form-group">
+                <strong>Foto:</strong>
+                <input type="file" name="image" class="form-control" placeholder="image">
+            </section>
             <div class="form-group">
                 <strong>Titular:</strong>
                 <input type="text" name="titular" value="{{ $noticia->titular }}" class="form-control"
-                    placeholder="Name">
+                    placeholder="titular">
             </div>
-
             <div class="form-group">
-                <strong>Imagen:</strong>
-                <input type="text" name="imagen" value="{{ $noticia->imagen }}" class="form-control" placeholder="Name">
-            </div>
-
-            <div class="form-group">
-                <strong>Descripción de la imagen:</strong>
-                <input type="text" name="piefoto" value="{{ $noticia->piefoto }}" class="form-control"
-                    placeholder="Name">
+                <strong>Pie de foto:</strong>
+                <input class="form-control" name="piefoto" placeholder="pie de foto"
+                    value="{{ $noticia->piefoto }}"></input>
             </div>
 
             <div class="form-group">
                 <strong>Subtítulo:</strong>
                 <input type="text" name="subtitulo" value="{{ $noticia->subtitulo }}" class="form-control"
-                    placeholder="Name">
+                    placeholder="Categoría">
             </div>
 
             <div class="form-group">
                 <strong>Fecha:</strong>
-                <input type="text" name="fecha" value="{{ $noticia->fecha }}" class="form-control" placeholder="Name">
+                <input type="text" name="fecha" value="{{ $noticia->fecha }}" class="form-control" placeholder="fecha">
             </div>
 
             <section class="form-group">
-                <strong>Contenido de la noticia:</strong>
-                <textarea class="form-control" style="height:150px" name="noticia"
-                    placeholder="Contenido de la noticia">{{ $noticia->noticia }}</textarea>
+                <strong>Noticia:</strong>
+                <textarea type="text" name="noticia" class="form-control"
+                    placeholder="noticia">{{ $noticia->noticia }}</textarea>
             </section>
+
 
             <section class="buttons-group">
                 <button type="submit" class="create-button">Aceptar</button>
-                <a class="cancel-button" href="{{ route('noticias.index') }}"> Cancelar</a>
+                <a class="cancel-button" href="{{ route('noticias.index') }}">Cancelar</a>
             </section>
+
         </form>
     </div>
+
 </x-app-layout>

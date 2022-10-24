@@ -10,7 +10,7 @@ class NewsController extends Controller
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $titular, $piefoto, $imagen, $subtitulo, $noticia, $fecha;
+    public $selected_id, $keyWord, $titular, $piefoto, $image, $subtitulo, $noticia, $fecha;
     public $updateMode = false;
 
     public function news()
@@ -23,13 +23,13 @@ class NewsController extends Controller
         $keyWord = '%' . $this->keyWord . '%';
         return view('noticias.index', [
             'noticias' => Noticia::latest()
-            ->orWhere('titular', 'LIKE', $keyWord)
-            ->orWhere('imagen', 'LIKE', $keyWord)
-            ->orWhere('piefoto', 'LIKE', $keyWord)
-            ->orWhere('subtitulo', 'LIKE', $keyWord)
-            ->orWhere('noticia', 'LIKE', $keyWord)
-            ->orWhere('fecha', 'LIKE', $keyWord)
-            ->paginate(10),
+                ->orWhere('titular', 'LIKE', $keyWord)
+                ->orWhere('image', 'LIKE', $keyWord)
+                ->orWhere('piefoto', 'LIKE', $keyWord)
+                ->orWhere('subtitulo', 'LIKE', $keyWord)
+                ->orWhere('noticia', 'LIKE', $keyWord)
+                ->orWhere('fecha', 'LIKE', $keyWord)
+                ->paginate(10),
         ]);
     }
     public function noticia($noticia)

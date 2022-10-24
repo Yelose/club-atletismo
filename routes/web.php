@@ -39,4 +39,10 @@ Route::resource('trainers', TrainersController::class);
 Route::resource('noticias', NoticiasController::class);
 App::setLocale("es");
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('atletas', AtletasController::class);
+    Route::resource('trainers', TrainersController::class);
+    Route::resource('noticias', NoticiasController::class);
+});
+
 require __DIR__ . '/auth.php';

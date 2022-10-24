@@ -5,8 +5,10 @@
         </h2>
     </x-slot>
     <div class="crud-container">
-
-        <a class="primary-button" href="{{ route('atletas.create') }}"> Crear atleta</a>
+        <div class="space-between">
+            <a class="primary-button" href="{{ route('team') }}">Ir a la página</a>
+            <a class="primary-button" href="{{ route('atletas.create') }}"> Crear atleta</a>
+        </div>
 
         @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -28,7 +30,7 @@
             <tr>
                 <td>{{ $atleta->name }}</td>
                 <td>{{ $atleta->licence }}</td>
-                <td>{{ $atleta->image }}</td>
+                <td><img src="/images/{{$atleta->image}}" width="50px"></td>
                 <td>{{ $atleta->category }}</td>
 
                 <td>

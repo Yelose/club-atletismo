@@ -19,14 +19,15 @@ class TeamController extends Controller
         return view("team", compact("atletas", "trainers"));
     }
 
-    function render(){
+    function render()
+    {
         $keyWord = '%' . $this->keyWord . '%';
-        return view('team.atletas.index', [
+        return view('components.atletas.index', [
             'atletas' => Team::latest()
-            ->orWhere('name', 'LIKE', $keyWord)
-            ->orWhere('licence', 'LIKE', $keyWord)
-            ->orWhere('image', 'LIKE', $keyWord)
-            ->orWhere('category', 'LIKE', $keyWord)
+                ->orWhere('name', 'LIKE', $keyWord)
+                ->orWhere('licence', 'LIKE', $keyWord)
+                ->orWhere('image', 'LIKE', $keyWord)
+                ->orWhere('category', 'LIKE', $keyWord)
         ]);
     }
 }

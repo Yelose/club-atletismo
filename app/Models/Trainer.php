@@ -13,8 +13,6 @@ class Trainer extends Model
     protected $table = 'trainers';
 
     protected $fillable = [
-        'photo',
-        'name',
-        'roll',
+        'name', 'image', 'roll'
     ];
 }

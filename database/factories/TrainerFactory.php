@@ -18,7 +18,7 @@ class TrainerFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'photo' => fake()->name(),
+            'image' => fake()->name(),
             'roll' => fake()->name(),
 
         ];
