@@ -1,0 +1,167 @@
+.principal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    .home-banner {
+        max-height: 50vh;
+        overflow: hidden;
+        img {
+            width: 100%;
+            margin-bottom: 3%;
+        }
+    }
+    > main {
+        display: flex;
+        flex-direction: row;
+        padding: 7vh 4vw;
+        gap: 3vw;
+        aside {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            min-width: 200px;
+            gap: 1vh;
+            h4,
+            p {
+                padding: 0.5vh;
+                text-align: right;
+            }
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10vh;
+            justify-content: center;
+            align-items: center;
+            #text {
+                display: flex;
+                flex: 4;
+                max-width: 1100px;
+                color: black;
+                gap: 3vw;
+                .contenedor-foto {
+                    max-width: 400px;
+                    min-width: 260px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text {
+                    justify-content: center;
+                    flex-direction: column;
+                    display: flex;
+                    align-content: center;
+                    gap: 1vw;
+                    .titulo-seccion {
+                        font-size: 22px;
+                        text-transform: uppercase;
+                        color: black;
+                        text-decoration: underline;
+                        text-decoration-color: rgb(0, 0, 0);
+                        text-decoration-thickness: 5px;
+                    }
+                    p {
+                        line-height: 25px;
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+            #testimonials {
+                width: 90%;
+                box-shadow: $box-shadow;
+                padding: 1vh 3vw 3vh;
+                border-radius: $border-radius;
+                position: relative;
+                h3 {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 2vh;
+                }
+                .prev,
+                .next {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    width: auto;
+                    margin-top: -30px;
+                    padding: 16px;
+                    color: #888;
+                    font-weight: bold;
+                    font-size: 20px;
+                    border-radius: 0 3px 3px 0;
+                    user-select: none;
+                }
+                .prev {
+                    position: absolute;
+                    left: 0;
+                    border-radius: 0 3px 3px 0;
+                }
+                .next {
+                    position: absolute;
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
+                }
+                .prev:hover,
+                .next:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                }
+
+                .slideshow-container {
+                    background: #f1f1f1f1;
+                    border-radius: calc($border-radius / 1.5);
+                    padding: 1vh 40px;
+                    .mySlides {
+                        display: none;
+                        text-align: center;
+                        q {
+                            font-style: italic;
+                        }
+                        .author {
+                            margin-top: 2vh;
+                            color: $first-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#sponsors {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 3vw;
+    .sponsor {
+        a {
+            width: fit-content;
+            figure {
+                max-width: 300px;
+                min-width: 80px;
+                width: 7vw;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .principal-container > main aside {
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .principal-container > main > div #text {
+        flex-direction: column;
+    }
+    .principal-container > main {
+        padding: 2vw;
+    }
+    .principal-container > main div #text .contenedor-foto {
+        display: flex;
+        width: 100%;
+        max-width: none;
+    }
+}

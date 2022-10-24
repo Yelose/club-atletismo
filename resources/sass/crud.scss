@@ -1,0 +1,137 @@
+.crud-container {
+    display: flex;
+    flex-direction: column;
+    padding: calc(1vh + 1vw);
+    gap: 3vh;
+    width: fit-content;
+    align-items: center;
+    margin: auto;
+    max-width: 1600px;
+    .space-between {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .primary-button {
+        width: fit-content;
+        background-color: $first-color;
+        padding: 5px 10px;
+        border-radius: $border-radius;
+        color: white;
+        align-self: flex-end;
+        box-shadow: 1px 2px 3px gray;
+        text-decoration: none;
+    }
+    .primary-button:hover {
+        background-color: rgb(89, 61, 104);
+    }
+    > table {
+        border-spacing: 0 7px;
+        border-collapse: separate;
+        min-width: 70%;
+        tr {
+            box-shadow: 0px 0px 1px 1px #e1d2ff;
+            border-radius: 3px;
+            th {
+                padding: 10px;
+                background-color: #e1d2ff;
+            }
+            td {
+                padding: 0 10px;
+
+                form {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    a {
+                        padding: 5px;
+                        svg {
+                            width: 22px;
+                            fill: $first-color;
+                        }
+                    }
+                    button {
+                        svg {
+                            width: 20px;
+                            fill: rgb(82, 1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.crud-create-edit-container {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+    gap: 6vh;
+    h2 {
+        text-align: center;
+    }
+    img {
+        width: 300px;
+    }
+    > form {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2vh;
+        width: 70%;
+        max-width: 900px;
+        > div {
+            min-width: 250px;
+            flex: 1;
+            input {
+                border: 1px solid #e1d2ff;
+                border-radius: 5px;
+                box-shadow: inset 1px 1px 2px 1px gray;
+            }
+        }
+        > section {
+            width: 100%;
+        }
+    }
+}
+.table-long-text {
+    height: 50px;
+    overflow: hidden;
+}
+.create-button {
+    background-color: rgb(226, 153, 255) !important;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: $border-radius;
+    color: white;
+    align-self: flex-end;
+    box-shadow: 1px 2px 3px gray;
+    text-decoration: none;
+}
+.create-button:hover {
+    background-color: rgb(220, 122, 255) !important;
+}
+
+.cancel-button {
+    background-color: rgb(100, 32, 32) !important;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: $border-radius;
+    color: white !important;
+    align-self: flex-end;
+    box-shadow: 1px 2px 3px gray;
+    text-decoration: none !important;
+}
+.cancel-button:hover {
+    background-color: rgb(64, 21, 21) !important;
+}
+.buttons-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+input[type="file"] {
+    width: fit-content;
+}

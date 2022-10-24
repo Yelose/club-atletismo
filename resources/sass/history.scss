@@ -1,0 +1,99 @@
+.history-container {
+    width: 100%;
+    max-width: 1400px;
+    justify-content: center;
+    margin: auto;
+    figure {
+        display: flex;
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 3vw;
+        overflow: hidden;
+        justify-content: center;
+        border-radius: 60px;
+        border: 4px solid #4d2756;
+        flex-direction: column;
+        img {
+            border-radius: 55px;
+        }
+    }
+    > h1 {
+        padding: calc(1vw + 1vh + 20px);
+        width: 100%;
+        text-transform: capitalize;
+        text-align: center;
+        background-color: #eee5ef69;
+        font-size: 2em;
+    }
+    > h3 {
+        margin: 10px;
+        padding: calc(0.5vh + 1vw);
+        text-align: justify;
+        background-color: rgba(231, 233, 236, 0.291);
+    }
+}
+.cronologias-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: calc(1vh + 1vw);
+    margin: auto;
+    .cronologia-container {
+        display: flex;
+        width: calc(50% + 45px);
+        padding: 1vh 0;
+        align-items: center;
+        gap: 2vw;
+        > section {
+            background-color: #eee5ef69;
+            border-radius: $border-radius;
+            padding: 1vh 2vw;
+        }
+        > aside {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            > p {
+                display: flex;
+                padding: 10px;
+                width: 90px;
+                height: 90px;
+                background-color: #4d2756;
+                color: aliceblue;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                text-align: center;
+            }
+        }
+    }
+    .cronologia-container:nth-child(odd) {
+        align-self: flex-end;
+    }
+
+    .cronologia-container:nth-child(even) {
+        > aside {
+            order: 2;
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    .history-container {
+        figure {
+            width: 90%;
+        }
+    }
+    .cronologias-container {
+        .cronologia-container {
+            width: 100%;
+            flex-direction: column;
+        }
+        .cronologia-container:nth-child(even) {
+            > aside {
+                order: 0;
+            }
+        }
+    }
+}

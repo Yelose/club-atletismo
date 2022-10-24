@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap");
+@import "variables.scss";
+@import "cookies.scss";
+@import "crud.scss";
+@import "dashboard.scss";
+@import "footer.scss";
+@import "header.scss";
+@import "history.scss";
+@import "layout.scss";
+@import "news.scss";
+@import "pagination.scss";
+@import "policy.scss";
+@import "team.scss";
+@import "calendar.scss";
+@import "home.scss";
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: calc($font-size * 3) !important;
+}
+h2 {
+    width: 100%;
+    text-align: center;
+    font-size: calc($font-size * 2) !important;
+}
+h3 {
+    width: 100%;
+    text-align: center;
+    font-size: calc($font-size * 1.5) !important;
+}
+h4 {
+    width: 100%;
+    font-size: calc($font-size * 1.2) !important;
+}
+p {
+    text-align: justify;
+    font-weight: 300;
+}
+a {
+    text-decoration: none !important;
+}
+a:hover {
+    color: $first-color;
+}
+
+.hidden {
+    display: none;
+}

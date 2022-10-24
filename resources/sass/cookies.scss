@@ -1,0 +1,21 @@
+#cookies {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: hsla(0, 0%, 13%, 0.8);
+    color: white;
+    padding: 5px;
+    z-index: 20;
+    p {
+        padding: 0 15px;
+    }
+    strong {
+        border: 1px solid white;
+        padding: 0 8px 2px;
+        text-align: center;
+        border-radius: 4px;
+        background-color: $first-color;
+        cursor: pointer;
+    }
+}
