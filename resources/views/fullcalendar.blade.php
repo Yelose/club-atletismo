@@ -2,6 +2,11 @@
 @section("title", "Calendario")
 @section("content")
 
+
+<div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        
+            <div class="p-6 bg-white border-b border-gray-200">
 <div class="container">
     <div class="jumbotron">
         <div class="container text-center">
@@ -10,14 +15,14 @@
         <header>
 
             <div class="p-5 text-center bg-image" style="
-                    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/044.webp');
+                    background-image: url('https://images.pexels.com/photos/3905827/pexels-photo-3905827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
                     height: 300px;
                     margin-top: 58px;
                   ">
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <div class="text-white">
-                            <h1 class="mb-3">Calendario anual</h1>
+                            <h1 class="mb-3">CALENDARIO ANUAL</h1>
                             <h4 class="mb-3">Club atletismo El Gaitero</h4>
 
                         </div>
@@ -27,6 +32,9 @@
 
         </header>
     </div>
+</div>
+          
+        </div>
     <div class="mb-5" id='calendar'>
     </div>
 </div>

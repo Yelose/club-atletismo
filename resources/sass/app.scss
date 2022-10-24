@@ -14,14 +14,13 @@
 @import "policy.scss";
 @import "team.scss";
 @import "home.scss";
+@import "calendar.scss";
 
 p {
     text-align: justify;
 }
 
-.jumbotron {
-    background-color: transparent;
-}
+
 .hidden {
     display: none;
 }
